@@ -14,6 +14,7 @@
 
 # Ignore .idea folder
 .vscode
+.idea
 /node_modules
 /Content
 /js
