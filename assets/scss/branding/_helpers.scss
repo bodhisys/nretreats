@@ -1,0 +1,28 @@
+.icon-flipped {
+    transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+}
+
+.nopadding {
+    padding: 0!important;
+    margin: 0!important;
+}
+
+@mixin rotate($deg) {
+    /* Safari */
+    -webkit-transform: rotate($deg);
+    /* Firefox */
+    -moz-transform: rotate($deg);
+    /* IE */
+    -ms-transform: rotate($deg);
+    /* Opera */
+    -o-transform: rotate($deg);
+    /* Internet Explorer */
+    //filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.rotate {
+    @include rotate(-90deg);
+}

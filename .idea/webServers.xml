@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c567fbdd-7b70-4392-9f1f-c376de160493" name="Natrual Retreats" url="http://192.241.252.130">
+        <fileTransfer host="192.241.252.130" port="22" rootFolder="/var/www/html/themes/nretreats" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
