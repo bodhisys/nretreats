@@ -1,0 +1,17 @@
+
+name = Natural Retreats
+description = A theme that incorporates Natural Retrats's design.
+package = Core
+version = VERSION
+core = 7.x
+
+
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+
+regions[content] = Content
+
+
+
+settings[shortcut_module_link] = 0
