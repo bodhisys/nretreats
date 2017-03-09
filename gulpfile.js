@@ -1,5 +1,8 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const concat = require('gulp-concat');
+const rename = require('gulp-rename');
+const uglify = require('gulp-uglify');
 const header = require('gulp-header');
 const pkg = require('./package.json');
 
@@ -20,9 +23,19 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('css'))
 });
 
+gulp.task('scripts', function(){
+    return gulp.src('redesign/scripts/**/*.js')
+        .pipe(concat('app.js'))
+        .pipe(gulp.dest('scripts'))
+        .pipe(gulp.rename('app.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('scripts'));
+});
+
 // Run everything
 gulp.task('default',function() {
     gulp.watch('redesign/sass/**/*.scss',['sass']);
+    gulp.watch('redesign/scripts/**/*.js',['scripts']);
 });
 
 

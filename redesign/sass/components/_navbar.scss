@@ -1,3 +1,6 @@
-.test {
-  color: red;
+@media screen and (min-width: 769px){
+  .navbar-nav, .navbar-brand {
+    float: left!important;
+    width: 33.33%!important;
+  }
 }

@@ -48,7 +48,7 @@ $destinations_subnav_list = nret_get_destinations();
 
 
 <nav class="global-nav">
-	<div class="inner flex v-center">
+	<div class="inner">
 		<div class="search__quick-links">
 			<?php if(!empty($search_quick_links_destinations)) { ?>
 			<div class="search__quick-links__container">
@@ -268,12 +268,14 @@ $destinations_subnav_list = nret_get_destinations();
 			</form>
 		</div>
 		<a href="/" class="logo logo-stuck"></a>
+
         <!--Main Desktop Navigation Display Starts-->
-		<div class="global-nav__right flex v-center">
+<!--		<div class="global-nav__right flex v-center">-->
+		<div class="global-nav global-nav__right">
 			<!--?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('flex main-menu__link-list')))); ?-->
             <?php
-            $menu_main_left_nav = menu_navigation_links('menu-main-left-nav');
-            print theme('links__menu_main_left_nav', array('links' => $menu_main_left_nav, 'attributes' => array('id' => 'main-left-menu', 'class' => array('nav navbar-nav navbar-left'))));
+                $menu_main_left_nav = menu_navigation_links('menu-main-left-nav');
+                print theme('links__menu_main_left_nav', array('links' => $menu_main_left_nav, 'attributes' => array('id' => 'main-left-menu', 'class' => array('nav navbar-nav navbar-left'))));
             ?>
             <a class="navbar-brand text-center" href="http://nr.com">
                         <span class="logo-text">
@@ -291,10 +293,10 @@ $destinations_subnav_list = nret_get_destinations();
                 <span class="logo-text-small visible-lg">Go Somewhere to Remember</span>
             </a>
             <?php
-            $menu_main_right_nav = menu_navigation_links('menu-main-right-nav');
-            print theme('links__menu_main_right_nav', array('links' => $menu_main_right_nav, 'attributes' => array('id' => 'main-right-menu', 'class' => array('nav navbar-nav navbar-right'))));
+                $menu_main_right_nav = menu_navigation_links('menu-main-right-nav');
+                print theme('links__menu_main_right_nav', array('links' => $menu_main_right_nav, 'attributes' => array('id' => 'main-right-menu', 'class' => array('nav navbar-nav navbar-right'))));
             ?>
-			<div class="btn__blue btn initMobileSearchDates">BOOK NOW</div>
+<!--			<div class="btn__blue btn initMobileSearchDates">BOOK NOW</div>-->
 			<div class="mobile-destination_subnav">
 				<div class="destination_subnav_block">
 					<h3 class="title">US EAST <span class="icon icon_carrot-down"></span> </h3>
@@ -339,12 +341,13 @@ $destinations_subnav_list = nret_get_destinations();
 					</div>
 				</div>
 			</div>
-			<div id="openBookNowSearch" class="btn btn__blue book-now-btn">Book Now</div>
-			<div id="openSearchInNav" class="icon icon_search"></div>
+<!--			<div id="openBookNowSearch" class="btn btn__blue book-now-btn">Book Now</div>-->
+<!--			<div id="openSearchInNav" class="icon icon_search"></div>-->
 			<div class="explorer__help-modal">
 				<div class="wrapper">
 					<div class="explorer__phone animate">
-						<div class="inner open fresh" ><span class="icon icon_phone"></span></div>
+<!--						<div class="inner open fresh" ><span class="icon icon_phone"></span></div>-->
+                        <div class="inner open fresh">Contact</div>
 					</div>
 					<div class="explorer__help-modal-inner">
 						<div class="explore-team-block__avatar">
