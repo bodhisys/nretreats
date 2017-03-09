@@ -1,0 +1,116 @@
+// Navigation
+.navbar {
+    padding: 30px 0px;
+    .container, .container-fluid {
+        position: relative;
+    }
+}
+
+.navbar-toggle {
+    float: left;
+}
+
+.navbar-brand {
+    transform: translateX(-50%);
+    left: 50%;
+    top: 0px;
+    position: absolute;
+    padding: 0px;
+    span {
+        font-size: 12px;
+    }
+    >img {
+        height: 100%;
+        width: auto;
+        padding: 7px 14px;
+    }
+    .logo-text {
+        font-size: 24px;
+        font-weight: 500;
+        @include font-eb-garamond;
+    }
+}
+
+.search-button-nav {
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    a {
+        color: $gray;
+        font-size: 20px;
+        &:hover, &:focus {
+            color: $gray-light;
+        }
+    }
+}
+
+.signin-top-link {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    ul {
+        padding: 0;
+        
+        margin-left: 0;
+    }
+}
+
+.sticky-top-nav {
+    background: $gray-dark;
+    border-color: $gray-dark;
+    -webkit-transition: background 0.5s linear;
+    -moz-transition: background 0.5s linear;
+    -ms-transition: background 0.5s linear;
+    -o-transition: background 0.5s linear;
+    transition: background 0.5s linear;
+    
+    .logo-text-small  {
+        display: none!important;
+    }
+    .navbar-nav {
+        > .active,  > li {
+            > a {
+                color: #fff;
+                &:focus, &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .navbar-brand, .search-button-nav a, .signin-top-link a {
+        color: #fff;
+        &:focus, &:hover {
+            color: #fff;
+        }
+    }
+    .btn-default {
+        background: $gray-base!important;
+    }
+}
+
+@media (max-width: $grid-float-breakpoint - 1) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: $grid-float-breakpoint) {
+    .navbar {
+        padding: 30px 60px;
+    }
+    .signin-top-link {
+        top: -20px;
+        ul {
+            margin-right: -70px;
+        }
+    }
+}
+
+@media (min-width: $grid-float-breakpoint) and (max-width: 1440px){
+    .navbar {
+        padding: 30px 15px;
+    }
+    .signin-top-link ul {
+        margin-right: -8px;
+    }
+}
