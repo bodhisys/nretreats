@@ -171,6 +171,14 @@ var nret = nret || {};
                     }
                 });
 
+                /*Subash Maharjan*/
+                $('.mbl-search-menu .select-box.loc').on('click', function(){
+                    var $this = $(this);
+                    $('.mbl-search-menu .select-box.loc').removeClass('active');
+                    $this.addClass('active');
+                });
+
+
                 $('.mbl-search-menu .select-box.cal').on('click', function() {
                     var $this = $(this);
                     $('.mbl-search-menu .select-box.cal').removeClass('active');
@@ -374,6 +382,7 @@ var nret = nret || {};
                     // mobile search relies on multiple select
                     // .val() returns an array of selected choices
                     retreatIdArray = $('.location').val();
+                    console.log(retreatIdArray);
                 } else {
                     // Desktop search does not rely on multiple select
                     retreats = $('.global-nav__destinations__destination-list-wrapper').find('.custom-check-input');

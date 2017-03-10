@@ -2,7 +2,23 @@
  * Natural Retreats Theme -  v1.0.0 ()
  * Copyright 2013-2017 Subash Maharjan
  */
-@media screen and (min-width: 769px) {
-  .navbar-nav, .navbar-brand {
-    float: left !important;
-    width: 33.33% !important; } }
+.icon-flipped {
+  transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1); }
+
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important; }
+
+.rotate {
+  /* Safari */
+  -webkit-transform: rotate(-90deg);
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+  /* IE */
+  -ms-transform: rotate(-90deg);
+  /* Opera */
+  -o-transform: rotate(-90deg);
+  /* Internet Explorer */ }

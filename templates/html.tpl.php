@@ -70,7 +70,7 @@ switch(substr(current_path(), 0,2))
 		<h2>Before Page Bottom</h2>
 	<?php print $page_bottom; ?>
 	<script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
-	<script src="/themes/nretreats/scripts/app.min.js" type="text/javascript"></script>
+	<script src="/themes/nretreats/scripts/app.js" type="text/javascript"></script>
 	<script language="javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true&v=3&key=AIzaSyAy8lCX6E19KLkr8ow3lZ4NPDr7jxX8Vg8&callback=nret.maps.runMapInOrder"></script>
 </body>
 </html>
