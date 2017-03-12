@@ -4,8 +4,8 @@ $nret_globalmessage_title = variable_get('nret_globalmessage_title', '');
 $nret_globalmessage_copy = variable_get('nret_globalmessage_copy', '');
 $nret_globalmessage_url = variable_get('nret_globalmessage_url', '');
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language; ?>" version="XHTML+RDFa 1.0" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>>
+<!DOCTYPE html>
+<html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces; ?>>
 <head profile="<?php print $grddl_profile; ?>">
     <?php print $head; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -14,7 +14,8 @@ $nret_globalmessage_url = variable_get('nret_globalmessage_url', '');
     <?php include 'components/optimizely.php'; ?>
     <?php include 'components/typekit.php'; ?>
     <!--  style to load BEFORE hero element. necessary to hide hero element which is inline to the element -->
-    <link rel="stylesheet" type="text/css" href="/themes/nretreats/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="/themes/nretreats/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/themes/nretreats/css/redesign.css">
     <?php print $styles; ?>
     <?php print $scripts; ?>
     <?php include 'components/bazaarvoice.php'; ?>
@@ -51,9 +52,10 @@ if ($nret_globalmessage_status) :
 <?php print $page_bottom; ?>
 <script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
 <!--<script src="/themes/nretreats/scripts/app.js" type="text/javascript"></script>-->
-<script src="/themes/nretreats/redesign/scripts/lib.js" type="text/javascript"></script>
-<script src="/themes/nretreats/redesign/scripts/components.js" type="text/javascript"></script>
-<script src="/themes/nretreats/redesign/scripts/page.js" type="text/javascript"></script>
+<script src="/themes/nretreats/scripts/lib.js" type="text/javascript"></script>
+<script src="/themes/nretreats/scripts/components.js" type="text/javascript"></script>
+<script src="/themes/nretreats/scripts/page.js" type="text/javascript"></script>
+<script src="/themes/nretreats/scripts/main.js" type="text/javascript"></script>
 <script language="javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true&v=3&key=AIzaSyAy8lCX6E19KLkr8ow3lZ4NPDr7jxX8Vg8&callback=nret.maps.runMapInOrder"></script>
 </body>
 </html>

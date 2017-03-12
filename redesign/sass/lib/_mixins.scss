@@ -1,10 +1,9 @@
-// @mixin font-adobe-garamond-pro {
-//     font-family: "adobe-garamond-pro", sans-serif;
-// }
-
-// @mixin font-proxima-nova {
-//     font-family: proxima-nova, sans-serif;
-// }
+// $vr: Vertical Length, $hr: Horizontal Length, $sr: Spread Radius
+@mixin box-shadow($hr: 10px, $vr: -10px, $blur: 20px, $sr: -10px, $color: #cccccc){
+  -webkit-box-shadow: $hr $vr $blur $sr rgba($color,1);
+  -moz-box-shadow: $hr $vr $blur $sr rgba($color,1);
+  box-shadow: $hr $vr $blur $sr rgba($color,1);
+}
 
 @mixin font-eb-garamond {
   font-family: 'EB Garamond', serif;
@@ -144,6 +143,9 @@ $retina-suffix: '@2x';
   position: absolute;
 }
 
+.clearfix {
+  @extend %clearfix;
+}
 // Usage
 // 1>
 // p {

@@ -5487,6 +5487,7 @@ nav.global-nav > .inner .global-nav__search-wrapper .btn__square
 }
 @media (max-width: 769px)
 {
+    /*Subash Maharjan*/
     nav.global-nav > .inner ul#main-menu
     {
         display: block;
@@ -5498,6 +5499,7 @@ nav.global-nav > .inner .global-nav__search-wrapper .btn__square
         display: none;
     }
 }
+/*Subash Maharjan*/
 nav.global-nav > .inner ul#main-menu li
 {
     font-size: 15px;

@@ -235,7 +235,8 @@ var nret = nret || {};
             }
         },
         openDestinationlistInNav: function() {
-            var navEl = $('#main-menu').find('a[href="/destination"]');
+            var navEl = $('#main-left-menu').find('a[href="/destination"]');
+            //$('#main-menu').find('a[href="/destination"]');
             navEl.addClass('doNotClose');
             navEl.on('click', function(event) {
                 if ($('body').hasClass('desktop') && window.innerWidth > 768) {
@@ -262,7 +263,8 @@ var nret = nret || {};
         checkMenuHighlight: function() {
             //check if destination and pathname and apply menu highlight
             if (window.location.pathname.match(/destination/g)!==null) {
-                $('#main-menu li.first').addClass('active');
+                $('#main-left-menu li.first').addClass('active');
+                //$('#main-menu li.first').addClass('active');
             }
         },
         showMobileDestinationSubnav: function() {
@@ -270,7 +272,9 @@ var nret = nret || {};
         },
         hideMobileDestinationSubnav: function() {
             $('.mobile-destination_subnav').removeClass('show');
-            $('.global-nav__right #main-menu li').velocity("transition.slideLeftIn", {stagger:50, duration:70, delay:150});
+            // $('.global-nav__right #main-menu li').velocity("transition.slideLeftIn", {stagger:50, duration:70, delay:150});
+            $('.global-nav__right #main-left-menu li').velocity("transition.slideLeftIn", {stagger:50, duration:70, delay:150});
+            $('.global-nav__right #main-right-menu li').velocity("transition.slideLeftIn", {stagger:50, duration:70, delay:150});
         },
         globalMessageListener: function() {
             var $modal = $('#global-message');

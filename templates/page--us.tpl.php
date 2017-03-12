@@ -45,8 +45,10 @@ switch(substr(current_path(), 0, 2)) {
 $destinations_subnav_list = nret_get_destinations();
 
 ?>
+
+
 <nav class="global-nav">
-    <div class="inner flex v-center">
+    <div class="inner">
         <div class="search__quick-links">
             <?php if(!empty($search_quick_links_destinations)) { ?>
                 <div class="search__quick-links__container">
@@ -238,17 +240,17 @@ $destinations_subnav_list = nret_get_destinations();
                 <div id="closeBookInNav" class="btn btn__square global-nav__book-now-close"><span class="icon_close icon"></span></div>
             </section>
         </div>
-        <a href="/" class="logo">
-            <?php
-            if (theme_get_setting('toggle_logo')) {
-                $image = array(
-                    'path' => theme_get_setting('logo'),
-                    'alt' => 'Natural Retreats logo'
-                );
-                print theme('image', $image);
-            }
-            ?>
-        </a>
+        <!--		<a href="/" class="logo">-->
+        <!--			--><?php
+        //			if (theme_get_setting('toggle_logo')) {
+        //				$image = array(
+        //					'path' => theme_get_setting('logo'),
+        //					'alt' => 'Natural Retreats logo'
+        //				);
+        //				print theme('image', $image);
+        //			}
+        //			?>
+        <!--		</a>-->
         <a href="" class="mbl-btn-nav">
             <span></span>
             <span></span>
@@ -266,9 +268,36 @@ $destinations_subnav_list = nret_get_destinations();
             </form>
         </div>
         <a href="/" class="logo logo-stuck"></a>
-        <div class="global-nav__right flex v-center">
-            <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('flex main-menu__link-list')))); ?>
-            <div class="btn__blue btn initMobileSearchDates">BOOK NOW</div>
+
+        <!--Main Desktop Navigation Display Starts-->
+        <div id="openSearchInNav" class="icon icon_search"></div>
+        <!--		<div class="global-nav__right flex v-center">-->
+        <div class="global-nav__right clearfix">
+            <!--?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('flex main-menu__link-list')))); ?-->
+            <?php
+            $menu_main_left_nav = menu_navigation_links('menu-main-left-nav');
+            print theme('links__menu_main_left_nav', array('links' => $menu_main_left_nav, 'attributes' => array('id' => 'main-left-menu', 'class' => array('navbar-left main-menu__link-list'))));
+            ?>
+            <a class="navbar-brand text-center" href="http://nr.com">
+                        <span class="logo-text">
+						<!--NATURAL RETREATS-->
+                            <?php
+                            if (theme_get_setting('toggle_logo')) {
+                                $image = array(
+                                    'path' => theme_get_setting('logo'),
+                                    'alt' => 'Natural Retreats logo'
+                                );
+                                print theme('image', $image);
+                            }
+                            ?>
+						</span> <br/>
+                <span class="logo-text-small visible-lg">Go Somewhere to Remember</span>
+            </a>
+            <?php
+            $menu_main_right_nav = menu_navigation_links('menu-main-right-nav');
+            print theme('links__menu_main_right_nav', array('links' => $menu_main_right_nav, 'attributes' => array('id' => 'main-right-menu', 'class' => array('navbar-right main-menu__link-list'))));
+            ?>
+            <!--			<div class="btn__blue btn initMobileSearchDates">BOOK NOW</div>-->
             <div class="mobile-destination_subnav">
                 <div class="destination_subnav_block">
                     <h3 class="title">US EAST <span class="icon icon_carrot-down"></span> </h3>
@@ -313,12 +342,15 @@ $destinations_subnav_list = nret_get_destinations();
                     </div>
                 </div>
             </div>
-            <div id="openBookNowSearch" class="btn btn__blue book-now-btn">Book Now</div>
-            <div id="openSearchInNav" class="icon icon_search"></div>
+            <!--			<div id="openBookNowSearch" class="btn btn__blue book-now-btn">Book Now</div>-->
+
             <div class="explorer__help-modal">
                 <div class="wrapper">
                     <div class="explorer__phone animate">
-                        <div class="inner open fresh" ><span class="icon icon_phone"></span></div>
+                        <div class="inner fresh">
+                            <span class="icon icon_phone"></span>
+                            <div class="text">Contact</div>
+                        </div>
                     </div>
                     <div class="explorer__help-modal-inner">
                         <div class="explore-team-block__avatar">
@@ -333,6 +365,7 @@ $destinations_subnav_list = nret_get_destinations();
                 </div>
             </div>
         </div>
+        <!--Main Desktop Navigation Display Ends-->
         <div class="global-nav__banner">
             <div class="inner">
                 <div class="global-nav__banner__country-select">
@@ -353,18 +386,22 @@ $destinations_subnav_list = nret_get_destinations();
                 <span id="navBannerClose" class="icon_close icon"></span>
             </div>
         </div>
-        <div class="global-nav__destinations open doNotClose">
-            <div class="global-nav__destinations__region">
-                <div class="global-nav__region-all">
-                    <a href="/destination">View All <span class="icon"></span></a>
-                </div>
-            </div>
-            <div class="global-nav__destinations__destination-list-wrapper">
+
+        <div class="arrow_box top global-nav__destinations open doNotClose">
+<!--            <div class="global-nav__destinations__region">-->
+<!--                <div class="global-nav__region-all">-->
+<!--                    <a href="/destination">View All <span class="icon"></span></a>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <!--New Redesign: Subash Maharjan-->
+            <div class=" global-nav__destinations__destination-list-wrapper">
+
                 <div class="wrapper">
                     <div class="global-nav__destination-list east <?php if ( $userglobalposition !== 'uk' && $userglobalposition !== 'ie' ) { echo 'current'; } ?>">
                         <header>
                             <h6 class="title">US EAST</h6>
-                            <span class="underline"></span>
+<!--                            <span class="underline"></span>-->
                         </header><!-- /header -->
                         <ul class="sort-list  <?php if ($userglobalposition == 'useast') {echo 'current';} ?> group<?php echo ( (isset($node) && count($node->destinations["east"]) < 5) ? ' centralized' : '') ?>">
                             <?php foreach($destinations_subnav_list['us'] as $destination) {
@@ -376,7 +413,7 @@ $destinations_subnav_list = nret_get_destinations();
                     <div class="global-nav__destination-list west">
                         <header>
                             <h6 class="title">US WEST</h6>
-                            <span class="underline"></span>
+<!--                            <span class="underline"></span>-->
                         </header><!-- /header -->
                         <ul class="sort-list group<?php echo (count($node->destinations["west"]) < 5 ? ' centralized' : ''); ?>">
                             <?php foreach($destinations_subnav_list['us'] as $destination) {
@@ -388,7 +425,7 @@ $destinations_subnav_list = nret_get_destinations();
                     <div class="global-nav__destination-list uk <?php if ( $userglobalposition == 'uk' || $userglobalposition == 'ie' ) { echo 'current'; } ?>" >
                         <header>
                             <h6 class="title">UK / EUROPE</h6>
-                            <span class="underline"></span>
+<!--                            <span class="underline"></span>-->
                         </header><!-- /header -->
                         <ul class="sort-list <?php if ($userglobalposition == 'uk' || $userglobalposition == 'ie') {echo 'current';} ?> group<?php echo (count($node->destinations["notus"]) < 5 ? ' centralized' : ''); ?>">
                             <?php foreach($destinations_subnav_list['uk'] as $destination) { ?>

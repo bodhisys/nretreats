@@ -28,19 +28,19 @@ gulp.task('folderscripts', function(){
     var tasks = folders.map(function(folder){
         return gulp.src(path.join(scriptsPath, folder, '/**/*.js'))
             .pipe(concat(folder + '.js'))
-            .pipe(gulp.dest(scriptsPath))
+            .pipe(gulp.dest('scripts'))
             .pipe(uglify())
             .pipe(rename(folder + '.min.js'))
-            .pipe(gulp.dest(scriptsPath));
+            .pipe(gulp.dest('scripts/min'));
     });
 
     // process all remaining files in scriptsPath root into main.js and main.min.js files
     var root = gulp.src(path.join(scriptsPath, '/*.js'))
         .pipe(concat('main.js'))
-        .pipe(gulp.dest(scriptsPath))
+        .pipe(gulp.dest('scripts'))
         .pipe(uglify())
         .pipe(rename('main.min.js'))
-        .pipe(gulp.dest(scriptsPath));
+        .pipe(gulp.dest('scripts/min'));
 
     // merge - combines the streams and ends only when all streams emitted end
     return merge(tasks, root);
@@ -70,7 +70,7 @@ gulp.task('scripts', ['folderscripts'], function(){
         .pipe(gulp.dest('scripts'))
         .pipe(rename('app.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('scripts'));
+        .pipe(gulp.dest('scripts/min'));
 });
 
 // Run everything

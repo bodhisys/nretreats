@@ -1,69 +1,152 @@
-@media screen and (min-width: 769px){
-  .navbar-nav, .navbar-brand {
-    float: left!important;
-    width: 33.33%!important;
-  }
+// Navbar
+.logo-text img {
+  width: auto;
 }
+nav.global-nav {
+  & > .inner {
+    .navbar-left, .navbar-right {
+      li {
+        font-size: 15px;
+        font-size: .9375rem;
+        position: relative;
+        margin-right: 20px;
+        -webkit-transition: color .2s ease;
+        transition: color .2s ease;
+        color: #313641;
+        &:after {
+          position: absolute;
+          bottom: -2px;
+          display: block;
+          width: 0;
+          height: 2px;
+          content: '';
+          -webkit-transition: width .4s ease-out 0s;
+          transition: width .4s ease-out 0s;
+          background-color: #313641;
+        }
+        &:hover, .active {
+          &:after {
+            width: 100%;
+          }
+        }
 
-// Navigation
-.navbar {
-  padding: 30px 0px;
-  .container, .container-fluid {
-    position: relative;
+        display: inline-block;
+        float: left;
+      }
+    }
+    .navbar-left {
+      float: left;
+      width: 35%;
+    }
+    .navbar-right {
+      float: right;
+      width: 35%;
+    }
+    .navbar-brand {
+      position: absolute;
+      margin: 0 auto;
+      top: 30px;
+      width: 25%;
+      padding: 0 2.5%;
+      text-align: center;
+    }
   }
-}
-
-.navbar-toggle {
-  float: left;
-}
-
-.navbar-brand {
-  transform: translateX(-50%);
-  left: 50%;
-  top: 0px;
-  position: absolute;
-  padding: 0px;
-  span {
-    font-size: 12px;
-  }
-  >img {
-    height: 100%;
-    width: auto;
-    padding: 7px 14px;
-  }
-  .logo-text {
-    font-size: 24px;
-    font-weight: 500;
-    @include font-eb-garamond;
-  }
-}
-
-.search-button-nav {
-  position: absolute;
-  top: 2px;
-  left: 0px;
-  a {
-    color: $gray;
-    font-size: 20px;
-    &:hover, &:focus {
-      color: $gray-light;
+  &.stuck .inner {
+    .navbar-left, .navbar-right {
+      li {
+        color: #fff;
+        a.active {
+          border-bottom: 1px solid #fff;
+        }
+      }
     }
   }
 }
 
-.signin-top-link {
-  position: absolute;
-  top: 15px;
-  right: 5px;
-  ul {
-    padding: 0;
-
-    margin-left: 0;
+@media screen and (max-width: 769px) {
+  nav.global-nav > .inner {
+    .navbar-left, .navbar-right {
+      display: block;
+      padding: 47.5px 0 0 35px;
+      #openSearch, li:after {
+        display: none;
+      }
+      li{ padding: 0 0 10px 0; }
+    }
   }
 }
 
-.sticky-top-nav {
-  background: $gray-dark;
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait){
+  nav.global-nav > .inner {
+    .navbar-left, .navbar-right {
+      li {
+        a {
+          font-size: 26px;
+          font-size: 1.625rem;
+        }
+      }
+    }
+  }
+}
+
+section.booking-widget.stuck nav.booking-widget__global-nav-stuck .inner {
+  .navbar-left, .navbar-right {
+    li {
+      color: #fff;
+    }
+  }
+}
+
+// Menu
+.global-nav__destinations {
+  margin-left: 40px;
+  &.show {
+    padding: 8px 8px 8px 0;
+  }
+  overflow: visible;
+  height: 300px;
+  width: 400px;
+  top: 75px;
+  @include box-shadow();
+}
+.global-nav__destinations__destination-list-wrapper {
+  overflow-y: scroll;
+  display: block!important;
+  width: 100%;
+  padding: 0;
+  & > .wrapper {
+    display: block!important;
+  }
+}
+.global-nav__destination-list {
+  width: 100%;
+  & > header {
+    margin-bottom: 0px;
+    padding: 8px;
+    border-bottom: 1px solid #aaa;
+    margin-right: 8px;
+    h6.title {
+      font-size: 1.5rem;
+    }
+  }
+  ul .destination-list-link {
+    a {
+      padding: 5px 8px;
+      border-bottom: 1px solid #aaa;
+      margin-right: 8px;
+      display: block;
+    }
+    &:hover {
+      background: #8c8c8c;
+      a {
+        color: #fff;
+      }
+    }
+
+  }
+}
+nav.global-nav.sticky-top-nav {
+  background-color: $gray-dark!important;
   border-color: $gray-dark;
   -webkit-transition: background 0.5s linear;
   -moz-transition: background 0.5s linear;
@@ -71,53 +154,65 @@
   -o-transition: background 0.5s linear;
   transition: background 0.5s linear;
 
-  .logo-text-small  {
-    display: none!important;
+  max-width: 100%;
+  margin: 0 auto;
+
+  .main-menu__link-list {
+    li {
+      color: #fff!important;
+    }
   }
-  .navbar-nav {
-    > .active,  > li {
-      > a {
-        color: #fff;
-        &:focus, &:hover {
-          color: #fff;
-        }
+
+  .logo-text-small {
+    color: #fff;
+  }
+}
+
+nav.global-nav {
+  & > .inner {
+    .mbl-btn-nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 50px;
+      height: auto;
+      padding: 17.5px 0;
+      span {
+        position: relative;
+        z-index: 2;
+        display: block;
+        width: 15px;
+        height: 1px;
+        margin: 3px auto;
+        background: #312f3c;
       }
     }
   }
-  .navbar-brand, .search-button-nav a, .signin-top-link a {
-    color: #fff;
-    &:focus, &:hover {
-      color: #fff;
+}
+@media (max-width: 1280px){
+  nav.global-nav {
+    & > .inner {
+      .navbar-left, .navbar-right {
+        li { display: none; }
+      }
+      .navbar-left li:first-child {
+        display: block!important;
+      }
+
     }
-  }
-  .btn-default {
-    background: $gray-base!important;
+    .logo-text-small { display: none; }
   }
 }
 
-@media (max-width: $grid-float-breakpoint - 1) {
-  .container {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: $grid-float-breakpoint) {
-  .navbar {
-    padding: 30px 60px;
-  }
-  .signin-top-link {
-    top: -20px;
-    ul {
-      margin-right: -70px;
+@media (min-width: 1281px){
+  nav.global-nav {
+    & > .inner {
+      .mbl-btn-nav {display: none; }
+      .global-nav__right { padding-top: 40px; }
     }
   }
 }
 
-@media (min-width: $grid-float-breakpoint) and (max-width: 1440px){
-  .navbar {
-    padding: 30px 15px;
-  }
-  .signin-top-link ul {
-    margin-right: -8px;
-  }
-}
+
+
