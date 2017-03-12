@@ -152,19 +152,58 @@ nav.global-nav > .inner .navbar-left li, nav.global-nav > .inner .navbar-right l
 nav.global-nav > .inner .navbar-brand {
   position: absolute;
   margin: 0 auto;
-  top: 30px;
   text-align: center; }
+
+nav.global-nav > .inner .mbl-btn-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 50px;
+  height: auto;
+  padding: 17.5px 0; }
+  nav.global-nav > .inner .mbl-btn-nav span {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 15px;
+    height: 1px;
+    margin: 3px auto;
+    background: #312f3c; }
+
+nav.global-nav > .inner .global-nav__search-wrapper {
+  left: 0; }
+
+nav.global-nav > .inner a {
+  text-transform: uppercase;
+  font-size: 12px; }
 
 nav.global-nav.stuck .inner .navbar-left li, nav.global-nav.stuck .inner .navbar-right li {
   color: #fff; }
   nav.global-nav.stuck .inner .navbar-left li a.active, nav.global-nav.stuck .inner .navbar-right li a.active {
     border-bottom: 1px solid #fff; }
 
+nav.global-nav.sticky-top-nav {
+  background-color: #333333 !important;
+  border-color: #333333;
+  -webkit-transition: background 0.5s linear;
+  -moz-transition: background 0.5s linear;
+  -ms-transition: background 0.5s linear;
+  -o-transition: background 0.5s linear;
+  transition: background 0.5s linear;
+  max-width: 100%;
+  margin: 0 auto; }
+  nav.global-nav.sticky-top-nav .main-menu__link-list li, nav.global-nav.sticky-top-nav .logo-text-small, nav.global-nav.sticky-top-nav .sign-in-link, nav.global-nav.sticky-top-nav .inner .icon_search {
+    color: #fff !important; }
+  nav.global-nav.sticky-top-nav .explorer__help-modal .explorer__phone .inner {
+    background: #fff !important;
+    color: #000 !important; }
+
 section.booking-widget.stuck nav.booking-widget__global-nav-stuck .inner .navbar-left li, section.booking-widget.stuck nav.booking-widget__global-nav-stuck .inner .navbar-right li {
   color: #fff; }
 
 .global-nav__destinations {
-  margin-left: 40px;
+  margin-left: 8%;
   overflow: visible;
   height: 300px;
   width: 400px;
@@ -202,41 +241,6 @@ section.booking-widget.stuck nav.booking-widget__global-nav-stuck .inner .navbar
     .global-nav__destination-list ul .destination-list-link:hover a {
       color: #fff; }
 
-nav.global-nav.sticky-top-nav {
-  background-color: #333333 !important;
-  border-color: #333333;
-  -webkit-transition: background 0.5s linear;
-  -moz-transition: background 0.5s linear;
-  -ms-transition: background 0.5s linear;
-  -o-transition: background 0.5s linear;
-  transition: background 0.5s linear;
-  max-width: 100%;
-  margin: 0 auto; }
-  nav.global-nav.sticky-top-nav .main-menu__link-list li {
-    color: #fff !important; }
-  nav.global-nav.sticky-top-nav .logo-text-small {
-    color: #fff; }
-
-nav.global-nav > .inner .mbl-btn-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 50px;
-  height: auto;
-  padding: 17.5px 0; }
-  nav.global-nav > .inner .mbl-btn-nav span {
-    position: relative;
-    z-index: 2;
-    display: block;
-    width: 15px;
-    height: 1px;
-    margin: 3px auto;
-    background: #312f3c; }
-
-nav.global-nav > .inner .global-nav__search-wrapper {
-  left: 0; }
-
 /*Mobile Only*/
 @media screen and (max-width: 769px) {
   nav.global-nav > .inner .navbar-left, nav.global-nav > .inner .navbar-right {
@@ -255,28 +259,70 @@ nav.global-nav > .inner .global-nav__search-wrapper {
 
 /*Mobile and Tablet*/
 @media (max-width: 1280px) {
-  nav.global-nav > .inner .navbar-left li, nav.global-nav > .inner .navbar-right li {
-    display: none; }
-  nav.global-nav > .inner .navbar-left li:first-child {
-    display: block !important; }
+  nav.global-nav {
+    height: 55px; }
+  nav.global-nav > .inner {
+    padding: 0;
+    padding-left: 4.5%; }
+  nav.global-nav > .inner .navbar-left, nav.global-nav > .inner .navbar-right {
+    display: none !important; }
+  nav.global-nav > .inner .global-nav__right {
+    margin-left: auto;
+    padding-top: 17px; }
+  nav.global-nav > .inner .navbar-brand {
+    width: 91%; }
   nav.global-nav .logo-text-small {
-    display: none; } }
+    display: none; }
+  .explorer__phone.animate {
+    padding: 4px 0; }
+    .explorer__phone.animate .icon {
+      color: #000; }
+  .explorer__help-modal .explorer__phone .inner {
+    background: transparent;
+    color: #000;
+    display: block;
+    width: auto;
+    height: auto;
+    text-align: right;
+    padding: 12px 15px;
+    text-align: center; }
+    .explorer__help-modal .explorer__phone .inner:hover, .explorer__help-modal .explorer__phone .inner.open {
+      background: transparent; }
+  .explorer__help-modal .explorer__help-modal-inner {
+    top: 30px !important; }
+  .explorer__help-modal .explorer__help-modal-inner__copy .css_triangle-up {
+    right: 0 !important; }
+  .sign-in-link {
+    top: 21px !important; } }
 
 /*Desktop Only*/
 @media (min-width: 1281px) {
+  nav.global-nav > .inner {
+    padding: 0 4.5%; }
   nav.global-nav > .inner .mbl-btn-nav {
     display: none; }
   nav.global-nav > .inner .global-nav__right {
-    padding-top: 40px; } }
+    padding-top: 40px; }
+  nav.global-nav > .inner .navbar-brand {
+    top: 31px; } }
 
 .explorer__help-modal .explorer__phone {
   position: absolute;
   right: 0;
-  top: -12px; }
+  top: -12px;
+  padding: 4px 0; }
 
 .page-body, footer.footer, nav.global-nav, .real-estate-footer {
   max-width: none !important;
   min-width: auto !important; }
+
+.sign-in-link {
+  position: absolute;
+  right: 4.5%;
+  top: 10px; }
+
+section.home-page .home__hero-wrapper {
+  max-width: 100%; }
 
 @media screen and (max-width: 1280px) {
   .explorer__help-modal .explorer__phone .inner .icon {
@@ -293,10 +339,13 @@ nav.global-nav > .inner .global-nav__search-wrapper {
     .explorer__help-modal .explorer__phone .inner {
       display: block;
       border-radius: 0;
-      padding: 5px 20px;
+      padding: 8px 20px;
       color: #fff; }
       .explorer__help-modal .explorer__phone .inner .icon {
         display: none; }
+      .explorer__help-modal .explorer__phone .inner .text {
+        text-transform: uppercase;
+        font-size: 12px; }
       .explorer__help-modal .explorer__phone .inner.open {
         color: #000; } }
 

@@ -3,8 +3,11 @@
 .logo-text img {
   width: auto;
 }
+
+
 nav.global-nav {
   & > .inner {
+
     // 100% = [(3 + 32) + (2 + 26 + 2) + 35]%
     .icon_search { float: left; width: 3%; }
     .navbar-left { float: left; width: 32%; }
@@ -51,8 +54,33 @@ nav.global-nav {
     .navbar-brand {
       position: absolute;
       margin: 0 auto;
-      top: 30px;
       text-align: center;
+    }
+
+    .mbl-btn-nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 50px;
+      height: auto;
+      padding: 17.5px 0;
+      span {
+        position: relative;
+        z-index: 2;
+        display: block;
+        width: 15px;
+        height: 1px;
+        margin: 3px auto;
+        background: #312f3c;
+      }
+    }
+    .global-nav__search-wrapper {
+      left: 0;
+    }
+    a {
+      text-transform: uppercase;
+      font-size: 12px;
     }
   }
   &.stuck .inner {
@@ -65,8 +93,29 @@ nav.global-nav {
       }
     }
   }
-}
+  &.sticky-top-nav {
+    background-color: $gray-dark!important;
+    border-color: $gray-dark;
+    -webkit-transition: background 0.5s linear;
+    -moz-transition: background 0.5s linear;
+    -ms-transition: background 0.5s linear;
+    -o-transition: background 0.5s linear;
+    transition: background 0.5s linear;
 
+    max-width: 100%;
+    margin: 0 auto;
+
+    .main-menu__link-list li, .logo-text-small, .sign-in-link, .inner .icon_search {
+      color: #fff!important;
+    }
+    .explorer__help-modal .explorer__phone {
+      .inner {
+        background: #fff!important;
+        color: #000!important;
+      }
+    }
+  }
+}
 
 section.booking-widget.stuck nav.booking-widget__global-nav-stuck .inner {
   .navbar-left, .navbar-right {
@@ -78,7 +127,7 @@ section.booking-widget.stuck nav.booking-widget__global-nav-stuck .inner {
 
 // Menu
 .global-nav__destinations {
-  margin-left: 40px;
+  margin-left: 8%;
   &.show {
     padding: 8px 8px 8px 0;
   }
@@ -124,54 +173,6 @@ section.booking-widget.stuck nav.booking-widget__global-nav-stuck .inner {
 
   }
 }
-nav.global-nav.sticky-top-nav {
-  background-color: $gray-dark!important;
-  border-color: $gray-dark;
-  -webkit-transition: background 0.5s linear;
-  -moz-transition: background 0.5s linear;
-  -ms-transition: background 0.5s linear;
-  -o-transition: background 0.5s linear;
-  transition: background 0.5s linear;
-
-  max-width: 100%;
-  margin: 0 auto;
-
-  .main-menu__link-list {
-    li {
-      color: #fff!important;
-    }
-  }
-
-  .logo-text-small {
-    color: #fff;
-  }
-}
-
-nav.global-nav {
-  & > .inner {
-    .mbl-btn-nav {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      width: 50px;
-      height: auto;
-      padding: 17.5px 0;
-      span {
-        position: relative;
-        z-index: 2;
-        display: block;
-        width: 15px;
-        height: 1px;
-        margin: 3px auto;
-        background: #312f3c;
-      }
-    }
-    .global-nav__search-wrapper {
-      left: 0;
-    }
-  }
-}
 
 // Responsive Navigation Styles
 /*Mobile Only*/
@@ -205,26 +206,67 @@ nav.global-nav {
 /*Mobile and Tablet*/
 @media (max-width: 1280px){
   nav.global-nav {
+    height: 55px;
+  }
+  nav.global-nav > .inner {
+    padding: 0;
+    padding-left: 4.5%;
+  }
+
+  nav.global-nav {
     & > .inner {
       .navbar-left, .navbar-right {
-        li { display: none; }
+        display: none!important;
       }
-      .navbar-left li:first-child {
-        display: block!important;
+      .global-nav__right {
+        margin-left: auto;
+        padding-top: 17px;
       }
-
+      .navbar-brand { width: 91%; }
     }
     .logo-text-small { display: none; }
+  }
+  .explorer__phone.animate {
+    padding: 4px 0;
+    .icon {
+      color: #000;
+    }
+  }
+
+  .explorer__help-modal .explorer__phone .inner {
+    background: transparent;
+    color: #000;
+    display: block;
+    width: auto;
+    height: auto;
+    text-align: right;
+    padding: 12px 15px;
+    text-align: center;
+    &:hover, &.open {
+      background: transparent;
+    }
+  }
+  .explorer__help-modal .explorer__help-modal-inner {
+    top: 30px!important;
+  }
+  .explorer__help-modal .explorer__help-modal-inner__copy .css_triangle-up {
+    right: 0!important;
+  }
+  .sign-in-link {
+    top: 21px!important;
   }
 }
 
 /*Desktop Only*/
 @media (min-width: 1281px){
+  nav.global-nav > .inner {
+    padding: 0 4.5%;
+  }
   nav.global-nav {
     & > .inner {
       .mbl-btn-nav {display: none; }
       .global-nav__right { padding-top: 40px; }
-
+      .navbar-brand { top: 31px; }
     }
   }
 }

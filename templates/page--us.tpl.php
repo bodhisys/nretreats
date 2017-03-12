@@ -269,8 +269,52 @@ $destinations_subnav_list = nret_get_destinations();
         </div>
         <a href="/" class="logo logo-stuck"></a>
 
-        <!--Main Desktop Navigation Display Starts-->
+        <div class="mobile-destination_subnav">
+            <div class="destination_subnav_block">
+                <h3 class="title">US EAST <span class="icon icon_carrot-down"></span> </h3>
+                <div class="mobile-destination_subnav_list">
+                    <ul>
+                        <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
+                        <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
+                        <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
+                        <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
+                        <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
+                        <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
+                        <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="destination_subnav_block">
+                <h3 class="title">US West <span class="icon icon_carrot-down"></span> </h3>
+                <div class="mobile-destination_subnav_list">
+                    <ul>
+                        <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
+                        <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
+                        <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
+                        <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
+                        <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
+                        <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
+                        <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="destination_subnav_block">
+                <h3 class="title">UK/EU <span class="icon icon_carrot-down"></span> </h3>
+                <div class="mobile-destination_subnav_list">
+                    <ul>
+                        <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
+                        <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
+                        <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
+                        <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
+                        <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
+                        <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
+                        <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
+        <!--Main Desktop Navigation Display Starts-->
         <!--		<div class="global-nav__right flex v-center">-->
         <div class="global-nav__right clearfix">
             <div id="openSearchInNav" class="icon icon_search"></div>
@@ -299,50 +343,7 @@ $destinations_subnav_list = nret_get_destinations();
             print theme('links__menu_main_right_nav', array('links' => $menu_main_right_nav, 'attributes' => array('id' => 'main-right-menu', 'class' => array('navbar-right main-menu__link-list'))));
             ?>
             <!--			<div class="btn__blue btn initMobileSearchDates">BOOK NOW</div>-->
-            <div class="mobile-destination_subnav">
-                <div class="destination_subnav_block">
-                    <h3 class="title">US EAST <span class="icon icon_carrot-down"></span> </h3>
-                    <div class="mobile-destination_subnav_list">
-                        <ul>
-                            <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
-                            <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
-                            <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
-                            <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
-                            <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
-                            <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
-                            <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="destination_subnav_block">
-                    <h3 class="title">US West <span class="icon icon_carrot-down"></span> </h3>
-                    <div class="mobile-destination_subnav_list">
-                        <ul>
-                            <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
-                            <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
-                            <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
-                            <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
-                            <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
-                            <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
-                            <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="destination_subnav_block">
-                    <h3 class="title">UK/EU <span class="icon icon_carrot-down"></span> </h3>
-                    <div class="mobile-destination_subnav_list">
-                        <ul>
-                            <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
-                            <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
-                            <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
-                            <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
-                            <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
-                            <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
-                            <li><a href="#0" class="strike" data-country-selection="us">US<span class="strike-through"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+
             <!--			<div id="openBookNowSearch" class="btn btn__blue book-now-btn">Book Now</div>-->
 
             <div class="explorer__help-modal">
@@ -365,6 +366,7 @@ $destinations_subnav_list = nret_get_destinations();
                     </div>
                 </div>
             </div>
+            <a class="sign-in-link" target="_blank" href="https://nres.naturalretreats.com/pls/apex/nres.owner_portal">SIGN IN</a>
         </div>
         <!--Main Desktop Navigation Display Ends-->
         <div class="global-nav__banner">

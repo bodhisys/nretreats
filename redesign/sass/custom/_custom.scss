@@ -3,12 +3,24 @@
   position: absolute;
   right: 0;
   top: -12px;
+  padding: 4px 0;
 }
 
 .page-body, footer.footer, nav.global-nav, .real-estate-footer{
   max-width: none!important;
   min-width: auto!important;
 }
+
+.sign-in-link {
+  position: absolute;
+  right: 4.5%;
+  top: 10px;
+}
+
+section.home-page .home__hero-wrapper {
+  max-width: 100%;
+}
+
 
 @media screen and (max-width: 1280px){
   .explorer__help-modal .explorer__phone {
@@ -26,9 +38,13 @@
     .inner {
       display: block;
       border-radius: 0;
-      padding: 5px 20px;
+      padding: 8px 20px;
       color: #fff;
       .icon { display: none; }
+      .text {
+        text-transform: uppercase;
+        font-size: 12px;
+      }
       &.open {
         color: #000;
       }
