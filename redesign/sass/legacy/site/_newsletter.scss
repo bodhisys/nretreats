@@ -1,0 +1,138 @@
+form.newsletter-email
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  width: 100%;
+
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  /* firefox 19+ */
+  /* ie */
+}
+@media (max-width: 769px)
+{
+  form.newsletter-email
+  {
+    display: block;
+
+    text-align: center;
+  }
+}
+form.newsletter-email .name-wrapper
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+form.newsletter-email .name-wrapper input[type='text']
+{
+  width: 50%;
+}
+@media (max-width: 769px)
+{
+  form.newsletter-email .name-wrapper
+  {
+    flex-direction: column;
+
+    width: calc(100% - 75px);
+    margin: 0 auto;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+  }
+  form.newsletter-email .name-wrapper input[type='text']
+  {
+    width: 100%;
+  }
+}
+form.newsletter-email input[type='email'],
+form.newsletter-email input[type='text']
+{
+  width: 30%;
+  height: 45px;
+  margin-right: 10px;
+  padding-left: 15px;
+
+  color: #abaeb3;
+}
+@media (max-width: 769px)
+{
+  form.newsletter-email input[type='email'],
+  form.newsletter-email input[type='text']
+  {
+    width: calc(100% - 75px);
+    margin-right: 0;
+  }
+}
+form.newsletter-email ::-webkit-input-placeholder
+{
+  font-style: italic;
+}
+form.newsletter-email ::-moz-placeholder
+{
+  font-style: italic;
+}
+form.newsletter-email :-ms-input-placeholder
+{
+  font-style: italic;
+}
+form.newsletter-email input:-moz-placeholder
+{
+  font-style: italic;
+}
+form.newsletter-email .btn
+{
+  width: 75px;
+
+  color: #fff;
+  border: none;
+  background-color: #313641;
+}
+@media (max-width: 769px)
+{
+  form.newsletter-email .btn
+  {
+    width: calc(100% - 75px);
+    margin: 0 auto;
+  }
+}
+@media (max-width: 769px)
+{
+  form.newsletter-email
+  {
+    flex-direction: column;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+  }
+}
+
+.newsletter-thankyou,
+.newsletter-error
+{
+  display: none;
+
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+
+  opacity: 0;
+}
+
+.newsletter-thankyou.show,
+.newsletter-error.show
+{
+  display: block;
+
+  opacity: 1;
+}

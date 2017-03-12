@@ -1,0 +1,159 @@
+
+nav.global-nav > .inner .global-nav__retreat_search
+{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 18.5%;
+
+  display: none;
+  display: none;
+
+  height: 100%;
+  padding-right: 20px;
+  padding-left: 0;
+
+  opacity: 0;
+  opacity: 0;
+  border-left: 1px solid #e3e3e3;
+  background: white;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+@media (max-width: 1280px)
+{
+  nav.global-nav > .inner .global-nav__retreat_search
+  {
+    left: 19%;
+
+    width: 81%;
+
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 1040px)
+{
+  nav.global-nav > .inner .global-nav__retreat_search
+  {
+    left: 17%;
+
+    width: 80%;
+  }
+}
+@media (max-width: 900px)
+{
+  nav.global-nav > .inner .global-nav__retreat_search
+  {
+    width: 70%;
+  }
+}
+nav.global-nav > .inner .global-nav__retreat_search .global-nav__book-now-close
+{
+  margin-top: 6px;
+  margin-right: 20px;
+}
+nav.global-nav > .inner .global-nav__retreat_search .home__retreat-search
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  min-width: 100%;
+}
+nav.global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper
+{
+  position: static;
+
+  width: 100%;
+}
+nav.global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .global-nav__destinations__destination-list-wrapper
+{
+  width: 100%;
+}
+nav.global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .global-nav__destinations__destination-list-wrapper .arrow-up-destination-list
+{
+  top: 257px;
+}
+nav.global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .global-nav__destinations__destination-list-wrapper > .wrapper
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  height: 100%;
+}
+nav.global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .global-nav__destinations__destination-list-wrapper > .wrapper .sort-list
+{
+  flex-direction: column;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+}
+nav.global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .global-nav__destinations__destination-list-wrapper > .wrapper .sort-list label
+{
+  white-space: nowrap;
+}
+nav.global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .global-nav__destination-list
+{
+  display: block;
+
+  width: 33%;
+  padding-top: 18px;
+
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+}
+nav.global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__retreat-search-container
+{
+  height: auto;
+}
+nav.global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown
+{
+  top: 99px;
+}
+nav.global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown.list
+{
+  top: 55px;
+}
+nav.global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown.list .arrow-up-destination-list
+{
+  top: -50px;
+}
+nav.global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown.home__search__check-in-wrapper,
+nav.global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown.home__search__check-out-wrapper
+{
+  border: 0;
+  background-color: transparent;
+}
+nav.global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown.home__search__check-in-wrapper .arrow-up-destination-list,
+nav.global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown.home__search__check-out-wrapper .arrow-up-destination-list
+{
+  z-index: 1;
+  top: -172px;
+  left: 22%;
+}
+nav.global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown.home__search__check-in-wrapper .home__search__calendar,
+nav.global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown.home__search__check-out-wrapper .home__search__calendar
+{
+  border: 1px solid #efefef;
+}
+nav.global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown.home__search__check-out-wrapper .arrow-up-destination-list
+{
+  left: 33%;
+}
+nav.global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown .arrow-up-destination-list
+{
+  top: -249px;
+}

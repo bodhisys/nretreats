@@ -1,0 +1,309 @@
+.animated
+{
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInUp
+{
+  from
+  {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+
+    opacity: 0;
+  }
+  to
+  {
+    -webkit-transform: none;
+    transform: none;
+
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp
+{
+  from
+  {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+
+    opacity: 0;
+  }
+  to
+  {
+    -webkit-transform: none;
+    transform: none;
+
+    opacity: 1;
+  }
+}
+
+.fadeInUp
+{
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInUpBig
+{
+  from
+  {
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+
+    opacity: 0;
+  }
+  to
+  {
+    -webkit-transform: none;
+    transform: none;
+
+    opacity: 1;
+  }
+}
+
+.animate
+{
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.hide-block
+{
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-transform: translateY(5%);
+  transform: translateY(5%);
+
+  opacity: 0;
+}
+
+.reveal-block
+{
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+
+  opacity: 1;
+}
+
+.tada
+{
+  -webkit-animation-name: tada;
+  animation-name: tada;
+}
+
+@-webkit-keyframes fadeInFromNone
+{
+  0%
+  {
+    display: none;
+
+    opacity: 0;
+  }
+  1%
+  {
+    display: block;
+
+    opacity: 0;
+  }
+  100%
+  {
+    display: block;
+
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromNone
+{
+  0%
+  {
+    display: none;
+
+    opacity: 0;
+  }
+  1%
+  {
+    display: block;
+
+    opacity: 0;
+  }
+  100%
+  {
+    display: block;
+
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp
+{
+  0%
+  {
+    display: none;
+
+    -webkit-transform: translateY(5%);
+    transform: translateY(5%);
+
+    opacity: 0;
+  }
+  1%
+  {
+    display: block;
+
+    opacity: 0;
+  }
+  100%
+  {
+    display: block;
+
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes tada
+{
+  from
+  {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  10%,
+  20%
+  {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90%
+  {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%,
+  60%,
+  80%
+  {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to
+  {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes tada
+{
+  from
+  {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  10%,
+  20%
+  {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90%
+  {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%,
+  60%,
+  80%
+  {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to
+  {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@-webkit-keyframes animeBg
+{
+  0%
+  {
+    opacity: 0;
+  }
+  10%
+  {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+
+    opacity: 1;
+  }
+  20%
+  {
+    -webkit-transform: scale(1.075);
+    transform: scale(1.075);
+
+    opacity: 1;
+  }
+  40%
+  {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+    opacity: 0;
+  }
+  100%
+  {
+    opacity: 0;
+  }
+}
+
+@keyframes animeBg
+{
+  0%
+  {
+    opacity: 0;
+  }
+  10%
+  {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+
+    opacity: 1;
+  }
+  20%
+  {
+    -webkit-transform: scale(1.075);
+    transform: scale(1.075);
+
+    opacity: 1;
+  }
+  40%
+  {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+    opacity: 0;
+  }
+  100%
+  {
+    opacity: 0;
+  }
+}

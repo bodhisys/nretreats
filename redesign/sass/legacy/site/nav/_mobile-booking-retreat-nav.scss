@@ -1,0 +1,84 @@
+
+.mbl-retreat-booking-nav .calendar
+{
+  width: auto;
+  margin: 0 auto;
+  padding: 15vw 0 0 0;
+
+  border-collapse: separate;
+}
+
+.mbl-retreat-booking-nav .ui-datepicker
+{
+  font-family: 'proxima-nova', sans-serif;
+
+  width: 100%;
+  margin: 0 auto;
+
+  color: #313641;
+  border: 0;
+  border-radius: 0;
+  background-color: #f6f6f6;
+}
+.mbl-retreat-booking-nav .ui-datepicker .ui-datepicker-header
+{
+  font-size: 10px;
+  font-size: .625rem;
+  font-weight: 500;
+
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+
+  color: #3d4451;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.mbl-retreat-booking-nav .ui-datepicker .ui-datepicker-calendar thead
+{
+  border-bottom: 1px solid #acafb4;
+}
+.mbl-retreat-booking-nav .ui-datepicker .ui-datepicker-calendar thead tr th span
+{
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 10px;
+  font-size: .625rem;
+  font-weight: 100;
+
+  text-transform: uppercase;
+
+  opacity: 1;
+  color: #acafb4;
+}
+.mbl-retreat-booking-nav .ui-datepicker .ui-datepicker-calendar tbody
+{
+  border: 0;
+}
+.mbl-retreat-booking-nav .ui-datepicker .ui-datepicker-calendar tbody tr .ui-state-disabled
+{
+  color: #3d4451;
+}
+.mbl-retreat-booking-nav .ui-datepicker .ui-datepicker-calendar tbody tr .ui-state-disabled span
+{
+  text-decoration: line-through;
+}
+.mbl-retreat-booking-nav .ui-datepicker .ui-datepicker-calendar tbody tr .ui-state-default
+{
+  font-family: 'proxima-nova', sans-serif;
+  font-style: normal;
+
+  width: 27px;
+  height: 26px;
+  margin: 0 auto;
+
+  text-align: center;
+
+  color: #3d4451;
+  border: 0;
+  background: transparent;
+}
+.mbl-retreat-booking-nav .ui-datepicker .ui-datepicker-calendar tbody tr .ui-state-active
+{
+  border: 1px solid #3d4451;
+  border-radius: 100px;
+}

@@ -1,0 +1,19 @@
+.explore-team-block__avatar
+{
+  overflow: hidden;
+
+  width: 165px;
+  height: 165px;
+  padding: 5px;
+
+  border: 3px solid #efefef;
+  border-radius: 200px;
+}
+.explore-team-block__avatar .inner
+{
+  width: 100%;
+  height: 100%;
+
+  border: 2px solid #efefef;
+  border-radius: 100px;
+}

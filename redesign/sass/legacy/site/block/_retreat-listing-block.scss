@@ -1,0 +1,202 @@
+.retreat-listing__block
+{
+  position: relative;
+
+  height: 500px;
+}
+.retreat-listing__block:last-child
+{
+  margin-bottom: 70px;
+}
+@media (max-width: 769px)
+{
+  .retreat-listing__block
+  {
+    flex-direction: column;
+
+    height: auto;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+  }
+}
+.retreat-listing__block .retreat-listing__block__blue-bar
+{
+  right: 0;
+  bottom: 0;
+
+  padding: 12px 18px;
+}
+.retreat-listing__block .retreat-listing__block__image-small
+{
+  width: 40%;
+  height: 100%;
+}
+@media (max-width: 769px)
+{
+  .retreat-listing__block .retreat-listing__block__image-small
+  {
+    width: 100%;
+    height: 0;
+    padding-top: 66.64%;
+
+    background-position: top !important;
+    /* (img-height / img-width * container-width) */
+    /* (853 / 1280 * 100) */
+  }
+}
+.retreat-listing__block .retreat-listing__block__image-large
+{
+  width: 60%;
+  height: 100%;
+}
+@media (max-width: 769px)
+{
+  .retreat-listing__block .retreat-listing__block__image-large
+  {
+    position: relative;
+
+    width: 85%;
+    height: 0;
+    margin: -100px auto 0;
+    padding-top: 66.64%;
+
+    background-position: top !important;
+    background-size: contain !important;
+    /* (img-height / img-width * container-width) */
+    /* (853 / 1280 * 100) */
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
+{
+  .retreat-listing__block .retreat-listing__block__image-large
+  {
+    padding-top: 52%;
+  }
+}
+.retreat-listing__block .retreat-listing__block__copy
+{
+  position: absolute;
+  bottom: 25px;
+  left: 6.7%;
+
+  width: 38%;
+  padding: 5%;
+
+  background-color: #fff;
+}
+@media only screen and (min-width: 600px) and (max-width: 1024px)
+{
+  .retreat-listing__block .retreat-listing__block__copy
+  {
+    width: 44.28571vw;
+  }
+}
+@media (max-width: 769px)
+{
+  .retreat-listing__block .retreat-listing__block__copy
+  {
+    position: static;
+
+    width: 100%;
+  }
+}
+.retreat-listing__block .retreat-listing__block__copy hgroup
+{
+  margin-bottom: 20px;
+}
+.retreat-listing__block .retreat-listing__block__copy hgroup h4
+{
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 24px;
+
+  margin-bottom: 6px;
+
+  text-transform: uppercase;
+}
+.retreat-listing__block .retreat-listing__block__copy .retreat-listing__block__bvrr-stars
+{
+  margin-bottom: 20px;
+}
+@media (max-width: 769px)
+{
+  .retreat-listing__block .retreat-listing__block__copy .btn-wrapper .btn
+  {
+    margin: 0 auto;
+  }
+}
+.retreat-listing__block .retreat-listing__block__copy .retreat-listing__block__copy-description
+{
+  line-height: 23px;
+
+  letter-spacing: .01rem;
+
+  color: #787b80;
+}
+@media (max-width: 769px)
+{
+  .retreat-listing__block .retreat-listing__block__copy .btn.quickview
+  {
+    display: none;
+  }
+}
+
+.retreat-listing__block-small
+{
+  width: calc(33.33% - 50px);
+  margin: 0 25px 55px;
+}
+@media (max-width: 769px)
+{
+  .retreat-listing__block-small
+  {
+    width: 87.25%;
+    margin: 0 auto 45px;
+  }
+}
+.retreat-listing__block-small .retreat-listing__block__bvrr-stars
+{
+  margin: 10px 0;
+}
+.retreat-listing__block-small .retreat-listing__block__image
+{
+  display: block;
+
+  height: 270px;
+}
+.retreat-listing__block-small .retreat-listing__block__copy
+{
+  padding: 35px 30px;
+
+  background-color: #fff;
+}
+@media (max-width: 769px)
+{
+  .retreat-listing__block-small .retreat-listing__block__copy
+  {
+    padding: 30px 0 45px;
+  }
+}
+.retreat-listing__block-small .retreat-listing__block__blue-bar
+{
+  top: 234px;
+  right: 0;
+  left: 0;
+
+  width: 100%;
+
+  text-align: center;
+}
+@media (max-width: 769px)
+{
+  .retreat-listing__block-small .retreat-listing__block__blue-bar
+  {
+    top: 246px;
+  }
+}
+.retreat-listing__block-small hgroup > a
+{
+  font-weight: normal;
+}

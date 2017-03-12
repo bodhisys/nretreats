@@ -1,0 +1,29 @@
+.map-wrapper
+{
+  position: relative;
+
+  height: 250px;
+
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.map
+{
+  position: relative;
+
+  height: 100%;
+}
+
+span.map__subheader
+{
+  font-size: 27px;
+  font-size: 1.6875rem;
+  font-style: italic;
+
+  position: absolute;
+  bottom: -54px;
+  left: 60px;
+
+  letter-spacing: -.01rem;
+}

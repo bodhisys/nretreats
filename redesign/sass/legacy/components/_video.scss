@@ -1,0 +1,329 @@
+body.mobile .video__bg
+{
+  display: none;
+}
+
+.video__bg
+{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+@media (max-width: 769px)
+{
+  .video__bg
+  {
+    display: none;
+  }
+}
+.video__bg video
+{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+
+  opacity: .9;
+
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.video-poster
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  width: 100%;
+  height: 650px;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@media (max-width: 769px)
+{
+  .video-poster
+  {
+    display: none;
+
+    height: 275px;
+  }
+}
+
+.youtube__mobile
+{
+  position: relative;
+
+  display: none;
+  overflow: hidden;
+
+  height: 0;
+  padding-top: 30px;
+  padding-bottom: 56.25%;
+}
+.youtube__mobile iframe,
+.youtube__mobile object,
+.youtube__mobile embed
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 769px)
+{
+  .youtube__mobile
+  {
+    display: block;
+  }
+}
+
+section.video__player
+{
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: none;
+
+  opacity: 0;
+  background-color: rgba(0, 0, 0, .4);
+}
+section.video__player .video__wrapper
+{
+  position: relative;
+
+  width: 60%;
+  margin: 60px auto 0;
+}
+@media (max-height: 625px)
+{
+  section.video__player .video__wrapper
+  {
+    width: 50%;
+    margin: 20px auto 0;
+  }
+}
+section.video__player .video__wrapper .video__control__close
+{
+  position: absolute;
+  top: 0;
+  right: -45px;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  width: 45px;
+  height: 45px;
+
+  cursor: pointer;
+
+  color: white;
+  background-color: #3d4451;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+section.video__player .video__wrapper .video__wrapper-inner
+{
+  position: relative;
+
+  overflow: hidden;
+
+  height: 0;
+  padding-top: 30px;
+  padding-bottom: 56.25%;
+}
+section.video__player .video__wrapper .video__wrapper-inner iframe,
+section.video__player .video__wrapper .video__wrapper-inner object,
+section.video__player .video__wrapper .video__wrapper-inner embed
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+section.video__player .video__wrapper .video__control-bar
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  width: 100%;
+  height: 45px;
+  margin-top: -1px;
+
+  background-color: #3d4451;
+}
+section.video__player .video__wrapper .video__control-bar > div
+{
+  cursor: pointer;
+}
+section.video__player .video__wrapper .video__control-bar .video__control__play-pause
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  width: 3.59375%;
+  padding-top: 6px;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+section.video__player .video__wrapper .video__control-bar .video__control__scrubber-wrapper
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  width: 85.3125%;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+section.video__player .video__wrapper .video__control-bar .video__control__scrubber-wrapper #progressBar
+{
+  width: 95.97069597069597%;
+  height: 5px;
+
+  cursor: pointer;
+
+  background-color: #1f232b;
+}
+section.video__player .video__wrapper .video__control-bar .video__control__scrubber-wrapper #progressBar div
+{
+  width: 0;
+  height: 100%;
+
+  background-color: #fff;
+}
+section.video__player .video__wrapper .video__control-bar .video__control__fullscreen
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  width: 1.5625%;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+section.video__player .video__wrapper .video__control-bar .video__control__share
+{
+  position: relative;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  width: 11.875%;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+section.video__player .video__wrapper .video__control-bar .video__control__share p
+{
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 9px;
+  font-size: .5625rem;
+
+  text-align: center;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+
+  color: #fff;
+}
+section.video__player .video__wrapper .video__control-bar .video__control__share ul.video__control__share__list
+{
+  position: absolute;
+  right: 0;
+  bottom: 44px;
+  left: 0;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+
+  height: 0;
+
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+
+  background-color: #fff;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+}
+section.video__player .video__wrapper .video__control-bar .video__control__share ul.video__control__share__list li
+{
+  margin: 10px 0;
+
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+
+  color: #808080;
+}
+section.video__player .video__wrapper .video__control-bar .video__control__share ul.video__control__share__list li:hover
+{
+  color: #313641;
+}

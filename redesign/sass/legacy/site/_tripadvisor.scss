@@ -1,0 +1,45 @@
+.tripadvisor-reviews
+{
+  display: none;
+
+  padding: 100px 15.27778%;
+
+  background-color: #fff;
+}
+.tripadvisor-reviews header,
+.tripadvisor-reviews hgroup
+{
+  position: relative;
+
+  margin-bottom: 50px;
+}
+@media (max-width: 769px)
+{
+  .tripadvisor-reviews header,
+  .tripadvisor-reviews hgroup
+  {
+    margin-bottom: 35px;
+  }
+}
+.tripadvisor-reviews header > h3,
+.tripadvisor-reviews header > .heading,
+.tripadvisor-reviews hgroup > h3,
+.tripadvisor-reviews hgroup > .heading
+{
+  padding-bottom: 1rem;
+}
+.tripadvisor-reviews header > span.underline,
+.tripadvisor-reviews hgroup > span.underline
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 150px;
+
+  border-top: 1px solid #313641;
+}
+.tripadvisor-reviews img
+{
+  width: auto;
+}

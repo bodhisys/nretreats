@@ -1,0 +1,144 @@
+section.reviews .reviews__container > .wrapper
+{
+  padding: 75px 9.194% 50px;
+}
+section.reviews .reviews__container > .wrapper header,
+section.reviews .reviews__container > .wrapper hgroup
+{
+  position: relative;
+
+  margin-bottom: 50px;
+}
+@media (max-width: 769px)
+{
+  section.reviews .reviews__container > .wrapper header,
+  section.reviews .reviews__container > .wrapper hgroup
+  {
+    margin-bottom: 35px;
+  }
+}
+section.reviews .reviews__container > .wrapper header > h3,
+section.reviews .reviews__container > .wrapper header > .heading,
+section.reviews .reviews__container > .wrapper hgroup > h3,
+section.reviews .reviews__container > .wrapper hgroup > .heading
+{
+  padding-bottom: 1rem;
+}
+section.reviews .reviews__container > .wrapper header > span.underline,
+section.reviews .reviews__container > .wrapper hgroup > span.underline
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 150px;
+
+  border-top: 1px solid #313641;
+}
+section.reviews .reviews__container > .wrapper header
+{
+  margin-bottom: 42px;
+}
+section.reviews .reviews__container > .wrapper p
+{
+  font-size: 14px;
+  font-size: .875rem;
+  line-height: 27px;
+  line-height: 1.6875rem;
+
+  margin-bottom: 42px;
+
+  letter-spacing: .01rem;
+
+  color: #5e6777;
+}
+
+section.reviews .reviews__container .bv-cleanslate .bv-core-container-16 .bv-action-bar button,
+section.reviews .reviews__container .bv-cleanslate .bv-core-container-16 .bv-content-list-container .bv-trustmarkIcon
+{
+  display: none !important;
+}
+
+section.reviews .reviews__container .video-poster
+{
+  height: 400px;
+  margin-top: 90px;
+}
+
+section.reviews .reviews__reviews
+{
+  margin-top: 100px;
+}
+section.reviews .reviews__reviews header,
+section.reviews .reviews__reviews hgroup
+{
+  position: relative;
+
+  margin-bottom: 50px;
+}
+@media (max-width: 769px)
+{
+  section.reviews .reviews__reviews header,
+  section.reviews .reviews__reviews hgroup
+  {
+    margin-bottom: 35px;
+  }
+}
+section.reviews .reviews__reviews header > h3,
+section.reviews .reviews__reviews header > .heading,
+section.reviews .reviews__reviews hgroup > h3,
+section.reviews .reviews__reviews hgroup > .heading
+{
+  padding-bottom: 1rem;
+}
+section.reviews .reviews__reviews header > span.underline,
+section.reviews .reviews__reviews hgroup > span.underline
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 150px;
+
+  border-top: 1px solid #313641;
+}
+section.reviews .reviews__reviews .review__block:not(:last-child)
+{
+  margin-bottom: 52px;
+}
+section.reviews .reviews__reviews .review__block p,
+section.reviews .reviews__reviews .review__block h6.title,
+section.reviews .reviews__reviews .review__block .review__quote
+{
+  margin-bottom: 12px;
+}
+section.reviews .reviews__reviews .review__block h6.title
+{
+  color: #313641;
+}
+section.reviews .reviews__reviews .review__block .review__quote
+{
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-style: italic;
+
+  color: #313641;
+}
+section.reviews .reviews__reviews .review__block a
+{
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 10px;
+  font-size: .625rem;
+
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+
+  color: #313641;
+}
+
+.product__reviews
+{
+  margin-top: 88px;
+  margin-right: 15.27778%;
+  margin-left: 15.27778%;
+}

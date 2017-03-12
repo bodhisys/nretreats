@@ -1,0 +1,183 @@
+
+section.experience > .wrapper
+{
+  background-color: #efefef;
+}
+section.experience > .wrapper > .hero
+{
+  position: relative;
+
+  height: calc(100vh - 100px);
+  max-height: 700px;
+}
+section.experience > .wrapper section.booking-widget
+{
+  top: -90px;
+
+  max-width: 1440px;
+  margin-bottom: -89px;
+}
+@media (max-width: 769px)
+{
+  section.experience > .wrapper section.booking-widget
+  {
+    top: -40px;
+
+    margin: 0 auto;
+  }
+}
+@media (max-width: 769px)
+{
+  section.experience > .wrapper section.booking-widget .booking-widget__above hgroup
+  {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 769px)
+{
+  section.experience > .wrapper section.booking-widget .booking-widget__below .wrapper
+  {
+    display: block;
+  }
+}
+section.experience > .wrapper section.booking-widget .booking-widget__below .subheader
+{
+  display: block;
+}
+section.experience > .wrapper section.booking-widget .disabled.filter__options-wrapper__filter-option
+{
+  opacity: .3;
+}
+section.experience > .wrapper section.booking-widget .invalid
+{
+  border: 1px solid #c0392b !important;
+}
+section.experience > .wrapper section.experience-details
+{
+  padding-top: 85px;
+}
+@media (max-width: 769px)
+{
+  section.experience > .wrapper section.experience-details
+  {
+    padding-top: 0;
+  }
+}
+section.experience > .wrapper article.experience-details__copy
+{
+  padding-bottom: 80px;
+}
+@media (max-width: 769px)
+{
+  section.experience > .wrapper article.experience-details__copy
+  {
+    padding-bottom: 35px;
+  }
+}
+section.experience > .wrapper article.experience-details__copy p
+{
+  color: #313641;
+}
+section.experience > .wrapper article.experience-details__copy > .paragraph,
+section.experience > .wrapper article.experience-details__copy p.intro
+{
+  line-height: 27px;
+
+  width: 51%;
+  margin-left: 24%;
+  padding-bottom: 30px;
+}
+@media (max-width: 769px)
+{
+  section.experience > .wrapper article.experience-details__copy > .paragraph,
+  section.experience > .wrapper article.experience-details__copy p.intro
+  {
+    width: 100%;
+    margin: 0;
+    padding: 0 35px 25px;
+  }
+}
+section.experience > .wrapper .pricing-container
+{
+  margin-bottom: 80px;
+}
+section.experience > .wrapper section.image-gallery__parent
+{
+  margin: 0 0 6.944444444444445% 100px;
+}
+@media (max-width: 769px)
+{
+  section.experience > .wrapper section.image-gallery__parent
+  {
+    margin: 0 0 50px 18px;
+  }
+}
+section.experience > .wrapper section.video-poster
+{
+  margin-bottom: 100px;
+}
+section.experience > .wrapper .youtube__mobile
+{
+  margin-bottom: 35px;
+}
+section.experience > .wrapper .experience__instagram-quote
+{
+  margin-bottom: 100px;
+  padding: 0 10.13889%;
+}
+@media (max-width: 769px)
+{
+  section.experience > .wrapper .experience__instagram-quote
+  {
+    margin-bottom: 35px;
+    padding: 0;
+  }
+}
+section.experience > .wrapper .instagram-row
+{
+  padding-bottom: 100px;
+}
+@media (max-width: 769px)
+{
+  section.experience > .wrapper .instagram-row
+  {
+    padding-bottom: 35px;
+  }
+}
+section.experience > .wrapper section.experience__related-experiences
+{
+  padding: 0 10.13889% 120px;
+}
+section.experience > .wrapper section.experience__related-experiences header,
+section.experience > .wrapper section.experience__related-experiences hgroup
+{
+  position: relative;
+
+  margin-bottom: 50px;
+}
+@media (max-width: 769px)
+{
+  section.experience > .wrapper section.experience__related-experiences header,
+  section.experience > .wrapper section.experience__related-experiences hgroup
+  {
+    margin-bottom: 35px;
+  }
+}
+section.experience > .wrapper section.experience__related-experiences header > h3,
+section.experience > .wrapper section.experience__related-experiences header > .heading,
+section.experience > .wrapper section.experience__related-experiences hgroup > h3,
+section.experience > .wrapper section.experience__related-experiences hgroup > .heading
+{
+  padding-bottom: 1rem;
+}
+section.experience > .wrapper section.experience__related-experiences header > span.underline,
+section.experience > .wrapper section.experience__related-experiences hgroup > span.underline
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 150px;
+
+  border-top: 1px solid #313641;
+}

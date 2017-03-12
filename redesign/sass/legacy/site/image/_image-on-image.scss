@@ -1,0 +1,162 @@
+.image-on-image__intro-wrapper
+{
+  position: relative;
+}
+.image-on-image__intro-wrapper .image-on-image__intro-copy
+{
+  position: absolute;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  width: 50%;
+  height: 100%;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.image-on-image__intro-wrapper .image-on-image__intro-copy .inner
+{
+  z-index: 2;
+
+  width: 100%;
+  height: 436px;
+  padding: 44px 75px;
+
+  background-color: #fff;
+  background-color: #fff;
+}
+.image-on-image__intro-wrapper .image-on-image__intro-copy .inner header,
+.image-on-image__intro-wrapper .image-on-image__intro-copy .inner hgroup
+{
+  position: relative;
+
+  margin-bottom: 50px;
+}
+@media (max-width: 769px)
+{
+  .image-on-image__intro-wrapper .image-on-image__intro-copy .inner header,
+  .image-on-image__intro-wrapper .image-on-image__intro-copy .inner hgroup
+  {
+    margin-bottom: 35px;
+  }
+}
+.image-on-image__intro-wrapper .image-on-image__intro-copy .inner header > h3,
+.image-on-image__intro-wrapper .image-on-image__intro-copy .inner header > .heading,
+.image-on-image__intro-wrapper .image-on-image__intro-copy .inner hgroup > h3,
+.image-on-image__intro-wrapper .image-on-image__intro-copy .inner hgroup > .heading
+{
+  padding-bottom: 1rem;
+}
+.image-on-image__intro-wrapper .image-on-image__intro-copy .inner header > span.underline,
+.image-on-image__intro-wrapper .image-on-image__intro-copy .inner hgroup > span.underline
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 150px;
+
+  border-top: 1px solid #313641;
+}
+@media (max-width: 769px)
+{
+  .image-on-image__intro-wrapper .image-on-image__intro-copy .inner
+  {
+    height: 360px;
+  }
+}
+.image-on-image__intro-wrapper .image-on-image__intro-copy .inner.list li
+{
+  margin-bottom: 10px;
+}
+.image-on-image__intro-wrapper .image-on-image__intro-copy .inner.list li.open p.image-on-image__list-copy
+{
+  margin: 6px 0 0 0;
+
+  -webkit-transform: translate(41px, 0);
+  transform: translate(41px, 0);
+}
+@media (max-width: 769px)
+{
+  .image-on-image__intro-wrapper .image-on-image__intro-copy .inner.list li.open p.image-on-image__list-copy
+  {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+.image-on-image__intro-wrapper .image-on-image__intro-copy .inner.list h4
+{
+  font-style: italic;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  cursor: pointer;
+  letter-spacing: -.025rem;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.image-on-image__intro-wrapper .image-on-image__intro-copy .inner.list h4 .long-dash
+{
+  width: 0;
+  margin-right: 0;
+}
+.image-on-image__intro-wrapper .image-on-image__intro-copy .inner.list p.image-on-image__list-copy
+{
+  position: relative;
+
+  overflow: hidden;
+
+  max-height: 0;
+
+  -webkit-transition: margin .4s linear 0s, -webkit-transform .4s 0s linear;
+  transition: margin .4s linear 0s, -webkit-transform .4s 0s linear;
+  transition: transform .4s 0s linear, margin .4s linear 0s;
+  transition: transform .4s 0s linear, margin .4s linear 0s, -webkit-transform .4s 0s linear;
+
+  opacity: 0;
+}
+.image-on-image__intro-wrapper .image-on-image__intro-copy .inner.list p.image-on-image__intro-copy__message
+{
+  margin-top: 30px;
+}
+.image-on-image__intro-wrapper .image-on-image__intro-copy p.intro
+{
+  margin-bottom: 15px;
+}
+.image-on-image__intro-wrapper .image-on-image__intro-copy .image-on-image__intro-copy__cta
+{
+  margin-top: 30px;
+}
+.image-on-image__intro-wrapper .image-on-image__intro-copy .image-on-image__intro-copy__cta .strike:first-child
+{
+  margin-right: 38px;
+}
+.image-on-image__intro-wrapper .image-on-image__intro-copy .image-on-image__intro-copy__cta .strike:last-child
+{
+  margin-right: 38px;
+}
+.image-on-image__intro-wrapper .image-on-image__map
+{
+  z-index: 1;
+
+  width: 72.6%;
+  height: 555px;
+  margin-left: auto;
+}
+.image-on-image__intro-wrapper .image-on-image__map .map-wrapper
+{
+  width: 100%;
+  height: 100%;
+}
+.image-on-image__intro-wrapper .image-on-image__map .map-wrapper .map
+{
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,132 @@
+/*Page: Homepage*/
+body.home-page nav.global-nav
+{
+  top: 45px;
+}
+@media (max-width: 769px)
+{
+  body.home-page nav.global-nav
+  {
+    top: 0;
+  }
+}
+body.home-page nav.global-nav .global-nav__banner
+{
+  display: block;
+}
+body.home-page nav.global-nav .global-nav__banner .icon_carrot-down
+{
+  font-size: 6px;
+  font-size: .375rem;
+}
+
+
+.home-page nav.global-nav > .inner .global-nav__retreat_search
+{
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+
+body.page-user .content
+{
+  padding: 80px 0;
+}
+body.page-user .content .form-item
+{
+  text-align: center;
+}
+body.page-user .content .form-item label
+{
+  margin-bottom: 10px;
+}
+body.page-user .content .form-item input
+{
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 10px;
+  font-size: .625rem;
+  line-height: 16px;
+  line-height: 1rem;
+
+  height: 45px;
+  padding: 0 20px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #313641;
+  border: 1px solid #cfd1d4;
+}
+body.page-user .content input[type='submit']
+{
+  font-family: 'proxima-nova', sans-serif;
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 10px;
+  font-size: .625rem;
+  font-weight: normal;
+  font-style: normal;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  width: 150px;
+  height: 45px;
+  margin: 0 auto;
+
+  cursor: pointer;
+  text-align: center;
+  letter-spacing: .2rem;
+  letter-spacing: .18rem;
+  text-transform: uppercase;
+
+  color: #fff;
+  background-color: #313641;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.page-admin .global-nav__destinations,
+.page-admin .explorer__help-modal-container,
+.page-admin .global-nav,
+.logged-in .global-nav__destinations,
+.logged-in .explorer__help-modal-container,
+.logged-in .global-nav,
+.page-node-edit .global-nav__destinations,
+.page-node-edit .explorer__help-modal-container,
+.page-node-edit .global-nav
+{
+  display: none !important;
+}
+
+.page-admin .page-body,
+.logged-in .page-body,
+.page-node-edit .page-body
+{
+  margin-left: 35px;
+}
+
+.page-admin img,
+.logged-in img,
+.page-node-edit img
+{
+  width: auto;
+}
+
+.page-admin input,
+.logged-in input,
+.page-node-edit input
+{
+  border: 1px solid #cfd1d4;
+}
+
+.page-node-edit .real-estate-header
+{
+  display: none !important;
+}

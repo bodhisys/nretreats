@@ -1,0 +1,65 @@
+.input-row
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  margin-bottom: 10px;
+}
+@media (max-width: 769px)
+{
+  .input-row
+  {
+    flex-direction: column;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+  }
+}
+.input-row input
+{
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 10px;
+  font-size: .625rem;
+
+  width: 50%;
+  height: 45px;
+  padding-left: 20px;
+
+  letter-spacing: .2rem;
+
+  color: #313641;
+}
+@media (max-width: 769px)
+{
+  .input-row input
+  {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+.input-row input:first-child
+{
+  margin-right: 5px;
+}
+@media (max-width: 769px)
+{
+  .input-row input:first-child
+  {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+.input-row input:last-child
+{
+  margin-left: 5px;
+}
+@media (max-width: 769px)
+{
+  .input-row input:last-child
+  {
+    margin-left: 0;
+  }
+}

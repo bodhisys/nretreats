@@ -270,9 +270,10 @@ $destinations_subnav_list = nret_get_destinations();
         <a href="/" class="logo logo-stuck"></a>
 
         <!--Main Desktop Navigation Display Starts-->
-        <div id="openSearchInNav" class="icon icon_search"></div>
+
         <!--		<div class="global-nav__right flex v-center">-->
         <div class="global-nav__right clearfix">
+            <div id="openSearchInNav" class="icon icon_search"></div>
             <!--?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('flex main-menu__link-list')))); ?-->
             <?php
             $menu_main_left_nav = menu_navigation_links('menu-main-left-nav');

@@ -1,0 +1,460 @@
+
+body.mobile section.acquisition .title-field
+{
+  display: none !important;
+}
+
+body.mobile section.acquisition .zip-to-post
+{
+  margin-top: 10px;
+}
+
+body.mobile section.acquisition .acquisition__hero header p.intro
+{
+  margin-bottom: 30px;
+}
+
+body.mobile section.acquisition .acquisition__wrapper
+{
+  margin-top: -35px;
+}
+body.mobile section.acquisition .acquisition__wrapper .wrapper
+{
+  margin-top: 0;
+  padding-top: 0;
+}
+
+body.mobile section.acquisition .acquisition__wrapper .wrapper .acquisition__input-wrapper__name .select-wrapper select,
+body.mobile section.acquisition .acquisition__wrapper .wrapper select
+{
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 10px;
+  font-size: .625rem;
+  line-height: 16px;
+  line-height: 1rem;
+
+  position: absolute;
+
+  visibility: visible;
+
+  width: 100%;
+  height: 45px;
+  padding: 0 20px;
+
+  color: #313641;
+  border: 1px solid #abaeb3;
+}
+
+body.mobile section.acquisition .acquisition__wrapper .wrapper .input-row .state-select-wrapper
+{
+  margin-right: 0;
+}
+body.mobile section.acquisition .acquisition__wrapper .wrapper .input-row .state-select-wrapper select
+{
+  margin-bottom: 10px;
+}
+
+section.acquisition
+{
+  padding-bottom: 100px;
+
+  background-color: #efefef;
+}
+@media (max-width: 769px)
+{
+  section.acquisition
+  {
+    padding-bottom: 0;
+  }
+}
+section.acquisition .small-garamond,
+section.acquisition .custom-check-label
+{
+  font-family: adobe-garamond-pro,sans-serif;
+  font-size: .875rem;
+  font-weight: 400;
+
+  margin: 0;
+
+  letter-spacing: .01rem;
+
+  color: #505866;
+}
+section.acquisition .icon_carrot-down
+{
+  font-size: 6px;
+
+  margin-left: auto;
+  padding-left: 5px;
+}
+section.acquisition .acquisition__hero
+{
+  padding-top: 90px;
+  padding-bottom: 290px;
+
+  background-color: #313641;
+}
+@media (max-width: 769px)
+{
+  section.acquisition .acquisition__hero
+  {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+section.acquisition .acquisition__hero header
+{
+  width: 40%;
+  margin: 0 auto;
+
+  text-align: center;
+}
+@media (max-width: 769px)
+{
+  section.acquisition .acquisition__hero header
+  {
+    width: 100%;
+    padding: 0 10.9375%;
+  }
+}
+section.acquisition .acquisition__hero header h1,
+section.acquisition .acquisition__hero header p
+{
+  color: #abaeb3;
+}
+section.acquisition .acquisition__hero header h1
+{
+  margin-bottom: 10px;
+}
+section.acquisition .acquisition__wrapper
+{
+  width: 78.125%;
+  margin: 0 auto;
+  margin-top: -200px;
+  padding: 50px 7.5%;
+
+  background-color: #fff;
+}
+section.acquisition .acquisition__wrapper .wrapper
+{
+  padding: 60px 10.9375%;
+  padding-bottom: 0;
+
+  background-color: #fff;
+}
+section.acquisition .acquisition__wrapper .wrapper input.address-field
+{
+  margin: 0;
+}
+@media (max-width: 769px)
+{
+  section.acquisition .acquisition__wrapper .wrapper
+  {
+    width: 100%;
+    margin: 60px auto 0;
+    padding: 0;
+    padding-top: 60px;
+  }
+}
+section.acquisition .acquisition__wrapper .wrapper .acquisition__form__section
+{
+  margin-bottom: 20px;
+}
+section.acquisition .acquisition__wrapper .wrapper .acquisition__input-wrapper__name .input-row:first-child
+{
+  width: auto;
+  margin-right: 5px;
+}
+section.acquisition .acquisition__wrapper .wrapper .acquisition__input-wrapper__name .select-wrapper
+{
+  position: relative;
+}
+section.acquisition .acquisition__wrapper .wrapper .acquisition__input-wrapper
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  margin-bottom: 10px;
+
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+section.acquisition .acquisition__wrapper .wrapper .acquisition__input-wrapper header,
+section.acquisition .acquisition__wrapper .wrapper .acquisition__input-wrapper hgroup
+{
+  position: relative;
+
+  margin-bottom: 50px;
+}
+@media (max-width: 769px)
+{
+  section.acquisition .acquisition__wrapper .wrapper .acquisition__input-wrapper header,
+  section.acquisition .acquisition__wrapper .wrapper .acquisition__input-wrapper hgroup
+  {
+    margin-bottom: 35px;
+  }
+}
+section.acquisition .acquisition__wrapper .wrapper .acquisition__input-wrapper header > h3,
+section.acquisition .acquisition__wrapper .wrapper .acquisition__input-wrapper header > .heading,
+section.acquisition .acquisition__wrapper .wrapper .acquisition__input-wrapper hgroup > h3,
+section.acquisition .acquisition__wrapper .wrapper .acquisition__input-wrapper hgroup > .heading
+{
+  padding-bottom: 1rem;
+}
+section.acquisition .acquisition__wrapper .wrapper .acquisition__input-wrapper header > span.underline,
+section.acquisition .acquisition__wrapper .wrapper .acquisition__input-wrapper hgroup > span.underline
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 150px;
+
+  border-top: 1px solid #313641;
+}
+section.acquisition .acquisition__wrapper .wrapper input,
+section.acquisition .acquisition__wrapper .wrapper textarea
+{
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 10px;
+  font-size: .625rem;
+  line-height: 16px;
+  line-height: 1rem;
+
+  border: 1px solid #abaeb3;
+}
+section.acquisition .acquisition__wrapper .wrapper select
+{
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  visibility: visible;
+
+  width: 120%;
+
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+
+  opacity: 0;
+}
+section.acquisition .acquisition__wrapper .wrapper ::-webkit-input-placeholder
+{
+  font-size: 10px;
+  font-size: .625rem;
+  line-height: 16px;
+  line-height: 1rem;
+
+  color: #313641;
+}
+section.acquisition .acquisition__wrapper .wrapper :-moz-placeholder
+{
+  font-size: 10px;
+  font-size: .625rem;
+  line-height: 16px;
+  line-height: 1rem;
+
+  color: #313641;
+}
+section.acquisition .acquisition__wrapper .wrapper ::-moz-placeholder
+{
+  font-size: 10px;
+  font-size: .625rem;
+  line-height: 16px;
+  line-height: 1rem;
+
+  color: #313641;
+}
+section.acquisition .acquisition__wrapper .wrapper :-ms-input-placeholder
+{
+  font-size: 10px;
+  font-size: .625rem;
+  line-height: 16px;
+  line-height: 1rem;
+
+  color: #313641;
+}
+section.acquisition .acquisition__wrapper .wrapper textarea
+{
+  display: block;
+
+  width: 100%;
+  height: 220px;
+  padding: 20px;
+
+  resize: none;
+}
+section.acquisition .acquisition__wrapper .wrapper header
+{
+  width: 100%;
+  margin-bottom: 20px;
+
+  border-bottom: 1px solid #abaeb3;
+}
+section.acquisition .acquisition__wrapper .wrapper header .title
+{
+  font-style: italic;
+
+  margin-bottom: 10px;
+
+  color: #313641;
+}
+section.acquisition .acquisition__wrapper .wrapper .input-row
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  width: 100%;
+  margin-bottom: 10px;
+}
+@media (max-width: 769px)
+{
+  section.acquisition .acquisition__wrapper .wrapper .input-row
+  {
+    flex-direction: column;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+  }
+}
+section.acquisition .acquisition__wrapper .wrapper .input-row .state-select-wrapper
+{
+  position: relative;
+
+  margin-right: 5px;
+}
+section.acquisition .acquisition__wrapper .wrapper .input-row input
+{
+  width: 50%;
+  height: 45px;
+  padding-left: 20px;
+}
+@media (max-width: 769px)
+{
+  section.acquisition .acquisition__wrapper .wrapper .input-row input
+  {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+section.acquisition .acquisition__wrapper .wrapper .input-row input:first-child
+{
+  margin-right: 5px;
+}
+@media (max-width: 769px)
+{
+  section.acquisition .acquisition__wrapper .wrapper .input-row input:first-child
+  {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 769px)
+{
+  section.acquisition .acquisition__wrapper .wrapper .input-row input:last-child
+  {
+    margin-left: 0;
+  }
+}
+section.acquisition .acquisition__wrapper .wrapper .input-row-1 input
+{
+  width: 100%;
+}
+section.acquisition .acquisition__wrapper .wrapper .select-dropdown
+{
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 10px;
+  font-size: .625rem;
+  line-height: 16px;
+  line-height: 1rem;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  height: 45px;
+  padding: 0 20px;
+
+  cursor: pointer;
+  text-transform: uppercase;
+
+  color: #313641;
+  border: 1px solid #abaeb3;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+section.acquisition .acquisition__wrapper .acquisition__property-information .acquisition__form__section
+{
+  flex-direction: column;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+}
+section.acquisition .acquisition__wrapper .acquisition__property-information .acquisition__input-wrapper
+{
+  flex-direction: column;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+}
+section.acquisition .acquisition__wrapper .acquisition__property-information .acquisition__input-wrapper__check
+{
+  padding: 0 10.13889%;
+
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+section.acquisition .acquisition__wrapper .acquisition__property-information .acquisition__input-wrapper__check .input-row
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  width: 100%;
+}
+section.acquisition .acquisition__wrapper .acquisition__property-information .acquisition__input-wrapper__check .input-row .checkbox-wrapper
+{
+  width: 50%;
+}
+@media (max-width: 769px)
+{
+  section.acquisition .acquisition__wrapper .acquisition__property-information .acquisition__input-wrapper__check .input-row .checkbox-wrapper
+  {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  section.acquisition .acquisition__wrapper .acquisition__property-information .acquisition__input-wrapper__check .input-row .checkbox-wrapper input[type=checkbox].custom-check-input + label.custom-check-label
+  {
+    line-height: 15px;
+  }
+}
+
+.acquisition__thankyou
+{
+  display: none;
+
+  margin-top: 40px;
+}
+.acquisition__thankyou p
+{
+  font-size: 26px;
+  font-size: 1.625rem;
+}
+.acquisition__thankyou.show
+{
+  display: block;
+}
+
+#main-acquisition-form-content.hidden
+{
+  display: none;
+}

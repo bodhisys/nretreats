@@ -1,0 +1,111 @@
+body.mobile .image-gallery__navigation
+{
+  display: none;
+}
+
+.image-gallery__navigation
+{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 769px)
+{
+  .image-gallery__navigation
+  {
+    display: none;
+  }
+}
+.image-gallery__navigation .image-gallery__navigation-left,
+.image-gallery__navigation .image-gallery__navigation-right
+{
+  width: 50%;
+  height: 100%;
+}
+.image-gallery__navigation .image-gallery__navigation-left
+{
+  cursor: w-resize;
+}
+.image-gallery__navigation .image-gallery__navigation-right
+{
+  cursor: e-resize;
+}
+
+.image-gallery__parent
+{
+  position: relative;
+}
+.image-gallery__parent .image-gallery__photographer
+{
+  position: absolute;
+  top: 30px;
+  left: -25px;
+
+  width: 400px;
+
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transform-origin: left top 0;
+  transform-origin: left top 0;
+}
+@media (max-width: 769px)
+{
+  .image-gallery__parent .image-gallery__photographer
+  {
+    position: static;
+
+    width: auto;
+    margin-bottom: 6px;
+
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.image-gallery__parent .image-gallery__photographer p
+{
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 10px;
+  font-size: .625rem;
+
+  letter-spacing: .18rem;
+
+  color: #cfd1d4;
+}
+@media (max-width: 769px)
+{
+  .image-gallery__parent .image-gallery__photographer p
+  {
+    text-transform: uppercase;
+  }
+}
+.image-gallery__parent .image-gallery-image-wrapper
+{
+  max-width: 850px;
+  padding-right: 1px;
+}
+.image-gallery__parent .image-gallery-image-wrapper img
+{
+  width: auto;
+  max-height: 550px;
+}
+@media (max-width: 769px)
+{
+  .image-gallery__parent .image-gallery-image-wrapper
+  {
+    width: 285px;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
+{
+  .image-gallery__parent .image-gallery-image-wrapper
+  {
+    width: 700px;
+  }
+}

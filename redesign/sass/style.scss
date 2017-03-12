@@ -1,0 +1,46 @@
+@import "legacy/vendor/jquery-ui",
+        "legacy/vendor/jquery-ui-datepicker",
+        "legacy/vendor/calender",
+        "legacy/vendor/slick-slider",
+        "legacy/vendor/animate";
+
+@import "legacy/normalize",
+        "legacy/global",
+        "legacy/header",
+        "legacy/footer",
+        "legacy/helpers",
+        "legacy/error";
+
+@import "legacy/components/form",
+"legacy/components/buttons",
+"legacy/components/web-fonts",
+"legacy/components/numbered-list",
+"legacy/components/video",
+"legacy/components/autocomplete";
+
+@import "legacy/site/navbar",
+"legacy/site/row",
+"legacy/site/blocks",
+"legacy/site/images",
+"legacy/site/widget",
+"legacy/site/details";
+
+@import "legacy/site/package-rates-container",
+"legacy/site/quickview",
+"legacy/site/newsletter",
+"legacy/site/explorer",
+"legacy/site/tripadvisor",
+"legacy/site/loader",
+"legacy/site/map",
+"legacy/site/map-card",
+"legacy/site/global-message",
+"legacy/site/real-estate",
+"legacy/site/scroll-drag",
+"legacy/site/arrow-up-destination-list",
+"legacy/site/home-retreat",
+"legacy/site/section",
+"legacy/site/listings",
+"legacy/site/home-retreat",
+"legacy/site/retreat-search",
+"legacy/site/page",
+"legacy/site/ie11";

@@ -1,0 +1,124 @@
+.uppercase
+{
+  text-transform: uppercase;
+}
+
+.italic
+{
+  font-style: italic;
+}
+
+.eyebrow
+{
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 10px;
+  font-size: .625rem;
+  font-weight: 700;
+}
+
+.blue-bar
+{
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 10px;
+  font-size: .625rem;
+
+  position: absolute;
+
+  padding: 12px 6%;
+
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+
+  color: #fff;
+  background-color: #313641;
+}
+
+.newstyle
+{
+  color: red;
+}
+
+.subheader
+{
+  font-family: 'adobe-garamond-pro',sans-serif;
+  font-size: 15px;
+  font-size: .9375rem;
+  font-weight: 400;
+  font-style: italic;
+
+  color: #3d4451;
+  text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+.long-dash
+{
+  position: relative;
+
+  display: inline-block;
+
+  width: 20px;
+  padding-bottom: 3px;
+
+  border-top: 1px solid #abaeb3;
+}
+
+.flex
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.v-center
+{
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+}
+
+.h-center
+{
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.hide
+{
+  display: none;
+}
+
+.funky-bg
+{
+  background: url('../images/funky.svg') center center repeat;
+  background-color: #f3f3f3;
+  background-size: contain;
+}
+
+span.fade
+{
+  display: none;
+}
+
+#skip-link
+{
+  display: none;
+}
+
+.css_triangle-up
+{
+  width: 0;
+  height: 0;
+
+  border-right: 10px solid transparent;
+  border-bottom: 11px solid white;
+  border-left: 11px solid transparent;
+}
+
+.line-through
+{
+  text-decoration: line-through;
+}

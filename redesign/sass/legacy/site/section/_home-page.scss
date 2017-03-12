@@ -1,0 +1,810 @@
+
+@media (max-width: 769px)
+{
+  section.home-page
+  {
+    margin-top: 0;
+  }
+}
+
+section.home-page .home__hero-wrapper
+{
+  position: fixed;
+  z-index: -1;
+  top: 100px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__hero-wrapper
+  {
+    top: 40px;
+  }
+}
+
+section.home-page .home__hero
+{
+  position: relative;
+
+  height: calc(100vh - 40px);
+  max-height: 740px;
+
+  background-repeat: no-repeat;
+  background-position: -10000px -10000px;
+  background-size: 1px 1px;
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__hero
+  {
+    background-position: center center;
+    background-size: cover;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)
+{
+  section.home-page .home__hero
+  {
+    max-height: none;
+  }
+}
+section.home-page .home__hero .home__search__check-in-wrapper,
+section.home-page .home__hero .home__search__check-out-wrapper
+{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+
+  display: none;
+
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+section.home-page .home__hero .home__search__check-in-wrapper.show,
+section.home-page .home__hero .home__search__check-out-wrapper.show
+{
+  display: block;
+
+  -webkit-animation: fadeInFromNone .5s ease-in-out;
+  animation: fadeInFromNone .5s ease-in-out;
+}
+section.home-page .home__hero .home__search__check-in-wrapper.show-now,
+section.home-page .home__hero .home__search__check-out-wrapper.show-now
+{
+  display: block;
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__hero .home__search__check-in-wrapper,
+  section.home-page .home__hero .home__search__check-out-wrapper
+  {
+    display: none;
+  }
+}
+section.home-page .home__hero .home__search__check-in-wrapper .home__search__calendar,
+section.home-page .home__hero .home__search__check-out-wrapper .home__search__calendar
+{
+  position: relative;
+}
+section.home-page .home__hero .home__search__check-in-wrapper .home__search__calendar .cal_label,
+section.home-page .home__hero .home__search__check-out-wrapper .home__search__calendar .cal_label
+{
+  position: absolute;
+  top: -40px;
+  right: 0;
+  left: 0;
+
+  text-align: center;
+
+  color: #fff;
+}
+section.home-page .home__hero .home__hero__mobile-header
+{
+  display: none;
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__hero .home__hero__mobile-header
+  {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 35px;
+
+    text-align: center;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  section.home-page .home__hero .home__hero__mobile-header h1,
+  section.home-page .home__hero .home__hero__mobile-header p
+  {
+    color: #fff;
+  }
+}
+section.home-page .home__hero section.start-exploring
+{
+  width: 100%;
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__hero section.start-exploring
+  {
+    display: none !important;
+  }
+}
+section.home-page .home__hero section.start-exploring .toggle
+{
+  margin-bottom: 30px;
+}
+section.home-page .home__hero section.start-exploring .toggle p,
+section.home-page .home__hero section.start-exploring .toggle span:not(.underline)
+{
+  font-weight: 100;
+
+  letter-spacing: .09rem;
+  text-transform: uppercase;
+
+  color: #fff;
+}
+section.home-page .home__hero section.start-exploring .toggle span:not(.underline)
+{
+  padding: 0 5px;
+}
+section.home-page .home__hero section.start-exploring .toggle p
+{
+  cursor: pointer;
+}
+section.home-page .home__hero section.start-exploring .toggle .underline
+{
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+
+  width: 100%;
+
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+
+  opacity: 0;
+  border-top: 1px solid #fff;
+}
+section.home-page .home__hero section.start-exploring .toggle .active
+{
+  position: relative;
+}
+section.home-page .home__hero section.start-exploring .toggle .active .underline
+{
+  opacity: 1;
+}
+section.home-page .home__hero section.start-exploring .btn
+{
+  margin: 0 auto;
+  padding-left: 4px;
+
+  color: #fff;
+}
+section.home-page .home__hero section.start-exploring .btn.show
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.home-page .global-nav__destinations__destination-list-wrapper
+{
+  width: 100%;
+  padding-left: 55px;
+}
+section.home-page .global-nav__destinations__destination-list-wrapper > .wrapper
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.home-page .arrow-up-destination-list
+{
+  left: 32%;
+}
+
+section.home-page .global-nav__destination-list
+{
+  display: block;
+
+  width: 33%;
+
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+}
+section.home-page .global-nav__destination-list.current
+{
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+section.home-page .global-nav__destination-list ul
+{
+  flex-direction: column;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+}
+section.home-page .global-nav__destination-list ul label
+{
+  white-space: nowrap;
+}
+
+section.home-page .global-nav__destinations
+{
+  display: none;
+
+  max-height: 5000px;
+  margin: 0 auto;
+}
+section.home-page .global-nav__destinations .global-nav__destinations__region ul
+{
+  height: 100%;
+}
+section.home-page .global-nav__destinations .global-nav__destinations__region ul li
+{
+  width: 100%;
+  margin-bottom: 10px;
+}
+section.home-page .global-nav__destinations.show
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-animation: fadeInFromNone .5s ease-in-out;
+  animation: fadeInFromNone .5s ease-in-out;
+}
+
+section.home-page .home__search__dropdown
+{
+  right: 0;
+
+  width: 88%;
+  margin: 0 auto;
+}
+section.home-page .home__search__dropdown.home__search__check-in-wrapper,
+section.home-page .home__search__dropdown.home__search__check-out-wrapper
+{
+  width: 56%;
+}
+
+section.home-page .home__choices__list-wrapper.show
+{
+  display: block;
+
+  opacity: 1;
+}
+
+section.home-page .home__choices__list-wrapper
+{
+  display: none;
+
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+
+  opacity: 0;
+}
+section.home-page .home__choices__list-wrapper ul.list
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+section.home-page .home__choices__list-wrapper ul.list li
+{
+  width: 50%;
+
+  text-align: left;
+}
+section.home-page .home__choices__list-wrapper .strike
+{
+  font-size: 22px;
+  font-size: 1.375rem;
+  font-style: italic;
+  line-height: 40px;
+
+  letter-spacing: -.025rem;
+
+  color: #fff;
+}
+section.home-page .home__choices__list-wrapper .strike .strike-through
+{
+  top: 14px;
+}
+
+section.home-page .home__featured-destinations .wrapper > header,
+section.home-page .home__news .wrapper > header,
+section.home-page .home__featured-retreat .wrapper > header
+{
+  margin-bottom: 72px;
+
+  text-align: center;
+}
+
+@media (max-width: 769px)
+{
+  section.home-page .hero-el__below
+  {
+    margin-top: 100vh;
+  }
+}
+
+section.home-page .home__featured-destinations
+{
+  position: relative;
+
+  padding: 146px 10.13889% 50px;
+}
+@media only screen and (min-width: 600px) and (max-width: 1024px)
+{
+  section.home-page .home__featured-destinations
+  {
+    padding: 100px 6.12245vw 50px;
+  }
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__featured-destinations
+  {
+    padding: 50px 2px 30px;
+  }
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__featured-destinations .destination-listing__block
+  {
+    flex-direction: column;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+  }
+}
+section.home-page .home__featured-destinations .destination-listing__block .destination-listing__copy
+{
+  width: auto;
+  max-width: 40%;
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__featured-destinations .destination-listing__block .destination-listing__copy
+  {
+    width: 100%;
+    max-width: none;
+  }
+}
+section.home-page .home__featured-destinations .btn
+{
+  margin: 50px auto 0;
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__featured-destinations .btn
+  {
+    margin: 25px auto;
+  }
+}
+
+section.home-page article.home__news
+{
+  padding: 100px 15.27778% 50px;
+}
+@media only screen and (min-width: 600px) and (max-width: 1024px)
+{
+  section.home-page article.home__news
+  {
+    padding: 100px 10.20408vw 50px;
+  }
+}
+@media (max-width: 769px)
+{
+  section.home-page article.home__news
+  {
+    padding: 50px 10px;
+  }
+  section.home-page article.home__news hgroup
+  {
+    margin-bottom: 16px;
+  }
+  section.home-page article.home__news hgroup > h3
+  {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 769px)
+{
+  section.home-page article.home__news header
+  {
+    margin-bottom: 70px;
+    margin-left: 10.9375%;
+  }
+}
+section.home-page article.home__news .image-overlay-block
+{
+  margin-bottom: 130px;
+}
+@media (max-width: 769px)
+{
+  section.home-page article.home__news .image-overlay-block
+  {
+    margin-bottom: 45px;
+  }
+}
+section.home-page article.home__news .news-row
+{
+  margin-bottom: 44px;
+}
+@media (max-width: 769px)
+{
+  section.home-page article.home__news .news-row time
+  {
+    top: -30px;
+  }
+}
+section.home-page article.home__news .btn
+{
+  margin: 0 auto;
+}
+
+section.home-page article.home__list-home
+{
+  flex-direction: column;
+
+  height: 310px;
+
+  text-align: center;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+}
+@media (max-width: 769px)
+{
+  section.home-page article.home__list-home
+  {
+    height: auto;
+    padding: 50px 15px;
+  }
+}
+section.home-page article.home__list-home hgroup
+{
+  width: 38%;
+  margin-bottom: 22px;
+}
+@media (max-width: 769px)
+{
+  section.home-page article.home__list-home hgroup
+  {
+    width: 100%;
+  }
+}
+section.home-page article.home__list-home hgroup h5.title
+{
+  margin-bottom: 18px;
+}
+section.home-page article.home__list-home p
+{
+  width: 40%;
+  margin: 0 auto;
+  margin-bottom: 24px;
+
+  text-align: center;
+}
+@media (max-width: 769px)
+{
+  section.home-page article.home__list-home p
+  {
+    width: 100%;
+  }
+}
+
+section.home-page .home__featured-retreat
+{
+  padding: 100px 10.13889% 0;
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__featured-retreat
+  {
+    padding: 46px 33px 0;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1024px)
+{
+  section.home-page .home__featured-retreat
+  {
+    padding: 100px 6.12245vw 0;
+  }
+}
+section.home-page .home__featured-retreat > .wrapper > header
+{
+  padding-bottom: 60px;
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__featured-retreat > .wrapper > header
+  {
+    margin-bottom: 35px;
+    padding-bottom: 0;
+  }
+}
+section.home-page .home__featured-retreat > .wrapper .retreat-listing__block
+{
+  margin-bottom: 170px;
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__featured-retreat > .wrapper .retreat-listing__block
+  {
+    margin-bottom: 50px;
+  }
+}
+section.home-page .home__featured-retreat .home__featured-retreat__container
+{
+  position: relative;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  margin-bottom: 86px;
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__featured-retreat .home__featured-retreat__container
+  {
+    display: block;
+
+    margin-bottom: 0;
+  }
+}
+section.home-page .home__featured-retreat .home__featured-retreat__container .retreat-listing__block-small
+{
+  z-index: 2;
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__featured-retreat .home__featured-retreat__container .retreat-listing__block-small
+  {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+section.home-page .home__featured-retreat .home__featured-retreat__container .retreat-listing__block-small .subheader
+{
+  margin-bottom: 10px;
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__featured-retreat .home__featured-retreat__container .retreat-listing__block-small:nth-child(3),
+  section.home-page .home__featured-retreat .home__featured-retreat__container .retreat-listing__block-small:nth-child(4)
+  {
+    display: none;
+  }
+}
+section.home-page .home__featured-retreat .funky-bg
+{
+  position: absolute;
+  z-index: 1;
+  top: -66px;
+  right: 0;
+  bottom: -12px;
+  left: 0;
+
+  width: 65%;
+  margin: 0 auto;
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__featured-retreat .funky-bg
+  {
+    display: none;
+  }
+}
+section.home-page .home__featured-retreat .retreat-listing__block__image-small,
+section.home-page .home__featured-retreat .retreat-listing__block__image-large,
+section.home-page .home__featured-retreat .retreat-listing__block__copy
+{
+  z-index: 2;
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__featured-retreat .retreat-listing__block__image-small .btn-wrapper .btn,
+  section.home-page .home__featured-retreat .retreat-listing__block__image-large .btn-wrapper .btn,
+  section.home-page .home__featured-retreat .retreat-listing__block__copy .btn-wrapper .btn
+  {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__featured-retreat .retreat-listing__block__image-large
+  {
+    top: -100px;
+
+    margin-bottom: -99px;
+    padding-top: 55.64%;
+  }
+}
+
+section.home-page .home__offers
+{
+  padding: 100px 10.13889% 50px;
+}
+section.home-page .home__offers header
+{
+  margin-bottom: 72px;
+
+  text-align: center;
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__offers
+  {
+    padding: 50px 0 35px;
+  }
+}
+section.home-page .home__offers .offers-row
+{
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__offers .offers-row
+  {
+    flex-direction: column;
+
+    width: 100%;
+    margin-bottom: 75px;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+  }
+}
+section.home-page .home__offers .offers-row .offers-block
+{
+  width: auto;
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__offers .offers-row .offers-block
+  {
+    width: 78.125%;
+    margin-bottom: 0;
+  }
+}
+section.home-page .home__offers .offers-row .offers-block hgroup
+{
+  width: 85%;
+  margin-bottom: 0;
+}
+section.home-page .home__offers .btn
+{
+  margin: 0 auto;
+}
+
+section.home-page .video-toggle
+{
+  width: 85%;
+  margin: 0 auto 220px;
+
+  text-align: center;
+
+  color: #fff;
+}
+section.home-page .video-toggle .selected
+{
+  font-weight: 700;
+}
+@media (max-width: 769px)
+{
+  section.home-page .video-toggle
+  {
+    display: none;
+  }
+}
+section.home-page .video-toggle h1
+{
+  font-weight: 100;
+
+  letter-spacing: .15rem;
+  text-transform: uppercase;
+
+  color: inherit;
+}
+section.home-page .video-toggle h1:nth-child(2)
+{
+  margin: 0 10px;
+}
+section.home-page .video-toggle p
+{
+  font-weight: 100;
+
+  color: #fff;
+}
+
+section.home-page .home__hero__mobile-cta
+{
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  left: 0;
+
+  display: none;
+
+  width: 100%;
+  padding: 0 35px;
+
+  color: #fff;
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__hero__mobile-cta
+  {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+section.home-page .home__hero__mobile-cta h1
+{
+  font-weight: 100;
+
+  letter-spacing: .15rem;
+  text-transform: uppercase;
+
+  color: inherit;
+}
+section.home-page .home__hero__mobile-cta h1:nth-child(2)
+{
+  margin: 0 10px;
+}
+section.home-page .home__hero__mobile-cta .btn
+{
+  width: 100%;
+}
+@media (max-width: 769px)
+{
+  section.home-page .home__hero__mobile-cta .btn
+  {
+    background-color: rgba(255, 255, 255, .45);
+  }
+}

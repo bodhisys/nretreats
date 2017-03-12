@@ -1,0 +1,31 @@
+.side-arrow
+{
+  display: inline-block;
+
+  width: 18px;
+  height: 10px;
+  margin-left: 5px;
+
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition:         transform .2s;
+  transition:         transform .2s, -webkit-transform .2s;
+  vertical-align: middle;
+
+  background: url(../images/cta-arrow.svg) center center no-repeat;
+  background-size: contain;
+}
+.side-arrow.side-arrow-white
+{
+  width: 14px;
+  height: 10px;
+
+  background: url('../images/arrow_white.svg') center center no-repeat;
+}
+
+a:hover > .side-arrow,
+button:hover > .side-arrow
+{
+  -webkit-transform: translateX(5px);
+  transform: translateX(5px);
+}

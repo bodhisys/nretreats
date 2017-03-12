@@ -1,0 +1,79 @@
+.numbered-list
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.numbered-list .numbered-item
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  width: 50%;
+  margin-bottom: 22px;
+  padding-right: 10px;
+
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.numbered-list .numbered-item .numbered-item__number
+{
+  position: relative;
+
+  margin-right: 35px;
+}
+.numbered-list .numbered-item .numbered-item__number p
+{
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 1;
+}
+.numbered-list .numbered-item .numbered-item__number span.strike
+{
+  position: absolute;
+  top: calc(50% - 1px);
+  right: -5px;
+  left: -5px;
+
+  border-top: 1px solid #cfd1d4;
+}
+.numbered-list .numbered-item .numbered-item__information
+{
+  padding-top: 6px;
+}
+.numbered-list .numbered-item .numbered-item__information h6.title
+{
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+.numbered-list .numbered-item .numbered-item__information h6.title a
+{
+  font-family: 'proxima-nova', sans-serif;
+  font-size: .625rem;
+  font-weight: 700;
+
+  display: block;
+
+  letter-spacing: .2rem;
+
+  color: #313641;
+}
+.numbered-list .numbered-item .numbered-item__information p,
+.numbered-list .numbered-item .numbered-item__information p a
+{
+  font-weight: normal;
+  font-style: italic;
+  line-height: 20px;
+
+  display: block;
+
+  letter-spacing: .025rem;
+
+  color: #5e6777;
+}

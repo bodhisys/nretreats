@@ -1,0 +1,235 @@
+.global-nav__destinations
+{
+  position: absolute;
+  top: 100px;
+  right: 0;
+  left: 0;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+
+  width: 100%;
+  max-height: 0;
+
+  -webkit-transition: max-height .4s ease-in-out;
+  transition: max-height .4s ease-in-out;
+
+  background-color: #fff;
+}
+@media (max-width: 769px)
+{
+  .global-nav__destinations
+  {
+    display: none;
+  }
+}
+.global-nav__destinations.show
+{
+  max-height: 1500px;
+
+  border-bottom: 1px solid #e3e3e3;
+}
+.global-nav__destinations__region
+{
+  position: relative;
+
+  width: 20%;
+  height: 100%;
+
+  background-color: #e2e2e4;
+}
+.global-nav__destinations__region a
+{
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 10px;
+  font-size: .625rem;
+  font-weight: 400;
+  font-style: normal;
+
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+}
+.global-nav__destinations__region ul
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+
+  height: calc(100% - 45px);
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.global-nav__destinations__region ul li
+{
+  margin-bottom: 26px;
+
+  text-align: center;
+}
+.global-nav__destinations__region ul li:last-child
+{
+  margin-bottom: 0;
+}
+.global-nav__destinations__region ul li .active
+{
+  color: inherit;
+  border-bottom: 1px solid #313641;
+}
+.global-nav__destinations__region .global-nav__region-all
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  height: 45px;
+
+  cursor: pointer;
+  -webkit-transition: background-color .5s ease;
+  transition: background-color .5s ease;
+  text-align: center;
+
+  background-color: #313641;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.global-nav__destinations__region .global-nav__region-all a
+{
+  width: 100%;
+  height: 100%;
+  padding-top: 17px;
+
+  -webkit-transition: color .5s ease;
+  transition: color .5s ease;
+
+  color: #fff;
+  color: #fff;
+}
+.global-nav__destinations__region .global-nav__region-all:hover
+{
+  background-color: #5e6777;
+}
+.global-nav__destinations__region .global-nav__region-all:hover a
+{
+  color: #fff;
+}
+.global-nav__destinations__destination-list-wrapper
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  width: 80%;
+  padding-top: 35px;
+  padding-bottom: 20px;
+  padding-left: 8.5%;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.global-nav__destinations__destination-list-wrapper > .wrapper
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  width: 100%;
+}
+.global-nav__destinations__destination-list-wrapper > .wrapper .global-nav__destination-list
+{
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+}
+.global-nav__destinations__destination-list-wrapper > .wrapper .global-nav__destination-list.current
+{
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+.global-nav__destination-list
+{
+  z-index: 350;
+
+  width: 33.33%;
+}
+.global-nav__destination-list > header
+{
+  margin-bottom: 26px;
+}
+.global-nav__destination-list > header span.underline
+{
+  display: block;
+
+  width: 140px;
+  padding-top: 15px;
+
+  border-bottom: 1px solid #abaeb3;
+}
+.global-nav__destination-list ul
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+}
+.global-nav__destination-list ul li
+{
+  margin-bottom: 10px;
+
+  white-space: nowrap;
+}
+.global-nav__destination-list ul .destination-list-link
+{
+  margin-bottom: 0;
+}
+.global-nav__destination-list .custom-check-label
+{
+  font-size: 15px;
+  font-size: .9375rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 27px;
+
+  letter-spacing: -.01rem;
+
+  color: #3d4451;
+}
+.global-nav__destination-list a.strike
+{
+  font-size: 15px;
+  font-size: .9375rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 27px;
+  line-height: 1.6875rem;
+
+  letter-spacing: .01rem;
+
+  color: #313641;
+}
+.global-nav__destination-list a.strike span.strike-through
+{
+  top: 12px;
+}

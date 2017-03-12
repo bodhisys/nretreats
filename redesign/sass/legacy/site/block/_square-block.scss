@@ -1,0 +1,106 @@
+.square-row
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  width: 100%;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.square
+{
+  position: relative;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  width: 50%;
+
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.square .copy-block
+{
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.square .copy-block .inner
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+
+  width: 75%;
+  height: 200px;
+  margin: 0 auto;
+
+  text-align: center;
+
+  background-color: #fff;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+}
+
+.square .copy-block .inner h4
+{
+  font-size: 18px;
+  font-size: 1.125rem;
+
+  letter-spacing: .055rem;
+  text-transform: uppercase;
+
+  color: #313641;
+}
+.square .copy-block .inner .subheader
+{
+  font-size: 15px;
+  font-size: .9375rem;
+  font-style: italic;
+
+  margin-bottom: 15px;
+
+  letter-spacing: .15rem;
+}
+.square .copy-block .inner p.description
+{
+  width: 72%;
+  margin: 0 auto;
+}
+.square:nth-child(odd)
+{
+  padding-right: 1px;
+}
+.square:nth-child(even)
+{
+  padding-left: 1px;
+}
+
+

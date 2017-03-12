@@ -1,0 +1,78 @@
+section.content-row__overflow-up .content-row__wrapper
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+section.content-row__overflow-up .content-row__copy
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+
+  width: 50%;
+  height: 420px;
+  padding: 0 5.5%;
+
+  background-color: #fff;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+section.content-row__overflow-up .content-row__copy header,
+section.content-row__overflow-up .content-row__copy hgroup
+{
+  position: relative;
+
+  margin-bottom: 50px;
+}
+section.content-row__overflow-up .content-row__copy header > h3,
+section.content-row__overflow-up .content-row__copy header > .heading,
+section.content-row__overflow-up .content-row__copy hgroup > h3,
+section.content-row__overflow-up .content-row__copy hgroup > .heading
+{
+  padding-bottom: 1rem;
+}
+section.content-row__overflow-up .content-row__copy header > span.underline,
+section.content-row__overflow-up .content-row__copy hgroup > span.underline
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 150px;
+
+  border-top: 1px solid #313641;
+}
+section.content-row__overflow-up .content-row__copy ul
+{
+  margin-top: 24px;
+
+  list-style: normal;
+  list-style-position: inside;
+  list-style-type: disc;
+}
+section.content-row__overflow-up .content-row__copy ul li
+{
+  font-size: 15px;
+  font-size: .9375rem;
+  line-height: 26px;
+
+  color: #313641;
+}
+section.content-row__overflow-up .content-row__image
+{
+  width: 50%;
+  height: 320px;
+}
+
+

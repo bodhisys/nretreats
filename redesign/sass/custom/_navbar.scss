@@ -1,9 +1,23 @@
+
 // Navbar
 .logo-text img {
   width: auto;
 }
 nav.global-nav {
   & > .inner {
+    // 100% = [(3 + 32) + (2 + 26 + 2) + 35]%
+    .icon_search { float: left; width: 3%; }
+    .navbar-left { float: left; width: 32%; }
+    .navbar-brand { width: 26%; padding: 0 2%; }
+    .navbar-right { float: right; width: 35%; }
+
+    // Styles
+    .icon_search {
+      font-size: 16px;
+      margin-top: 2px;
+      margin-left: 0;
+      margin-right: 10px;
+    }
     .navbar-left, .navbar-right {
       li {
         font-size: 15px;
@@ -34,20 +48,10 @@ nav.global-nav {
         float: left;
       }
     }
-    .navbar-left {
-      float: left;
-      width: 35%;
-    }
-    .navbar-right {
-      float: right;
-      width: 35%;
-    }
     .navbar-brand {
       position: absolute;
       margin: 0 auto;
       top: 30px;
-      width: 25%;
-      padding: 0 2.5%;
       text-align: center;
     }
   }
@@ -63,31 +67,6 @@ nav.global-nav {
   }
 }
 
-@media screen and (max-width: 769px) {
-  nav.global-nav > .inner {
-    .navbar-left, .navbar-right {
-      display: block;
-      padding: 47.5px 0 0 35px;
-      #openSearch, li:after {
-        display: none;
-      }
-      li{ padding: 0 0 10px 0; }
-    }
-  }
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait){
-  nav.global-nav > .inner {
-    .navbar-left, .navbar-right {
-      li {
-        a {
-          font-size: 26px;
-          font-size: 1.625rem;
-        }
-      }
-    }
-  }
-}
 
 section.booking-widget.stuck nav.booking-widget__global-nav-stuck .inner {
   .navbar-left, .navbar-right {
@@ -188,8 +167,42 @@ nav.global-nav {
         background: #312f3c;
       }
     }
+    .global-nav__search-wrapper {
+      left: 0;
+    }
   }
 }
+
+// Responsive Navigation Styles
+/*Mobile Only*/
+@media screen and (max-width: 769px) {
+  nav.global-nav > .inner {
+    .navbar-left, .navbar-right {
+      display: block;
+      padding: 47.5px 0 0 35px;
+      #openSearch, li:after {
+        display: none;
+      }
+      li{ padding: 0 0 10px 0; }
+    }
+  }
+}
+
+/*Potrait Tablet Only*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait){
+  nav.global-nav > .inner {
+    .navbar-left, .navbar-right {
+      li {
+        a {
+          font-size: 26px;
+          font-size: 1.625rem;
+        }
+      }
+    }
+  }
+}
+
+/*Mobile and Tablet*/
 @media (max-width: 1280px){
   nav.global-nav {
     & > .inner {
@@ -205,11 +218,13 @@ nav.global-nav {
   }
 }
 
+/*Desktop Only*/
 @media (min-width: 1281px){
   nav.global-nav {
     & > .inner {
       .mbl-btn-nav {display: none; }
       .global-nav__right { padding-top: 40px; }
+
     }
   }
 }

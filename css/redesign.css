@@ -104,6 +104,28 @@
 .logo-text img {
   width: auto; }
 
+nav.global-nav > .inner .icon_search {
+  float: left;
+  width: 3%; }
+
+nav.global-nav > .inner .navbar-left {
+  float: left;
+  width: 32%; }
+
+nav.global-nav > .inner .navbar-brand {
+  width: 26%;
+  padding: 0 2%; }
+
+nav.global-nav > .inner .navbar-right {
+  float: right;
+  width: 35%; }
+
+nav.global-nav > .inner .icon_search {
+  font-size: 16px;
+  margin-top: 2px;
+  margin-left: 0;
+  margin-right: 10px; }
+
 nav.global-nav > .inner .navbar-left li, nav.global-nav > .inner .navbar-right li {
   font-size: 15px;
   font-size: .9375rem;
@@ -127,40 +149,16 @@ nav.global-nav > .inner .navbar-left li, nav.global-nav > .inner .navbar-right l
   nav.global-nav > .inner .navbar-left li:hover:after, nav.global-nav > .inner .navbar-left li .active:after, nav.global-nav > .inner .navbar-right li:hover:after, nav.global-nav > .inner .navbar-right li .active:after {
     width: 100%; }
 
-nav.global-nav > .inner .navbar-left {
-  float: left;
-  width: 35%; }
-
-nav.global-nav > .inner .navbar-right {
-  float: right;
-  width: 35%; }
-
 nav.global-nav > .inner .navbar-brand {
   position: absolute;
   margin: 0 auto;
   top: 30px;
-  width: 25%;
-  padding: 0 2.5%;
   text-align: center; }
 
 nav.global-nav.stuck .inner .navbar-left li, nav.global-nav.stuck .inner .navbar-right li {
   color: #fff; }
   nav.global-nav.stuck .inner .navbar-left li a.active, nav.global-nav.stuck .inner .navbar-right li a.active {
     border-bottom: 1px solid #fff; }
-
-@media screen and (max-width: 769px) {
-  nav.global-nav > .inner .navbar-left, nav.global-nav > .inner .navbar-right {
-    display: block;
-    padding: 47.5px 0 0 35px; }
-    nav.global-nav > .inner .navbar-left #openSearch, nav.global-nav > .inner .navbar-left li:after, nav.global-nav > .inner .navbar-right #openSearch, nav.global-nav > .inner .navbar-right li:after {
-      display: none; }
-    nav.global-nav > .inner .navbar-left li, nav.global-nav > .inner .navbar-right li {
-      padding: 0 0 10px 0; } }
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  nav.global-nav > .inner .navbar-left li a, nav.global-nav > .inner .navbar-right li a {
-    font-size: 26px;
-    font-size: 1.625rem; } }
 
 section.booking-widget.stuck nav.booking-widget__global-nav-stuck .inner .navbar-left li, section.booking-widget.stuck nav.booking-widget__global-nav-stuck .inner .navbar-right li {
   color: #fff; }
@@ -236,6 +234,26 @@ nav.global-nav > .inner .mbl-btn-nav {
     margin: 3px auto;
     background: #312f3c; }
 
+nav.global-nav > .inner .global-nav__search-wrapper {
+  left: 0; }
+
+/*Mobile Only*/
+@media screen and (max-width: 769px) {
+  nav.global-nav > .inner .navbar-left, nav.global-nav > .inner .navbar-right {
+    display: block;
+    padding: 47.5px 0 0 35px; }
+    nav.global-nav > .inner .navbar-left #openSearch, nav.global-nav > .inner .navbar-left li:after, nav.global-nav > .inner .navbar-right #openSearch, nav.global-nav > .inner .navbar-right li:after {
+      display: none; }
+    nav.global-nav > .inner .navbar-left li, nav.global-nav > .inner .navbar-right li {
+      padding: 0 0 10px 0; } }
+
+/*Potrait Tablet Only*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  nav.global-nav > .inner .navbar-left li a, nav.global-nav > .inner .navbar-right li a {
+    font-size: 26px;
+    font-size: 1.625rem; } }
+
+/*Mobile and Tablet*/
 @media (max-width: 1280px) {
   nav.global-nav > .inner .navbar-left li, nav.global-nav > .inner .navbar-right li {
     display: none; }
@@ -244,6 +262,7 @@ nav.global-nav > .inner .mbl-btn-nav {
   nav.global-nav .logo-text-small {
     display: none; } }
 
+/*Desktop Only*/
 @media (min-width: 1281px) {
   nav.global-nav > .inner .mbl-btn-nav {
     display: none; }

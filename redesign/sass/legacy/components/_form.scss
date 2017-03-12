@@ -1,0 +1,107 @@
+input[type=checkbox].custom-check-input
+{
+  position: absolute;
+  z-index: -1000;
+  left: -1000px;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+}
+
+input[type=checkbox].custom-check-input + label.custom-check-label
+{
+  line-height: 10px;
+
+  display: inline-block;
+
+  height: 10px;
+  padding-left: 14px;
+
+  cursor: pointer;
+  vertical-align: middle;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+label.custom-check-label span
+{
+  line-height: 16px;
+
+  position: relative;
+  top: -4px;
+}
+
+input[type=checkbox].custom-check-input:checked + label.custom-check-label
+{
+  background-position: 0 -10px;
+}
+
+input[type=radio].custom-check-input
+{
+  position: absolute;
+  z-index: -1000;
+  left: -1000px;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+}
+
+input[type=radio].custom-check-input + label.custom-check-label
+{
+  line-height: 10px;
+
+  display: inline-block;
+
+  height: 10px;
+  padding-left: 14px;
+
+  cursor: pointer;
+  vertical-align: middle;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+input[type=radio].custom-check-input:checked + label.custom-check-label
+{
+  background-position: 0 -10px;
+}
+
+label.custom-check-label
+{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  background-image: url(../images/boxes.png);
+
+  -webkit-touch-callout: none;
+}
+
+label.custom-check-label.label-radio
+{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  background-image: url(../images/radios.png);
+
+  -webkit-touch-callout: none;
+}

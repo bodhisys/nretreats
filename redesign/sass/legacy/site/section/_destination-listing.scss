@@ -1,0 +1,29 @@
+
+section.destination-listing.destination-seo .destination-listing__hero-copy
+{
+  flex-direction: column;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+}
+
+section.destination-listing.destination-seo .wrapper .destination-listing__hero-copy h1,
+section.destination-listing.destination-seo .wrapper .destination-listing__hero-copy .intro
+{
+  text-align: center;
+
+  color: #fff;
+}
+
+section.destination-listing.destination-seo .wrapper .destination-listing__hero-copy h1
+{
+  width: 60%;
+  margin: 0 auto 14px;
+}
+
+section.destination-listing.destination-seo .wrapper .destination-listing__hero-copy .intro
+{
+  width: 60%;
+  margin: 0 auto;
+}
