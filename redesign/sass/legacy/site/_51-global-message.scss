@@ -1,0 +1,78 @@
+#global-message
+{
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+
+  background-color: rgba(0, 0, 0, .5);
+}
+#global-message:before
+{
+  display: inline-block;
+
+  height: 100%;
+  margin-right: -.25em;
+
+  content: '';
+  vertical-align: middle;
+}
+#global-message .container
+{
+  position: relative;
+
+  display: inline-block;
+
+  max-width: 568px;
+  margin-top: 100px;
+  padding: 92px 66px 100px;
+
+  vertical-align: middle;
+
+  background-color: #fff;
+}
+@media (max-width: 769px)
+{
+  #global-message .container
+  {
+    max-width: 90%;
+    margin-top: 0;
+    padding: 60px 25px;
+  }
+}
+#global-message .container h2
+{
+  font-family: 'adobe-garamond-pro',sans-serif;
+  font-size: 22px;
+  font-style: none;
+
+  margin-bottom: 15px;
+
+  text-transform: uppercase;
+}
+@media (max-width: 769px)
+{
+  #global-message .container h2
+  {
+    font-size: 18px;
+  }
+}
+#global-message .container .cta
+{
+  margin-top: 40px;
+}
+#global-message .container .global-message-close
+{
+  position: absolute;
+  top: 26px;
+  right: 25px;
+
+  display: block;
+
+  cursor: pointer;
+}

@@ -1,0 +1,38 @@
+section.error-404
+{
+  max-width: 42em;
+  margin: 0 auto;
+  padding: 2.77778%;
+  padding-bottom: 22%;
+}
+@media (max-width: 769px)
+{
+  section.error-404
+  {
+    padding: 10.9375%;
+    padding-bottom: 17%;
+  }
+}
+
+.error-404__content p
+{
+  font-size: 3.125rem;
+}
+@media (max-width: 769px)
+{
+  .error-404__content p
+  {
+    font-size: 2.5rem;
+  }
+}
+
+.error-404__content p a
+{
+  font: inherit;
+
+  display: inline-block;
+
+  white-space: nowrap;
+
+  border-bottom: 2px solid #313641;
+}

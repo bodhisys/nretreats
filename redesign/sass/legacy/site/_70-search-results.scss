@@ -1,0 +1,106 @@
+section.search-results
+{
+  padding-bottom: 100px;
+
+  background-color: #f4f4f4;
+}
+section.search-results .inner > .search__hero
+{
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+@media (max-width: 769px)
+{
+  section.search-results .inner > .search__hero
+  {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+section.search-results .inner > .search__hero header
+{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10.13889%;
+
+  text-align: left;
+}
+@media (max-width: 769px)
+{
+  section.search-results .inner > .search__hero header
+  {
+    width: 100%;
+    padding: 0 10.13889%;
+  }
+}
+section.search-results .inner > .search__hero header h1
+{
+  color: #abaeb3;
+  color: #313641;
+}
+section.search-results .inner .search-results__content
+{
+  padding: 0 10.13889%;
+}
+section.search-results .inner .search-results__block
+{
+  margin-bottom: 50px;
+}
+section.search-results .inner .search-results__block header,
+section.search-results .inner .search-results__block hgroup
+{
+  position: relative;
+
+  margin-bottom: 50px;
+}
+@media (max-width: 769px)
+{
+  section.search-results .inner .search-results__block header,
+  section.search-results .inner .search-results__block hgroup
+  {
+    margin-bottom: 35px;
+  }
+}
+section.search-results .inner .search-results__block header > h3,
+section.search-results .inner .search-results__block header > .heading,
+section.search-results .inner .search-results__block hgroup > h3,
+section.search-results .inner .search-results__block hgroup > .heading
+{
+  padding-bottom: 1rem;
+}
+section.search-results .inner .search-results__block header > span.underline,
+section.search-results .inner .search-results__block hgroup > span.underline
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 150px;
+
+  border-top: 1px solid #313641;
+}
+section.search-results .inner .search-results__block header
+{
+  margin-bottom: 8px;
+}
+section.search-results .inner .search-results__block header h3
+{
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+section.search-results .inner .search-results__block header .underline
+{
+  display: none;
+}
+section.search-results .inner .search-results__block ul li .strike
+{
+  font-size: 14px;
+  font-size: .875rem;
+  line-height: 28px;
+
+  color: #313641;
+}
+section.search-results .inner .search-results__block ul li .strike .strike-through
+{
+  top: .48rem;
+}

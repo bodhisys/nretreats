@@ -1,0 +1,223 @@
+section.career-detail
+{
+  width: 52%;
+  margin: 0 auto;
+  padding: 100px 0 90px;
+}
+section.career-detail hgroup
+{
+  margin-bottom: 100px;
+}
+section.career-detail hgroup h1,
+section.career-detail hgroup h6
+{
+  text-align: center;
+}
+section.career-detail hgroup h6
+{
+  font-size: 12px;
+  font-size: .75rem;
+
+  letter-spacing: .15rem;
+  text-transform: uppercase;
+}
+section.career-detail .career-detail__meta
+{
+  margin-bottom: 26px;
+}
+section.career-detail .career-detail__meta li
+{
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 10px;
+  font-size: .625rem;
+
+  margin-bottom: 12px;
+
+  letter-spacing: .15rem;
+  text-transform: uppercase;
+
+  color: #313641;
+}
+section.career-detail .career-detail__meta li:last-child
+{
+  margin: 0;
+}
+section.career-detail .career-detail__details
+{
+  margin-bottom: 60px;
+}
+section.career-detail p.intro
+{
+  margin-bottom: 40px;
+}
+section.career-detail p.intro a
+{
+  font-size: inherit;
+}
+section.career-detail .career-detail__block
+{
+  margin-bottom: 35px;
+}
+section.career-detail .career-detail__block:last-child
+{
+  margin-bottom: 0;
+}
+section.career-detail .career-detail__subtitle
+{
+  font-style: italic;
+
+  margin-bottom: 8px;
+
+  color: #313641;
+}
+section.career-detail .career-detail__paragraph
+{
+  line-height: 1.688rem;
+}
+section.career-detail .career-detail__list li
+{
+  font-size: 15px;
+  font-size: .9375rem;
+
+  margin-bottom: 8px;
+
+  list-style-position: inside;
+  list-style-type: disc;
+
+  color: #313641;
+}
+section.career-detail span.underline
+{
+  display: block;
+
+  width: 150px;
+
+  border-top: 1px solid #313641;
+}
+
+section.careers-listing .careers-listing__hero
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  height: 540px;
+
+  color: #fff;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+section.careers-listing .careers-listing__hero header
+{
+  width: 100%;
+}
+section.careers-listing .careers-listing__hero header .intro,
+section.careers-listing .careers-listing__hero header h1
+{
+  text-align: center;
+
+  color: #fff;
+}
+section.careers-listing .careers-listing__hero header h1
+{
+  width: 59%;
+  margin: 0 auto 14px;
+}
+section.careers-listing .careers-listing__hero header .intro
+{
+  width: 60%;
+  margin: 0 auto;
+}
+section.careers-listing .careers-listing__hero header a
+{
+  font-family: 'adobe-garamond-pro',sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+section.careers-listing .careers-listing__intro
+{
+  margin-bottom: 48px;
+}
+section.careers-listing .careers-listing__intro .careers-listing__usa-cta a
+{
+  font-size: inherit;
+
+  color: inherit;
+}
+section.careers-listing .careers-listing__intro .careers-listing__usa-cta a span
+{
+  top: 19px;
+}
+
+section.careers-listing .careers-listing__content
+{
+  width: 60%;
+  margin: 0 auto;
+  padding: 90px 0;
+}
+section.careers-listing .careers-listing__content header,
+section.careers-listing .careers-listing__content hgroup
+{
+  position: relative;
+
+  margin-bottom: 50px;
+}
+@media (max-width: 769px)
+{
+  section.careers-listing .careers-listing__content header,
+  section.careers-listing .careers-listing__content hgroup
+  {
+    margin-bottom: 35px;
+  }
+}
+section.careers-listing .careers-listing__content header > h3,
+section.careers-listing .careers-listing__content header > .heading,
+section.careers-listing .careers-listing__content hgroup > h3,
+section.careers-listing .careers-listing__content hgroup > .heading
+{
+  padding-bottom: 1rem;
+}
+section.careers-listing .careers-listing__content header > span.underline,
+section.careers-listing .careers-listing__content hgroup > span.underline
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 150px;
+
+  border-top: 1px solid #313641;
+}
+section.careers-listing .careers-listing__content p
+{
+  line-height: 1.688rem;
+
+  margin-bottom: 30px;
+}
+section.careers-listing .careers-listing__content p.intro
+{
+  margin-bottom: 24px;
+}
+section.careers-listing .careers-listing__content .careers-listing__job-listing li
+{
+  margin-bottom: 22px;
+}
+section.careers-listing .careers-listing__content .careers-listing__job-listing li a.strike
+{
+  font-size: 18px;
+  font-size: 1.125rem;
+
+  letter-spacing: -.025rem;
+
+  color: #313641;
+}
+section.careers-listing .careers-listing__content .careers-listing__job-listing li a.strike .strike-through
+{
+  top: 11px;
+}

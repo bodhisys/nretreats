@@ -1,0 +1,11 @@
+body.mobile section.contact-us .contact__topic-init.select-dropdown
+{
+  display: none;
+}
+
+body.mobile section.contact-us .contact__form .contact__topic-wrapper select
+{
+  position: static;
+
+  visibility: visible;
+}

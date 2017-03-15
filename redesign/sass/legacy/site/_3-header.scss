@@ -1,0 +1,172 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p
+{
+  font-family: 'adobe-garamond-pro', sans-serif;
+  font-weight: normal;
+
+  margin: 0;
+
+  color: #313641;
+  text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+h1.title,
+.heading-1.title
+{
+  font-size: 50px;
+  font-size: 3.125rem;
+
+  letter-spacing: .052rem;
+
+  color: #313641;
+}
+h1.title a,
+.heading-1.title a
+{
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+@media (max-width: 769px)
+{
+  h1.title,
+  .heading-1.title
+  {
+    font-size: 40px;
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+}
+
+h1.title__caps,
+.heading-1.title__caps
+{
+  font-size: 50px;
+  font-size: 3.125rem;
+  line-height: 55px;
+  line-height: 3.4375rem;
+
+  letter-spacing: .052rem;
+  text-transform: uppercase;
+
+  color: #313641;
+}
+h1.title__caps a,
+.heading-1.title__caps a
+{
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+@media (max-width: 769px)
+{
+  h1.title__caps,
+  .heading-1.title__caps
+  {
+    font-size: 40px;
+    font-size: 2.5rem;
+  }
+}
+
+h2.title
+{
+  font-size: 26px;
+  font-size: 1.625rem;
+
+  letter-spacing: .055rem;
+}
+
+h3.title,
+.heading-3.title
+{
+  font-size: 22px;
+  font-size: 1.375rem;
+
+  letter-spacing: .01rem;
+
+  color: #313641;
+}
+h3.title a,
+.heading-3.title a
+{
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+@media (max-width: 769px)
+{
+  h3.title,
+  .heading-3.title
+  {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+}
+
+h4,
+.heading-4
+{
+  font-size: 18px;
+  font-size: 1.125rem;
+
+  letter-spacing: .015rem;
+}
+h4 a,
+.heading-4 a
+{
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+h5.title,
+.heading-5.title
+{
+  font-family: 'proxima-nova', sans-serif;
+  font-weight: 100;
+
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+
+  color: #313641;
+}
+h5.title a,
+.heading-5.title a
+{
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+@media (max-width: 769px)
+{
+  h5.title,
+  .heading-5.title
+  {
+    font-size: 8px;
+    font-size: .5rem;
+  }
+}
+
+h6.title,
+.heading-6.title
+{
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 10px;
+  font-size: .625rem;
+
+  letter-spacing: .2rem;
+}
+h6.title a,
+.heading-6.title a
+{
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}

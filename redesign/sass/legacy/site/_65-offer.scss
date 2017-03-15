@@ -1,0 +1,765 @@
+/*Should be 65*/
+section.offer-listing .filter-link-container
+{
+  padding-top: 15px;
+}
+
+section.offer-listing .filter__options-wrapper
+{
+  display: none;
+}
+
+section.offer-listing .offer-listing__hero
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  height: 540px;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@media (max-width: 769px)
+{
+  section.offer-listing .offer-listing__hero
+  {
+    padding: 0 15px;
+  }
+}
+section.offer-listing .offer-listing__hero hgroup .intro,
+section.offer-listing .offer-listing__hero hgroup h1
+{
+  text-align: center;
+
+  color: #3d4451;
+}
+section.offer-listing .offer-listing__hero hgroup h1
+{
+  width: 59%;
+  margin: 0 auto 14px;
+}
+@media (max-width: 769px)
+{
+  section.offer-listing .offer-listing__hero hgroup h1
+  {
+    width: 100%;
+  }
+}
+section.offer-listing .offer-listing__hero hgroup .intro
+{
+  width: 60%;
+  margin: 0 auto;
+}
+@media (max-width: 769px)
+{
+  section.offer-listing .offer-listing__hero hgroup .intro
+  {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+section.offer-listing .offer-listing__hero hgroup a
+{
+  font-family: 'adobe-garamond-pro',sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+section.offer-listing .offer-listing__content
+{
+  min-height: 650px;
+  padding: 70px 15.27778% 60px;
+}
+@media (max-width: 769px)
+{
+  section.offer-listing .offer-listing__content
+  {
+    padding: 35px;
+  }
+}
+section.offer-listing .offer-listing__content .filter-block
+{
+  margin-bottom: 40px;
+}
+@media (max-width: 769px)
+{
+  section.offer-listing .offer-listing__content .offers-row .offers-block
+  {
+    margin-bottom: 50px;
+  }
+}
+section.offer-listing .offer-listing__content .btn
+{
+  margin: 0 auto;
+}
+
+section.offer-detail
+{
+  padding-bottom: 100px;
+
+  background-color: #efefef;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail
+  {
+    padding-bottom: 50px;
+  }
+}
+section.offer-detail .hero
+{
+  position: fixed;
+  z-index: -1;
+  top: 100px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  max-width: 1440px;
+  margin: 0 auto;
+}
+section.offer-detail .booking-widget
+{
+  top: -100px;
+
+  margin: 0 auto -19px;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .booking-widget
+  {
+    top: -40px;
+
+    margin: 0 auto;
+  }
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .booking-widget .booking-widget__above header
+  {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .booking-widget .booking-widget__below .wrapper
+  {
+    display: block;
+  }
+}
+section.offer-detail .booking-widget.stuck > .wrapper .booking-widget__above
+{
+  top: 18px;
+}
+section.offer-detail .booking-widget.stuck > .wrapper .booking-widget__below
+{
+  width: 94%;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .booking-widget.stuck > .wrapper .booking-widget__below
+  {
+    width: 100%;
+    padding: 10px 20px;
+  }
+}
+section.offer-detail .offer-detail__content
+{
+  margin-top: 100vh;
+}
+section.offer-detail .offer-detail__content > p
+{
+  width: 51%;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content > p
+  {
+    width: 78.125%;
+  }
+}
+section.offer-detail .offer-detail__content > p:not(.intro)
+{
+  margin-bottom: 50px;
+}
+section.offer-detail .offer-detail__content > p.intro
+{
+  margin-bottom: 42px;
+}
+section.offer-detail .offer-detail__content .offer-detail__retreat-summary
+{
+  width: 51%;
+  margin: 0 auto 100px;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content .offer-detail__retreat-summary
+  {
+    width: 78.125%;
+  }
+}
+section.offer-detail .offer-detail__content .offer-detail__retreat-summary header,
+section.offer-detail .offer-detail__content .offer-detail__retreat-summary hgroup
+{
+  position: relative;
+
+  margin-bottom: 50px;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content .offer-detail__retreat-summary header,
+  section.offer-detail .offer-detail__content .offer-detail__retreat-summary hgroup
+  {
+    margin-bottom: 35px;
+  }
+}
+section.offer-detail .offer-detail__content .offer-detail__retreat-summary header > h3,
+section.offer-detail .offer-detail__content .offer-detail__retreat-summary header > .heading,
+section.offer-detail .offer-detail__content .offer-detail__retreat-summary hgroup > h3,
+section.offer-detail .offer-detail__content .offer-detail__retreat-summary hgroup > .heading
+{
+  padding-bottom: 1rem;
+}
+section.offer-detail .offer-detail__content .offer-detail__retreat-summary header > span.underline,
+section.offer-detail .offer-detail__content .offer-detail__retreat-summary hgroup > span.underline
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 150px;
+
+  border-top: 1px solid #313641;
+}
+section.offer-detail .offer-detail__content .offer-detail__retreat-summary .btn__lrn
+{
+  margin-top: 50px;
+}
+section.offer-detail .offer-detail__content section.listing-map
+{
+  width: 51%;
+  margin-right: auto;
+  margin-bottom: 100px;
+  margin-left: auto;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content section.listing-map .listing-map__map
+  {
+    display: none;
+  }
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content section.listing-map
+  {
+    width: 78.125%;
+  }
+}
+section.offer-detail .offer-detail__content section.package-rates-container
+{
+  margin-bottom: 100px;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content section.package-rates-container
+  {
+    margin-bottom: 50px;
+  }
+}
+section.offer-detail .offer-detail__content .offer-detail__room-type
+{
+  margin-bottom: 100px;
+  padding: 0 10.13889%;
+}
+section.offer-detail .offer-detail__content .offer-detail__room-type header,
+section.offer-detail .offer-detail__content .offer-detail__room-type hgroup
+{
+  position: relative;
+
+  margin-bottom: 50px;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content .offer-detail__room-type header,
+  section.offer-detail .offer-detail__content .offer-detail__room-type hgroup
+  {
+    margin-bottom: 35px;
+  }
+}
+section.offer-detail .offer-detail__content .offer-detail__room-type header > h3,
+section.offer-detail .offer-detail__content .offer-detail__room-type header > .heading,
+section.offer-detail .offer-detail__content .offer-detail__room-type hgroup > h3,
+section.offer-detail .offer-detail__content .offer-detail__room-type hgroup > .heading
+{
+  padding-bottom: 1rem;
+}
+section.offer-detail .offer-detail__content .offer-detail__room-type header > span.underline,
+section.offer-detail .offer-detail__content .offer-detail__room-type hgroup > span.underline
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 150px;
+
+  border-top: 1px solid #313641;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content .offer-detail__room-type
+  {
+    margin-bottom: 50px;
+    padding: 0 10px;
+  }
+}
+section.offer-detail .offer-detail__content .offer-detail__room-type header
+{
+  margin-bottom: 20px;
+  margin-left: 75px;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content .offer-detail__room-type header
+  {
+    margin-bottom: 30px;
+    margin-left: 35px;
+  }
+}
+section.offer-detail .offer-detail__content .offer-detail__image-gallery
+{
+  margin-bottom: 100px;
+  padding-left: 10.13889%;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content .offer-detail__image-gallery
+  {
+    margin-bottom: 50px;
+  }
+}
+section.offer-detail .offer-detail__content section.video-poster
+{
+  margin-bottom: 100px;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content section.video-poster
+  {
+    margin-bottom: 50px;
+  }
+}
+section.offer-detail .offer-detail__content .content-grid__secondary
+{
+  margin-bottom: 100px;
+  padding: 0 10.13889%;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content .content-grid__secondary
+  {
+    margin-bottom: 50px;
+  }
+}
+section.offer-detail .offer-detail__content .related-row
+{
+  padding: 0 10.13889%;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content .related-row
+  {
+    margin-bottom: 15px;
+    padding: 0;
+  }
+}
+
+/*repeated after 64*/
+section.offer-listing .filter-link-container
+{
+  padding-top: 15px;
+}
+
+section.offer-listing .filter__options-wrapper
+{
+  display: none;
+}
+
+section.offer-listing .offer-listing__hero
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  height: 540px;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@media (max-width: 769px)
+{
+  section.offer-listing .offer-listing__hero
+  {
+    padding: 0 15px;
+  }
+}
+section.offer-listing .offer-listing__hero hgroup .intro,
+section.offer-listing .offer-listing__hero hgroup h1
+{
+  text-align: center;
+
+  color: #3d4451;
+}
+section.offer-listing .offer-listing__hero hgroup h1
+{
+  width: 59%;
+  margin: 0 auto 14px;
+}
+@media (max-width: 769px)
+{
+  section.offer-listing .offer-listing__hero hgroup h1
+  {
+    width: 100%;
+  }
+}
+section.offer-listing .offer-listing__hero hgroup .intro
+{
+  width: 60%;
+  margin: 0 auto;
+}
+@media (max-width: 769px)
+{
+  section.offer-listing .offer-listing__hero hgroup .intro
+  {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+section.offer-listing .offer-listing__hero hgroup a
+{
+  font-family: 'adobe-garamond-pro',sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+section.offer-listing .offer-listing__content
+{
+  min-height: 650px;
+  padding: 70px 15.27778% 60px;
+}
+@media (max-width: 769px)
+{
+  section.offer-listing .offer-listing__content
+  {
+    padding: 35px;
+  }
+}
+section.offer-listing .offer-listing__content .filter-block
+{
+  margin-bottom: 40px;
+}
+@media (max-width: 769px)
+{
+  section.offer-listing .offer-listing__content .offers-row .offers-block
+  {
+    margin-bottom: 50px;
+  }
+}
+section.offer-listing .offer-listing__content .btn
+{
+  margin: 0 auto;
+}
+
+section.offer-detail
+{
+  padding-bottom: 100px;
+
+  background-color: #efefef;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail
+  {
+    padding-bottom: 50px;
+  }
+}
+section.offer-detail .hero
+{
+  position: fixed;
+  z-index: -1;
+  top: 100px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  max-width: 1440px;
+  margin: 0 auto;
+}
+section.offer-detail .booking-widget
+{
+  top: -100px;
+
+  margin: 0 auto -19px;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .booking-widget
+  {
+    top: -40px;
+
+    margin: 0 auto;
+  }
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .booking-widget .booking-widget__above header
+  {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .booking-widget .booking-widget__below .wrapper
+  {
+    display: block;
+  }
+}
+section.offer-detail .booking-widget.stuck > .wrapper .booking-widget__above
+{
+  top: 18px;
+}
+section.offer-detail .booking-widget.stuck > .wrapper .booking-widget__below
+{
+  width: 94%;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .booking-widget.stuck > .wrapper .booking-widget__below
+  {
+    width: 100%;
+    padding: 10px 20px;
+  }
+}
+section.offer-detail .offer-detail__content
+{
+  margin-top: 100vh;
+}
+section.offer-detail .offer-detail__content > p
+{
+  width: 51%;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content > p
+  {
+    width: 78.125%;
+  }
+}
+section.offer-detail .offer-detail__content > p:not(.intro)
+{
+  margin-bottom: 50px;
+}
+section.offer-detail .offer-detail__content > p.intro
+{
+  margin-bottom: 42px;
+}
+section.offer-detail .offer-detail__content .offer-detail__retreat-summary
+{
+  width: 51%;
+  margin: 0 auto 100px;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content .offer-detail__retreat-summary
+  {
+    width: 78.125%;
+  }
+}
+section.offer-detail .offer-detail__content .offer-detail__retreat-summary header,
+section.offer-detail .offer-detail__content .offer-detail__retreat-summary hgroup
+{
+  position: relative;
+
+  margin-bottom: 50px;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content .offer-detail__retreat-summary header,
+  section.offer-detail .offer-detail__content .offer-detail__retreat-summary hgroup
+  {
+    margin-bottom: 35px;
+  }
+}
+section.offer-detail .offer-detail__content .offer-detail__retreat-summary header > h3,
+section.offer-detail .offer-detail__content .offer-detail__retreat-summary header > .heading,
+section.offer-detail .offer-detail__content .offer-detail__retreat-summary hgroup > h3,
+section.offer-detail .offer-detail__content .offer-detail__retreat-summary hgroup > .heading
+{
+  padding-bottom: 1rem;
+}
+section.offer-detail .offer-detail__content .offer-detail__retreat-summary header > span.underline,
+section.offer-detail .offer-detail__content .offer-detail__retreat-summary hgroup > span.underline
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 150px;
+
+  border-top: 1px solid #313641;
+}
+section.offer-detail .offer-detail__content .offer-detail__retreat-summary .btn__lrn
+{
+  margin-top: 50px;
+}
+section.offer-detail .offer-detail__content section.listing-map
+{
+  width: 51%;
+  margin-right: auto;
+  margin-bottom: 100px;
+  margin-left: auto;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content section.listing-map .listing-map__map
+  {
+    display: none;
+  }
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content section.listing-map
+  {
+    width: 78.125%;
+  }
+}
+section.offer-detail .offer-detail__content section.package-rates-container
+{
+  margin-bottom: 100px;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content section.package-rates-container
+  {
+    margin-bottom: 50px;
+  }
+}
+section.offer-detail .offer-detail__content .offer-detail__room-type
+{
+  margin-bottom: 100px;
+  padding: 0 10.13889%;
+}
+section.offer-detail .offer-detail__content .offer-detail__room-type header,
+section.offer-detail .offer-detail__content .offer-detail__room-type hgroup
+{
+  position: relative;
+
+  margin-bottom: 50px;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content .offer-detail__room-type header,
+  section.offer-detail .offer-detail__content .offer-detail__room-type hgroup
+  {
+    margin-bottom: 35px;
+  }
+}
+section.offer-detail .offer-detail__content .offer-detail__room-type header > h3,
+section.offer-detail .offer-detail__content .offer-detail__room-type header > .heading,
+section.offer-detail .offer-detail__content .offer-detail__room-type hgroup > h3,
+section.offer-detail .offer-detail__content .offer-detail__room-type hgroup > .heading
+{
+  padding-bottom: 1rem;
+}
+section.offer-detail .offer-detail__content .offer-detail__room-type header > span.underline,
+section.offer-detail .offer-detail__content .offer-detail__room-type hgroup > span.underline
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 150px;
+
+  border-top: 1px solid #313641;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content .offer-detail__room-type
+  {
+    margin-bottom: 50px;
+    padding: 0 10px;
+  }
+}
+section.offer-detail .offer-detail__content .offer-detail__room-type header
+{
+  margin-bottom: 20px;
+  margin-left: 75px;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content .offer-detail__room-type header
+  {
+    margin-bottom: 30px;
+    margin-left: 35px;
+  }
+}
+section.offer-detail .offer-detail__content .offer-detail__image-gallery
+{
+  margin-bottom: 100px;
+  padding-left: 10.13889%;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content .offer-detail__image-gallery
+  {
+    margin-bottom: 50px;
+  }
+}
+section.offer-detail .offer-detail__content section.video-poster
+{
+  margin-bottom: 100px;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content section.video-poster
+  {
+    margin-bottom: 50px;
+  }
+}
+section.offer-detail .offer-detail__content .content-grid__secondary
+{
+  margin-bottom: 100px;
+  padding: 0 10.13889%;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content .content-grid__secondary
+  {
+    margin-bottom: 50px;
+  }
+}
+section.offer-detail .offer-detail__content .related-row
+{
+  padding: 0 10.13889%;
+}
+@media (max-width: 769px)
+{
+  section.offer-detail .offer-detail__content .related-row
+  {
+    margin-bottom: 15px;
+    padding: 0;
+  }
+}

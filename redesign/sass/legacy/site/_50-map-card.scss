@@ -1,0 +1,106 @@
+.map-card
+{
+  display: block;
+}
+.map-card .wrapper
+{
+  position: relative;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+}
+.map-card .wrapper .map-card__image
+{
+  display: block;
+
+  height: 210px;
+}
+.map-card .wrapper .map-card__copy
+{
+  padding: 20px 30px;
+
+  background-color: #fff;
+}
+.map-card .wrapper .map-card__copy h4
+{
+  font-size: 18px;
+  font-size: 1.125rem;
+
+  letter-spacing: .025rem;
+
+  color: #5e6777;
+}
+.map-card .wrapper .map-card__copy p
+{
+  font-size: 15px;
+  font-size: .9375rem;
+
+  margin: 14px 0;
+
+  letter-spacing: -.01rem;
+}
+.map-card .wrapper .map-card__copy > span
+{
+  font-size: 14px;
+  font-size: .875rem;
+  font-weight: 100;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  letter-spacing: .05rem;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.map-card .wrapper .map-card__copy > span .icon
+{
+  font-size: 2px;
+
+  margin-left: 5px;
+}
+.map-card .map-card__close
+{
+  position: absolute;
+  top: -20px;
+  right: 0;
+  left: 0;
+
+  width: 100%;
+}
+.map-card .map-card__close .map-card__close-container
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+
+  cursor: pointer;
+
+  border-radius: 40px;
+  background-color: #fff;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.map-card .map-card__close .map-card__close-container .icon
+{
+  font-size: 13px;
+
+  color: #000;
+}

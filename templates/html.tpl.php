@@ -14,29 +14,13 @@ $nret_globalmessage_url = variable_get('nret_globalmessage_url', '');
 	<?php include 'components/optimizely.php'; ?>
 	<?php include 'components/typekit.php'; ?>
 	<!--  style to load BEFORE hero element. necessary to hide hero element which is inline to the element -->
-
-<?php
-switch(substr(current_path(), 0,2))
-{
-    case 'uk':
-    case 'ie':
-    case 'us':
-		echo '<link rel="stylesheet" type="text/css" href="/themes/nretreats/css/Site.min.css">';
-		break;
-    default:
-        echo '<link rel="stylesheet" type="text/css" href="/themes/nretreats/css/style.min.css">';
-        break;
-}
-?>
-
-	
+    <link rel="stylesheet" type="text/css" href="/themes/nretreats/css/style.css">
 	
 	<?php print $styles; ?>
 	<?php print $scripts; ?>
 	<?php include 'components/bazaarvoice.php'; ?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
-<h1>TEST</h1>
 	<?php include 'components/criteo.php'; ?>
 	<?php include 'components/google-tag-manager.php'; ?>
 	<div id="skip-link"><a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a></div>
@@ -63,14 +47,15 @@ switch(substr(current_path(), 0,2))
 		</aside>
     <?php endif; ?>
 	<?php endif; ?>
-	<h2>Before Page Top</h2>
 	<?php print $page_top; ?>
-		<h2>Before Page</h2>
 	<?php print $page; ?>
-		<h2>Before Page Bottom</h2>
 	<?php print $page_bottom; ?>
 	<script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
-	<script src="/themes/nretreats/scripts/app.js" type="text/javascript"></script>
+<!--	<script src="/themes/nretreats/scripts/app.js" type="text/javascript"></script>-->
+    <script src="/themes/nretreats/scripts/lib.js" type="text/javascript"></script>
+    <script src="/themes/nretreats/scripts/components.js" type="text/javascript"></script>
+    <script src="/themes/nretreats/scripts/page.js" type="text/javascript"></script>
+    <script src="/themes/nretreats/scripts/main.js" type="text/javascript"></script>
 	<script language="javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true&v=3&key=AIzaSyAy8lCX6E19KLkr8ow3lZ4NPDr7jxX8Vg8&callback=nret.maps.runMapInOrder"></script>
 </body>
 </html>

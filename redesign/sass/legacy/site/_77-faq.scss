@@ -1,0 +1,134 @@
+section.faq .faq__hero
+{
+  height: 500px;
+  padding-top: 80px;
+
+  background-color: #313641;
+}
+@media (max-width: 769px)
+{
+  section.faq .faq__hero
+  {
+    height: auto;
+    padding: 30px 0 65px;
+  }
+}
+section.faq .faq__hero header
+{
+  width: 40%;
+  margin: 0 auto;
+
+  text-align: center;
+}
+@media (max-width: 769px)
+{
+  section.faq .faq__hero header
+  {
+    width: 100%;
+    padding: 0 10.9375%;
+  }
+}
+section.faq .faq__hero header h1
+{
+  font-size: 2.125rem;
+
+  margin-bottom: 15px;
+}
+section.faq .faq__hero header h1,
+section.faq .faq__hero header p
+{
+  color: #abaeb3;
+}
+
+section.faq .faq__content-wrapper
+{
+  background-color: #efefef;
+}
+
+section.faq article.faq__content
+{
+  position: relative;
+  top: -200px;
+
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: -159px;
+  padding: 100px 8.75%;
+
+  background-color: #fff;
+}
+@media (max-width: 769px)
+{
+  section.faq article.faq__content
+  {
+    top: -35px;
+
+    width: 90%;
+    margin-bottom: 0;
+    padding: 35px 10.9375%;
+  }
+}
+
+section.faq .faq__content__topic
+{
+  margin-bottom: 80px;
+}
+section.faq .faq__content__topic header,
+section.faq .faq__content__topic hgroup
+{
+  position: relative;
+
+  margin-bottom: 50px;
+}
+@media (max-width: 769px)
+{
+  section.faq .faq__content__topic header,
+  section.faq .faq__content__topic hgroup
+  {
+    margin-bottom: 35px;
+  }
+}
+section.faq .faq__content__topic header > h3,
+section.faq .faq__content__topic header > .heading,
+section.faq .faq__content__topic hgroup > h3,
+section.faq .faq__content__topic hgroup > .heading
+{
+  padding-bottom: 1rem;
+}
+section.faq .faq__content__topic header > span.underline,
+section.faq .faq__content__topic hgroup > span.underline
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 150px;
+
+  border-top: 1px solid #313641;
+}
+section.faq .faq__content__topic:last-child
+{
+  margin-bottom: 0;
+}
+section.faq .faq__content__topic .faq__block
+{
+  margin-bottom: 40px;
+}
+section.faq .faq__content__topic .faq__block:last-child
+{
+  margin-bottom: 0;
+}
+section.faq .faq__content__topic .faq__block p
+{
+  line-height: 27px;
+
+  color: #313641;
+}
+section.faq .faq__content__topic .faq__block p.intro
+{
+  font-style: italic;
+
+  margin-bottom: 11px;
+
+  color: #313641;
+}

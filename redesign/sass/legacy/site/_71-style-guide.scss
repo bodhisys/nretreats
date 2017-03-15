@@ -1,0 +1,130 @@
+section.style-guide
+{
+  padding-top: 100px;
+}
+section.style-guide .style-guide__typography h1,
+section.style-guide .style-guide__typography h2,
+section.style-guide .style-guide__typography h3,
+section.style-guide .style-guide__typography h4,
+section.style-guide .style-guide__typography h5,
+section.style-guide .style-guide__typography h6,
+section.style-guide .style-guide__typography p,
+section.style-guide .style-guide__typography time
+{
+  padding-bottom: 20px;
+}
+section.style-guide time
+{
+  display: block;
+}
+section.style-guide .style-guide__section
+{
+  padding: 0 10.13889% 100px;
+}
+section.style-guide .style-guide__section header,
+section.style-guide .style-guide__section hgroup
+{
+  position: relative;
+
+  margin-bottom: 50px;
+}
+@media (max-width: 769px)
+{
+  section.style-guide .style-guide__section header,
+  section.style-guide .style-guide__section hgroup
+  {
+    margin-bottom: 35px;
+  }
+}
+section.style-guide .style-guide__section header > h3,
+section.style-guide .style-guide__section header > .heading,
+section.style-guide .style-guide__section hgroup > h3,
+section.style-guide .style-guide__section hgroup > .heading
+{
+  padding-bottom: 1rem;
+}
+section.style-guide .style-guide__section header > span.underline,
+section.style-guide .style-guide__section hgroup > span.underline
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 150px;
+
+  border-top: 1px solid #313641;
+}
+section.style-guide .style-guide__section h1.style-guide__section-title
+{
+  margin-bottom: 60px;
+  padding: 0;
+
+  border-bottom: 1px solid #cfd1d4;
+}
+section.style-guide .style-guide__border
+{
+  margin: 40px 0;
+
+  border-bottom: 1px solid #cfd1d4;
+}
+section.style-guide .style-guide__intro
+{
+  width: 50%;
+  margin: 0 auto 100px;
+
+  text-align: center;
+}
+section.style-guide .style-guide__typography
+{
+  width: 75%;
+}
+section.style-guide .style-guide__typography .style-guide__anchor-tag
+{
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 10px;
+  font-size: .625rem;
+
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+
+  color: #313641;
+}
+section.style-guide .style-guide__typography .style-guide__typo-info
+{
+  font-family: 'proxima-nova', sans-serif;
+  font-size: 15px;
+  font-size: .9375rem;
+
+  display: block;
+
+  padding-left: 25px;
+
+  text-transform: uppercase;
+}
+section.style-guide .style-guide__buttons .btn
+{
+  margin-bottom: 20px;
+}
+section.style-guide .subnav-container
+{
+  margin: 0;
+}
+section.style-guide .subnav-container .title
+{
+  padding-bottom: 0;
+}
+section.style-guide .subnav-container.stuck
+{
+  position: fixed;
+}
+section.style-guide .style-guide__modules
+{
+  padding-top: 100px;
+
+  background-color: #efefef;
+}
+section.style-guide .numbered-list
+{
+  width: 51%;
+  margin: 0 auto;
+}
