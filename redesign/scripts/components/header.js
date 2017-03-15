@@ -25,8 +25,8 @@ var nret = nret || {};
                     bar3.velocity({rotateZ: '-405deg', translateX:'2.2px', translateY:'-3px', backgroundColor:'#FFF'}, {duration: 200, easing: [0, -0.01, 0.1, 0.99]});
                     background.velocity({height:'50px'}, {duration:200, easing: [0, -0.01, 0, 0.99]});
                     navbar.velocity({translateY:'0%'}, {duration:200, easing: [0.77, 0.5, 0.59, 0.9]});
-                    navLeftLIs.css({opacity:0});
-                    navLeftLIs.css({opacity:0});
+                    // navLeftLIs.css({opacity:0});
+                    // navLeftLIs.css({opacity:0});
                     navRightLIs.velocity("transition.slideLeftIn", {stagger: 50, duration: 70, delay: 150});
                     navRightLIs.velocity("transition.slideLeftIn", {stagger: 50, duration: 70, delay: 150});
                     //navLIs.css({opacity:0});
@@ -239,10 +239,10 @@ var nret = nret || {};
             //$('#main-menu').find('a[href="/destination"]');
             navEl.addClass('doNotClose');
             navEl.on('click', function(event) {
-                if ($('body').hasClass('desktop') && window.innerWidth > 768) {
+                //if ($('body').hasClass('desktop') && window.innerWidth > 768) {
                     event.preventDefault();
                     $('nav.global-nav').find('.global-nav__destinations').toggleClass('show');
-                }
+                //}
             });
         },
         toggleDestinationListOnSelection: function() {

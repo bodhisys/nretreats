@@ -415,5 +415,6 @@ $destinations_subnav_list = nret_get_destinations();
 </script>
 <?php }} ?>
 <?php
-	drupal_add_js('jQuery(document).ready(function () { nret.helpers.phoneHelperOpen();nret.quickView.init(); });', 'inline');
+//	drupal_add_js('jQuery(document).ready(function () { nret.helpers.phoneHelperOpen();nret.quickView.init(); });', 'inline');
+drupal_add_js('jQuery(document).ready(function () { nret.quickView.init(); });', 'inline');
 ?>

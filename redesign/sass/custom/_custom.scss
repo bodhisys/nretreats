@@ -20,8 +20,17 @@
 section.home-page .home__hero-wrapper {
   max-width: 100%;
 }
-
-
+@media (max-width: 769px) {
+  .global-nav__destinations.show {
+    display: block;
+    z-index: 3;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 600px) {
+  .page-body, footer.footer, nav.global-nav {
+    min-width: auto;
+  }
+}
 @media screen and (max-width: 1280px){
   .explorer__help-modal .explorer__phone {
     .inner {
@@ -50,10 +59,13 @@ section.home-page .home__hero-wrapper {
       }
     }
   }
-
-}
-@media only screen and (max-width: 1024px) and (min-width: 600px) {
-  .page-body, footer.footer, nav.global-nav {
-    min-width: auto;
+  nav.global-nav .logo  {
+    width: 26%;
+    padding: 0 2%;
+    position: absolute;
+    margin: 30px 31%;
+    text-align: center;
   }
 }
+
+

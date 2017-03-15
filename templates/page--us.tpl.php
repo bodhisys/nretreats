@@ -247,6 +247,32 @@ $destinations_subnav_list = nret_get_destinations();
                 <span></span>
                 <span></span>
             </a>
+<!--            <a href="/" class="logo">-->
+<!--                --><?php
+//                if (theme_get_setting('toggle_logo')) {
+//                    $image = array(
+//                        'path' => theme_get_setting('logo'),
+//                        'alt' => 'Natural Retreats logo'
+//                    );
+//                    print theme('image', $image);
+//                }
+//                ?>
+<!--            </a>-->
+            <a class="logo text-center" href="http://nr.com">
+                        <span class="logo-text">
+						<!--NATURAL RETREATS-->
+                            <?php
+                            if (theme_get_setting('toggle_logo')) {
+                                $image = array(
+                                    'path' => theme_get_setting('logo'),
+                                    'alt' => 'Natural Retreats logo'
+                                );
+                                print theme('image', $image);
+                            }
+                            ?>
+						</span> <br/>
+                <span class="logo-text-small visible-lg">Go Somewhere to Remember</span>
+            </a>
             <a href="" class="mbl-btn-search icon icon_search">
                 <span></span>
                 <span></span>
@@ -312,21 +338,49 @@ $destinations_subnav_list = nret_get_destinations();
             $menu_main_left_nav = menu_navigation_links('menu-main-left-nav');
             print theme('links__menu_main_left_nav', array('links' => $menu_main_left_nav, 'attributes' => array('id' => 'main-left-menu', 'class' => array('navbar-left main-menu__link-list'))));
             ?>
-            <a class="navbar-brand text-center" href="http://nr.com">
-                        <span class="logo-text">
-						<!--NATURAL RETREATS-->
-                            <?php
-                            if (theme_get_setting('toggle_logo')) {
-                                $image = array(
-                                    'path' => theme_get_setting('logo'),
-                                    'alt' => 'Natural Retreats logo'
-                                );
-                                print theme('image', $image);
-                            }
-                            ?>
-						</span> <br/>
-                <span class="logo-text-small visible-lg">Go Somewhere to Remember</span>
-            </a>
+            <div class="arrow_box top global-nav__destinations open doNotClose">
+                <!--New Redesign: Subash Maharjan-->
+                <div class=" global-nav__destinations__destination-list-wrapper">
+
+                    <div class="wrapper">
+                        <div class="global-nav__destination-list east <?php if ( $userglobalposition !== 'uk' && $userglobalposition !== 'ie' ) { echo 'current'; } ?>">
+                            <header>
+                                <h6 class="title">US EAST</h6>
+                                <!--                            <span class="underline"></span>-->
+                            </header><!-- /header -->
+                            <ul class="sort-list  <?php if ($userglobalposition == 'useast') {echo 'current';} ?> group<?php echo ( (isset($node) && count($node->destinations["east"]) < 5) ? ' centralized' : '') ?>">
+                                <?php foreach($destinations_subnav_list['us'] as $destination) {
+                                    if ($destination['region'] == 'east')  {  ?>
+                                        <li class="destination-list-link"><a href="<?php echo $destination['url']; ?>" class="strike"><?php echo $destination['name']; ?><?php if (!empty($destination['state']) ) { echo ', '.$destination['state']; } ?></a></li>
+                                    <?php } }  ?>
+                            </ul>
+                        </div>
+                        <div class="global-nav__destination-list west">
+                            <header>
+                                <h6 class="title">US WEST</h6>
+                                <!--                            <span class="underline"></span>-->
+                            </header><!-- /header -->
+                            <ul class="sort-list group<?php echo (count($node->destinations["west"]) < 5 ? ' centralized' : ''); ?>">
+                                <?php foreach($destinations_subnav_list['us'] as $destination) {
+                                    if ($destination['region'] == 'west')  {?>
+                                        <li class="destination-list-link"><a href="<?php echo $destination['url']; ?>" class="strike"><?php echo $destination['name']; ?><?php if (!empty($destination['state']) ) { echo ', '.$destination['state']; } ?></a></li>
+                                    <?php } } ?>
+                            </ul>
+                        </div>
+                        <div class="global-nav__destination-list uk <?php if ( $userglobalposition == 'uk' || $userglobalposition == 'ie' ) { echo 'current'; } ?>" >
+                            <header>
+                                <h6 class="title">UK / EUROPE</h6>
+                                <!--                            <span class="underline"></span>-->
+                            </header><!-- /header -->
+                            <ul class="sort-list <?php if ($userglobalposition == 'uk' || $userglobalposition == 'ie') {echo 'current';} ?> group<?php echo (count($node->destinations["notus"]) < 5 ? ' centralized' : ''); ?>">
+                                <?php foreach($destinations_subnav_list['uk'] as $destination) { ?>
+                                    <li class="destination-list-link"><a href="<?php echo $destination['url']; ?>" class="strike"><?php echo $destination['name']; ?><?php if (!empty($destination['state']) ) { echo ', '.$destination['state']; } ?></a></li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <?php
             $menu_main_right_nav = menu_navigation_links('menu-main-right-nav');
             print theme('links__menu_main_right_nav', array('links' => $menu_main_right_nav, 'attributes' => array('id' => 'main-right-menu', 'class' => array('navbar-right main-menu__link-list'))));
@@ -443,49 +497,7 @@ $destinations_subnav_list = nret_get_destinations();
             </div>
         </div>
 
-        <div class="arrow_box top global-nav__destinations open doNotClose">
-            <!--New Redesign: Subash Maharjan-->
-            <div class=" global-nav__destinations__destination-list-wrapper">
 
-                <div class="wrapper">
-                    <div class="global-nav__destination-list east <?php if ( $userglobalposition !== 'uk' && $userglobalposition !== 'ie' ) { echo 'current'; } ?>">
-                        <header>
-                            <h6 class="title">US EAST</h6>
-<!--                            <span class="underline"></span>-->
-                        </header><!-- /header -->
-                        <ul class="sort-list  <?php if ($userglobalposition == 'useast') {echo 'current';} ?> group<?php echo ( (isset($node) && count($node->destinations["east"]) < 5) ? ' centralized' : '') ?>">
-                            <?php foreach($destinations_subnav_list['us'] as $destination) {
-                                if ($destination['region'] == 'east')  {  ?>
-                                    <li class="destination-list-link"><a href="<?php echo $destination['url']; ?>" class="strike"><?php echo $destination['name']; ?><?php if (!empty($destination['state']) ) { echo ', '.$destination['state']; } ?></a></li>
-                                <?php } }  ?>
-                        </ul>
-                    </div>
-                    <div class="global-nav__destination-list west">
-                        <header>
-                            <h6 class="title">US WEST</h6>
-<!--                            <span class="underline"></span>-->
-                        </header><!-- /header -->
-                        <ul class="sort-list group<?php echo (count($node->destinations["west"]) < 5 ? ' centralized' : ''); ?>">
-                            <?php foreach($destinations_subnav_list['us'] as $destination) {
-                                if ($destination['region'] == 'west')  {?>
-                                    <li class="destination-list-link"><a href="<?php echo $destination['url']; ?>" class="strike"><?php echo $destination['name']; ?><?php if (!empty($destination['state']) ) { echo ', '.$destination['state']; } ?></a></li>
-                                <?php } } ?>
-                        </ul>
-                    </div>
-                    <div class="global-nav__destination-list uk <?php if ( $userglobalposition == 'uk' || $userglobalposition == 'ie' ) { echo 'current'; } ?>" >
-                        <header>
-                            <h6 class="title">UK / EUROPE</h6>
-<!--                            <span class="underline"></span>-->
-                        </header><!-- /header -->
-                        <ul class="sort-list <?php if ($userglobalposition == 'uk' || $userglobalposition == 'ie') {echo 'current';} ?> group<?php echo (count($node->destinations["notus"]) < 5 ? ' centralized' : ''); ?>">
-                            <?php foreach($destinations_subnav_list['uk'] as $destination) { ?>
-                                <li class="destination-list-link"><a href="<?php echo $destination['url']; ?>" class="strike"><?php echo $destination['name']; ?><?php if (!empty($destination['state']) ) { echo ', '.$destination['state']; } ?></a></li>
-                            <?php } ?>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </nav>
 <script type="text/template" id="mbl-search">
