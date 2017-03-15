@@ -101,6 +101,19 @@
   border-right-color: #D8D8D8;
   margin-top: -9px; }
 
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+.ui-datepicker .ui-datepicker-header,
+section.promotion .select__wrapper .select-text,
+section.promotion .select__wrapper.travel-with {
+  font-family: 'EB Garamond', serif; }
+
 .global-nav__destinations__destination-list-wrapper {
   overflow-y: scroll;
   display: block !important;

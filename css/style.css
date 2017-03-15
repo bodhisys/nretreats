@@ -927,71 +927,74 @@ label.custom-check-label.label-radio {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon_alert:before {
-  content: '\e916'; }
+.icon_user:before {
+  content: "\e900"; }
 
-.icon_fullscreen:before {
-  content: '\e919'; }
-
-.icon_phone:before {
-  content: '\e922'; }
-
-.icon_carrot-down:before {
-  content: '\e91e'; }
-
-.icon_carrot-down-fill:before {
-  content: '\e917'; }
-
-.icon_carrot-right:before {
-  content: '\e91f'; }
-
-.icon_carrot-left:before {
-  content: '\e905'; }
-
-.icon_carrot-up:before {
-  content: '\e920'; }
-
-.icon_arrow-left:before {
-  content: '\e91c'; }
-
-.icon_arrow-right:before {
-  content: '\e925'; }
+.icon_calendar:before {
+  content: "\e902"; }
 
 .icon_search:before {
-  content: '\e926'; }
+  content: "\e901"; }
 
-.icon_logo:before {
-  content: '\e91d'; }
+.icon_alert:before {
+  content: "\e916"; }
 
-.icon_play:before {
-  content: '\e92c'; }
+.icon_carrot-down:before {
+  content: "\e917"; }
 
 .icon_close:before {
-  content: '\e918'; }
+  content: "\e918"; }
 
-.icon_pin:before {
-  content: '\e923'; }
-
-.icon_star:before {
-  content: '\e927'; }
+.icon_fullscreen:before {
+  content: "\e919"; }
 
 .icon_fb:before {
-  content: '\e91a'; }
+  content: "\e91a"; }
 
 .icon_instagram:before {
-  content: '\e91b'; }
+  content: "\e91b"; }
 
-.icon_twitter:before {
-  content: '\e928'; }
+.icon_arrow-left:before {
+  content: "\e91c"; }
+
+.icon_logo:before {
+  content: "\e91d"; }
+
+.icon_Navigatedown2:before {
+  content: "\e91e"; }
+
+.icon_carrot-right:before {
+  content: "\e91f"; }
+
+.icon_carrot-up:before {
+  content: "\e920"; }
+
+.icon_Phone:before {
+  content: "\e922"; }
+
+.icon_Pin:before {
+  content: "\e923"; }
 
 .icon_pinterest:before {
-  content: '\e924'; }
+  content: "\e924"; }
 
-.icon_printer:before {
-  content: '\e954'; }
+.icon_right:before {
+  content: "\e925"; }
 
-.icon_share2:before {
-  content: '\ea82'; }
+.icon_search2:before {
+  content: "\e926"; }
+
+.icon_star:before {
+  content: "\e927"; }
+
+.icon_twitter:before {
+  content: "\e928"; }
+
+.icon_USERNAMEnavigatedown2:before {
+  content: "\e929"; }
+
+.icon_play:before {
+  content: "\e92c"; }
 
 .btn {
   font-family: 'proxima-nova', sans-serif;
