@@ -371,8 +371,9 @@ var nret = nret || {};
                     $('.checkin-sublabel, .checkout-sublabel').removeClass('show');
                 }
 
-                $('.checkin-label').text("Check In");
-                $('.checkout-label').text("Check Out");
+                /*Subash Maharjan*/
+                // $('.checkin-label').text("Check In");
+                // $('.checkout-label').text("Check Out");
 
 
             })

@@ -72,12 +72,12 @@ $destinations_subnav_list = nret_get_destinations();
 			</div>
 			<div class="video__bg" data-videourl='<?php echo json_encode($hompeage_video_urls); ?>'>
 			</div>
-			<section class="start-exploring">
-				<div class="video-toggle h-center">
-					<h1 class="title"><?php echo $hero_main_copy; ?></h1>
-					<p><?php echo $hero_sub_copy; ?></p>
-				</div>
-			</section>
+<!--			<section class="start-exploring">-->
+<!--				<div class="video-toggle h-center">-->
+<!--					<h1 class="title">--><?php //echo $hero_main_copy; ?><!--</h1>-->
+<!--					<p>--><?php //echo $hero_sub_copy; ?><!--</p>-->
+<!--				</div>-->
+<!--			</section>-->
 		</div>
 		<div class="video-toggle flex h-center">
         	<p><?php echo $hero_main_copy; ?></p>
@@ -91,17 +91,27 @@ $destinations_subnav_list = nret_get_destinations();
 		<section class="home__retreat-search scroll-to-search">
 			<div class="wrapper">
 				<!-- Search Dropdowns -->
+                <header>
+                    <h3 class="title search-section-header">FIND <em>your</em> PERFECT VACATION</h3>
+                </header>
 				<div class="home__retreat-search-container scroll-once">
 					<div class="choices choices-search flex show">
+
 						<div class="inner">
+
 							<div class="home__search__location-wrapper home__search__dropdown-title">
-								<header>
-									<h3 class="title">Find Your Destination</h3>
-								</header>
-								<h3 class="title initHomeDropdown doNotClose first-dropdown" data-home-search="location"><span class="destination destination-label home__search__choice doNotClose">Select Destination</span><span class="icon icon_carrot-down"></span></h3>
-								<h3 class="title initHomeDropdown doNotClose" data-home-search="checkIn"><span class="label checkin-sublabel">Check In</span><p class="checkin-label home__search__choice doNotClose">Check In</p><span class="icon icon_carrot-down"></span></h3>
-								<h3 class="title initHomeDropdown doNotClose check-out" data-home-search="checkOut"><span class="label checkout-sublabel">Check Out</span><p class="checkout-label home__search__choice doNotClose">Check Out</p><span class="icon icon_carrot-down"></span></h3>
-							    <h3 class="title initHomeDropdown doNotClose home__search__bedrooms-dropdown" data-home-search="bedrooms"><span class="bedrooms bedroom-label home__search__choice doNotClose">Bedrooms</span><span class="icon icon_carrot-down"></span>   									<ul class="list home__search__dropdown doNotClose" data-home-search="bedrooms">
+
+								<h3 class="title initHomeDropdown doNotClose first-dropdown" data-home-search="location">
+                                    <span class="icon icon_search"></span>
+                                    <span class="destination destination-label home__search__choice doNotClose">FIND YOUR PERFECT VACATION RENTAL</span>
+                                </h3>
+
+                                <h3 class="title initHomeDropdown doNotClose check-in" data-home-search="checkIn">
+                                    <span class="home__search__choice doNotClose icon icon_calendar"></span>
+                                </h3>
+							    <h3 class="title initHomeDropdown doNotClose home__search__bedrooms-dropdown" data-home-search="bedrooms">
+                                    <span class="home__search__choice doNotClose icon icon_user"></span>
+                                    <ul class="list home__search__dropdown doNotClose" data-home-search="bedrooms">
 										<li><div class="arrow-up-destination-list"></div><a href="#0" data-home-bedrooms="1" class="strike nolink doNotClose">1</a></li>
 										<li><a href="#0" data-home-bedrooms="2" class="strike nolink doNotClose">2</a></li>
 										<li><a href="#0" data-home-bedrooms="3" class="strike nolink doNotClose">3</a></li>
@@ -114,8 +124,10 @@ $destinations_subnav_list = nret_get_destinations();
 										<li><a href="#0" data-home-bedrooms="10" class="strike nolink doNotClose">10+</a></li>
 									</ul>
 								</h3>
-								<a href="#0" class="btn btn__blue search initHomeRetreatSearch">Search</a>
-                                <a href="#0" class="btn btn__blue reset initHomeRetreatReset">Reset</a>
+                                <h3 class="search-btn-wrapper">
+                                    <a href="#0" class="btn search initHomeRetreatSearch">Search</a>
+<!--                                    <a href="#0" class="btn btn__blue reset initHomeRetreatReset">Reset</a>-->
+                                </h3>
 							</div>
 						</div>
 					</div>
@@ -127,7 +139,6 @@ $destinations_subnav_list = nret_get_destinations();
 							<div class="global-nav__destination-list east <?php if ( $currentcountry !== 'uk' && $currentcountry !== 'ie' ) { echo 'current'; } ?>">
 								<header>
 									<h6 class="title">US EAST</h6>
-									<span class="underline"></span>
 								</header><!-- /header -->
 								<ul class="sort-list  <?php if ($currentcountry == 'us') {echo 'current';} ?> group<?php echo (count($node->destinations["east"]) < 5 ? ' centralized' : ''); ?>">
 									<?php foreach($destinations_subnav_list['us'] as $destination) {
@@ -142,7 +153,6 @@ $destinations_subnav_list = nret_get_destinations();
 							<div class="global-nav__destination-list west">
 								<header>
 									<h6 class="title">US WEST</h6>
-									<span class="underline"></span>
 								</header><!-- /header -->
 								<ul class="sort-list group<?php echo (count($node->destinations["west"]) < 5 ? ' centralized' : ''); ?>">
 									<?php foreach($destinations_subnav_list['us'] as $destination) {
@@ -157,7 +167,6 @@ $destinations_subnav_list = nret_get_destinations();
 							<div class="global-nav__destination-list uk <?php if ( $currentcountry == 'uk' || $currentcountry == 'ie' ) { echo 'current'; } ?>" >
 								<header>
 									<h6 class="title">UK / EUROPE</h6>
-									<span class="underline"></span>
 								</header><!-- /header -->
 								<ul class="sort-list <?php if ($currentcountry == 'uk' || $currentcountry == 'ie') {echo 'current';} ?> group<?php echo (count($node->destinations["notus"]) < 5 ? ' centralized' : ''); ?>">
 									<?php foreach($destinations_subnav_list['uk'] as $destination) { ?>
