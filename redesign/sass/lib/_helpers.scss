@@ -26,3 +26,7 @@
 .rotate {
   @include rotate(-90deg);
 }
+
+.text-center {
+  text-align: center!important;
+}

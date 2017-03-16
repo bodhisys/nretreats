@@ -20,6 +20,24 @@
 section.home-page .home__hero-wrapper {
   max-width: 100%;
 }
+
+.our-services{
+  padding: 120px 0;
+  .icon {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 20px 0;
+  }
+  .text-summary {
+    font-size: 14px;
+    color: $gray-light;
+  }
+}
+
+
 @media (max-width: 769px) {
   .global-nav__destinations.show {
     display: block;

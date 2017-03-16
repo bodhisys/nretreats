@@ -1,13 +1,19 @@
 .search-section-header {
   color: #fff!important;
   font-size: 2.5rem!important;
+  @include font-eb-garamond;
+}
+header {
+  text-align: center;
 }
 
 .home__retreat-search {
+  display: block!important;
   & > .wrapper {
     top: -350px!important;
     background: transparent;
     width: 600px;
+
     & > .home__retreat-search-container {
       height: auto;
       .btn {
@@ -59,46 +65,6 @@
   }
 }
 
-section.home-page {
-  .home__featured-destinations {
-    padding: 0;
-  }
-  .home__featured-destinations .wrapper > header,
-  .home__news .wrapper > header,
-  .home__featured-retreat .wrapper > header {
-    margin-bottom: 10px;
-  }
-  .home__search__dropdown {
-    right: auto;
-    left: 0;
-    margin: 0;
-    width: 370px;
-  }
-  .global-nav__destination-list {
-    header {
-      margin: 0;
-      padding: 5px 8px;
-      padding-left: 14px;
-    }
-    width: 100%;
-    ul {
-      li {
-        padding: 5px 8px;
-        border-bottom: 1px solid #aaa;
-        margin: 0;
-        display: block;
-      }
-    }
-    label {
-      text-transform: uppercase;
-      &.custom-check-label{
-        background: none!important;
-      }
-    }
-  }
-}
-
-
 
 @media (max-width: 1280px) {
   .home__retreat-search > .wrapper {
@@ -106,3 +72,11 @@ section.home-page {
   }
 }
 
+
+
+.home__retreat-search .home__search__dropdown {
+  top: 96px;
+  width: 371px;
+  left: 0;
+  margin: 0;
+}

@@ -19,16 +19,26 @@ section.home-page .home__offers {
   padding: 0;
 }
 
-
+.flex-direction-nav a  {
+  font-style: normal!important;
+  text-align: center!important;
+}
 @media screen and (min-width: 1281px){
   .destination-carousel{
+    .flexslider {
+      margin: 0;
+      margin-bottom: 60px;
+    }
+    .flexslider .slides {
+      margin-left: -25%;
+    }
     .flexslider .flex-direction-nav .flex-next {
-      right: 32%!important; /* adjust offset to match the hover style */
+      right: 24%!important; /* adjust offset to match the hover style */
       opacity: .8; /* adjust opacity to match the hover style */
     }
 
     .flexslider .flex-direction-nav .flex-prev {
-      left: 32%!important; /* adjust offset to match the hover style */
+      left: 24%!important; /* adjust offset to match the hover style */
       opacity: .8; /* adjust opacity to match the hover style */
     }
 
@@ -36,5 +46,28 @@ section.home-page .home__offers {
       opacity: 1!important;
       z-index: 1000;
     }
+
+
+
+    .flex-caption {
+      bottom: 0;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      /* width: 100%; */
+      margin-right: 25px;
+      right: -5px;
+      left: 20px;
+      padding: 20px;
+      text-align: center;
+
+      a {
+        font-style: normal;
+        @include font-montserrat;
+        font-weight: 200;
+        font-size: 24px;
+      }
+    }
   }
 }
+

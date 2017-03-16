@@ -8,6 +8,6 @@ h6,
 p,
 .ui-datepicker .ui-datepicker-header,
 section.promotion .select__wrapper .select-text,
-section.promotion .select__wrapper.travel-with {
-  @include font-eb-garamond;
+section.promotion .select__wrapper.travel-with, .btn {
+  @include font-montserrat;
 }

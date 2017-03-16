@@ -1,13 +1,27 @@
 .home__list-home {
   background: #1d1e1f;
+  padding: 80px 0;
   .text-center {
     h4, p {
       color: #fff;
+      font-weight:300;
       @include font-montserrat;
     }
     p {
-      padding: 20px 0 40px 0;
+      padding: 20px 0 60px 0;
     }
+  }
+}
+
+form.newsletter-email {
+  @include nr-placeholder(color, $gray-lighter, ' ');
+  @include nr-placeholder(font-style, normal, ' ');
+  @include nr-placeholder(text-transform, uppercase, ' ');
+  @include nr-placeholder(font-size, 12px, ' ');
+
+  .btn {
+    width: 100px;
+    color: #fff;
   }
 }
 

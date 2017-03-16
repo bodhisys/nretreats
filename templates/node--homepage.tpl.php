@@ -66,16 +66,16 @@ $destinations_subnav_list = nret_get_destinations();
 <section id="home" class="home-page content-start">
 	<div class="home__hero-wrapper">
 		<div class="home__hero hero-el flex v-center h-center" <?php if($home_mobile_background_image){ ?>style="background-image:url('<?php echo $home_mobile_background_image; ?>');"<?php } ?>>
-			<div class="home__hero__mobile-header">
-				<h1 class="title"><?php echo $hero_main_copy; ?></h1>
-				<p><?php echo $hero_sub_copy; ?></p>
-			</div>
+<!--			<div class="home__hero__mobile-header">-->
+<!--				<h1 class="title">--><?php //echo $hero_main_copy; ?><!--</h1>-->
+<!--				<p>--><?php //echo $hero_sub_copy; ?><!--</p>-->
+<!--			</div>-->
 			<div class="video__bg" data-videourl='<?php echo json_encode($hompeage_video_urls); ?>'>
 			</div>
 		</div>
-		<div class="video-toggle flex h-center">
-        	<p><?php echo $hero_main_copy; ?></p>
-			<p><?php echo $hero_sub_copy; ?></p>
+<!--		<div class="video-toggle flex h-center">-->
+<!--        	<p>--><?php //echo $hero_main_copy; ?><!--</p>-->
+<!--			<p>--><?php //echo $hero_sub_copy; ?><!--</p>-->
       	</div>
       	<div class="btn-wrapper home__hero__mobile-cta">
       		<div class="initMobileSearchDates btn__transparent btn">Book Now</div>
@@ -221,8 +221,32 @@ $destinations_subnav_list = nret_get_destinations();
     </div>
     <!--Major Changes for Logo Bar Ends-->
     <!---->
+    <div class="section our-services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <span class="icon icon_calendar"></span>
+                    <h4>Experimental Vacations</h4>
+                    <p class="text-summary">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <span class="icon icon_calendar"></span>
+                    <h4>Concierge Services</h4>
+                    <p class="text-summary">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <span class="icon icon_calendar"></span>
+                    <h4>Over 500 Homes</h4>
+                    <p class="text-summary">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+    <!---->
     <div class="section destination-carousel">
-        <div class="container-fluid">
+        <div class="nopadding container-fluid">
             <!-- Place somewhere in the <body> of your page -->
             <div class="flexslider destination-slider">
                 <ul class="slides">
@@ -264,6 +288,69 @@ $destinations_subnav_list = nret_get_destinations();
     </div>
     <!---->
 
+
+
+    <!---->
+    <div class="section guest-reviews-carousel">
+        <div class="container">
+            <!-- Place somewhere in the <body> of your page -->
+            <div class="flexslider guest-reviews-slider">
+                <ul class="slides">
+                    <li>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h2>GUEST REVIEWS</h2>
+                                <p class="flex-caption">Adventurer Cheesecake Brownie</p>
+                                <a class="btn btn-default">STAY HERE</a>
+                            </div>
+                            <div class="col-md-7">
+                                <img src="/themes/nretreats/assets/img/image-placeholder-900x600.jpg" />
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h2>GUEST REVIEWS</h2>
+                                <p class="flex-caption">Adventurer Cheesecake Brownie</p>
+                                <a class="btn btn-default">STAY HERE</a>
+                            </div>
+                            <div class="col-md-7">
+                                <img src="/themes/nretreats/assets/img/image-placeholder-900x600.jpg" />
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h2>GUEST REVIEWS</h2>
+                                <p class="flex-caption">Adventurer Cheesecake Brownie</p>
+                                <a class="btn btn-default">STAY HERE</a>
+                            </div>
+                            <div class="col-md-7">
+                                <img src="/themes/nretreats/assets/img/image-placeholder-900x600.jpg" />
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h2>GUEST REVIEWS</h2>
+                                <p class="flex-caption">Adventurer Cheesecake Brownie</p>
+                                <a class="btn btn-default">STAY HERE</a>
+                            </div>
+                            <div class="col-md-7">
+                                <img src="/themes/nretreats/assets/img/image-placeholder-900x600.jpg" />
+                            </div>
+                        </div>
+                    </li>
+                    <!-- items mirrored twice, total of 12 -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!---->
+
 	<section class="home__offers">
 		<header class="hide-block">
 			<h3 class="title">Special Offers</h3>
@@ -280,12 +367,12 @@ $destinations_subnav_list = nret_get_destinations();
                                     <a href="<?php echo url('node/'.$offer->nid->value()); ?>" class="offers-block">
                                         <img src="<?php echo nret_parse_image_url( $offer->field_hero_image->value() ); ?>" alt="">
                                     </a>
-                                    <p class="special-offer-tag">Special Offer</p>
+                                    <p class="special-offer-tag">Offer</p>
                                 </div>
 
                                 <div class="flex-caption">
-                                    <h6><?php echo $offer->title->value(); ?></h6>
-                                    <p>
+                                    <h4><?php echo $offer->title->value(); ?></h4>
+                                    <p class="text">
                                         Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
                                     </p>
                                 </div>
@@ -310,7 +397,7 @@ $destinations_subnav_list = nret_get_destinations();
                 </div>
                 <input type="email" name="Email" value="" placeholder="Your Email Address" required>
                 <input type="hidden" name="MailingListCode" value="<?php echo nret_get_mailinglist_code(); ?>">
-                <input class="btn btn__transparent newsletter-submit" value="Submit" type="submit">
+                <input class="btn btn__transparent newsletter-submit" value="SIGN UP" type="submit">
             </form>
             <h3 class="title newsletter-thankyou">Thank You for Subscribing</h3>
             <h3 class="title newsletter-error">Sorry, please try again</h3>

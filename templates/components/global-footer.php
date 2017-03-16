@@ -7,7 +7,11 @@ $contact_phone = variable_get('nret_contact_' . $userglobalposition . '_phone');
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <input type="text" id="footerSearch" placeholder="Search">
+                    <div>
+                        <span class="icon icon_search"></span>
+                        <input type="text" id="footerSearch" placeholder="Search">
+                    </div>
+
                     <ul class="footer-nav-menu clearfix">
                         <li><a href="/about">About NR</a></li>
                         <li><a href="/faq">FAQ</a></li>
