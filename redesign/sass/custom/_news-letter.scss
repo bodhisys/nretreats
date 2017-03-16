@@ -1,0 +1,16 @@
+.home__list-home {
+  background: #1d1e1f;
+  .text-center {
+    h4, p {
+      color: #fff;
+      @include font-montserrat;
+    }
+    p {
+      padding: 20px 0 40px 0;
+    }
+  }
+}
+
+form.newsletter-email input[type='email'], form.newsletter-email input[type='text'] {
+  background: #222;
+}

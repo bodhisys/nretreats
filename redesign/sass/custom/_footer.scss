@@ -1,0 +1,56 @@
+$gray-base:              #000 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
+$gray:                   lighten($gray-base, 33.5%) !default; // #555
+$gray-medium:             lighten($gray-base, 46.7%) !default; // #777
+$gray-light:             lighten($gray-base, 65%)!default;
+$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+
+.real-estate-footer {
+  padding: 50px 0;
+  display: block;
+  background: $gray-light;
+}
+
+.footer-top {
+  background: $gray-dark;
+  .footer-top-wrap {
+
+    padding: 50px 0;
+  }
+  color: $gray-lighter;
+  input {
+    background: $gray;
+    border-color: $gray;
+    color: $gray-lighter;
+  }
+
+}
+form.newsletter-email {
+  @include nr-placeholder(color, $gray-lighter, ' ');
+  @include nr-placeholder(font-style, normal, ' ');
+  @include nr-placeholder(text-transform, uppercase, ' ');
+}
+
+.footer-nav-menu, .thumbnail-images {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    width: 33%;
+    float: left;
+    margin-bottom: 1px;
+  }
+}
+
+.footer-nav-menu {
+  padding: 20px 0;
+}
+
+.thumbnail-images {
+  max-width: 420px;
+  float: right;
+  img {
+    width: 100%;
+  }
+}

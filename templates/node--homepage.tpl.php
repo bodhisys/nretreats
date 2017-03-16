@@ -72,12 +72,6 @@ $destinations_subnav_list = nret_get_destinations();
 			</div>
 			<div class="video__bg" data-videourl='<?php echo json_encode($hompeage_video_urls); ?>'>
 			</div>
-<!--			<section class="start-exploring">-->
-<!--				<div class="video-toggle h-center">-->
-<!--					<h1 class="title">--><?php //echo $hero_main_copy; ?><!--</h1>-->
-<!--					<p>--><?php //echo $hero_sub_copy; ?><!--</p>-->
-<!--				</div>-->
-<!--			</section>-->
 		</div>
 		<div class="video-toggle flex h-center">
         	<p><?php echo $hero_main_copy; ?></p>
@@ -87,6 +81,7 @@ $destinations_subnav_list = nret_get_destinations();
       		<div class="initMobileSearchDates btn__transparent btn">Book Now</div>
       	</div>
 	</div>
+    <!--Major Changes for Hero Search Starts-->
 	<article class="home__featured-destinations funky-bg hero-el__below">
 		<section class="home__retreat-search scroll-to-search">
 			<div class="wrapper">
@@ -192,182 +187,137 @@ $destinations_subnav_list = nret_get_destinations();
 				</div>
 			</div>
 		</section>
-		<?php if($hasFD) { ?>
-		<div class="wrapper hide-block">
-			<header>
-				<h3 class="title">Featured Destination</h3>
-			</header>
-			<a href="<?php echo url('node/'.$featured_destination->nid->value()); ?>" class="destination-listing__block">
-				<div class="destination-listing__image" style="background:url('<?php echo $node->destination_api_data->Image2; ?>') center center no-repeat;background-size:cover;"></div>
-				<div class="destination-listing__image" style="background:url('<?php echo $node->destination_api_data->Image1; ?>') center center no-repeat;background-size:cover;">
-					<img src="<?php echo $node->destination_api_data->Image1; ?>" alt="">
-				</div>
-				<div class="destination-listing__copy">
-					<div class="wrapper">
-						<hgroup>
-							<p class="strike"><?php echo $featured_destination->title->value(); ?><span class="strike-through"></span></p>
-							<h3 class="title"><?php echo $node->destination_api_data->CategoryCount; ?> Retreats</h3>
-						</hgroup>
-						<?php if ( !empty($node->destination_api_data->Summary) ) { ?>
-						<p><?php echo $node->destination_api_data->Summary; ?></p>
-						<?php } ?>
-						<span class="destination-listing__copy__price">Starting from <span class="price">
-							<?php echo nret_get_currency($node->destination_api_data->RegionId)." ".((!empty($node->destination_api_data->FromPrice) && !is_null($node->destination_api_data->FromPrice))?$node->destination_api_data->FromPrice:$node->destination_api_data->destination_from_price); ?> / night</span></span>
-					</div>
-				</div>
-			</a>
-			<a href="/destination" class="btn btn__transparent">View All</a>
-		</div>
-		<?php } ?>
+
 	</article>
+    <!--Major Changes for Hero Search Ends-->
+    <!--Major Changes for Logo Bar Starts-->
+    <div class="hero-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-inline partners-bar">
+                        <li>
+                            <img src="/themes/nretreats/assets/img/logos/condo-nast-logo.png"/>
+                        </li>
+                        <li>
+                            <img src="/themes/nretreats/assets/img/logos/cbs-logo.png"/>
+                        </li>
+                        <li>
+                            <img src="/themes/nretreats/assets/img/logos/southern-living-logo.png"/>
+                        </li>
+                        <li>
+                            <img src="/themes/nretreats/assets/img/logos/travel-leisure-logo.png"/>
+                        </li>
+                        <li>
+                            <img src="/themes/nretreats/assets/img/logos/new-york-post-logo.png"/>
+                        </li>
+                        <li>
+                            <img src="/themes/nretreats/assets/img/logos/garden-gun-logo.png"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Major Changes for Logo Bar Ends-->
+    <!---->
+    <div class="section destination-carousel">
+        <div class="container-fluid">
+            <!-- Place somewhere in the <body> of your page -->
+            <div class="flexslider destination-slider">
+                <ul class="slides">
+                    <?php
+                    foreach ($home_retreats as $home_retreat)
+                    {
+                        foreach($home_retreat_api[$home_retreat->nid->value()] as $retreat) { ?>
+                            <li>
+                                <div class="inner">
+                                    <a href="<?php echo url('node/'.$home_retreat->nid->value()); ?>" class="retreat-listing__block__image">
+                                        <img src="<?php echo nret_parse_image_url($home_retreat->field_hero_image->value()); ?>"/>
+                                    </a>
+                                    <p class="flex-caption">
+                                        <a href="<?php echo url('node/'.$home_retreat->nid->value()); ?>" title=""><?php echo $retreat->CategoryName; ?> - <?php echo $home_retreat->field_destination->title->value(); ?></a>
+                                    </p>
+                                </div>
+                            </li>
+
+                        <?php } } ?>
+                    <?php
+                    foreach ($home_retreats as $home_retreat)
+                    {
+                        foreach($home_retreat_api[$home_retreat->nid->value()] as $retreat) { ?>
+                            <li>
+                                <div class="inner">
+                                    <a href="<?php echo url('node/'.$home_retreat->nid->value()); ?>" class="retreat-listing__block__image">
+                                        <img src="<?php echo nret_parse_image_url($home_retreat->field_hero_image->value()); ?>"/>
+                                    </a>
+                                    <p class="flex-caption">
+                                        <a href="<?php echo url('node/'.$home_retreat->nid->value()); ?>" title=""><?php echo $retreat->CategoryName; ?> - <?php echo $home_retreat->field_destination->title->value(); ?></a>
+                                    </p>
+                                </div>
+                            </li>
+
+                        <?php } } ?>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!---->
+
 	<section class="home__offers">
 		<header class="hide-block">
 			<h3 class="title">Special Offers</h3>
 		</header>
 
-		<div class="offers-row image-gallery-mobile hide-block">
-			<?php foreach($home_offers as $offer) { ?>
-			<a href="<?php echo url('node/'.$offer->nid->value()); ?>" class="offers-block">
-				<div class="offers-block__bg-image">
-					<img src="<?php echo nret_parse_image_url( $offer->field_hero_image->value() ); ?>" alt="">
-				</div>
-				<div class="offers-block__copy">
-					<hgroup>
-						<h5 class="title"><?php echo $offer->field_offer_type->value(); ?></h5>
-						<h3 class="title"><?php echo $offer->title->value(); ?></h3>
-						<p class="subheader"><?php echo $offer->field_offer_cta_text->value(); ?></p>
-					</hgroup>
-				</div>
-			</a>
-			<?php } ?>
-		</div>
-		<a href="/offers" class="btn btn__transparent">View All</a>
+        <div class="section special-offer-carousel">
+            <div class="container">
+                <!-- Place somewhere in the <body> of your page -->
+                <div class="flexslider special-offer-slider">
+                    <ul class="slides">
+                        <?php foreach($home_offers as $offer) { ?>
+                            <li>
+                                <div class="image-wrap">
+                                    <a href="<?php echo url('node/'.$offer->nid->value()); ?>" class="offers-block">
+                                        <img src="<?php echo nret_parse_image_url( $offer->field_hero_image->value() ); ?>" alt="">
+                                    </a>
+                                    <p class="special-offer-tag">Special Offer</p>
+                                </div>
+
+                                <div class="flex-caption">
+                                    <h6><?php echo $offer->title->value(); ?></h6>
+                                    <p>
+                                        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                                    </p>
+                                </div>
+                            </li>
+
+                        <?php } ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
 	</section>
-
-	<article class="home__list-home funky-bg flex v-center h-center">
-		<hgroup>
-			<h3 class="title">Sign Up for our Newsletter</h3>
-		</hgroup>
-		<p><?php echo variable_get('nret_newsletter_copy'); ?></p>
-		<form class="newsletter-email" action="" method="POST" accept-charset="utf-8">
-			<div class="name-wrapper">
-				<input type="text" name="FirstName" value="" placeholder="First Name" required>
-				<input type="text" name="LastName" value="" placeholder="Last Name" required>
-			</div>
-			<input type="email" name="Email" value="" placeholder="Your Email Address" required>
-			<input type="hidden" name="MailingListCode" value="<?php echo nret_get_mailinglist_code(); ?>">
-			<input class="btn btn__transparent newsletter-submit" value="Submit" type="submit">
-		</form>
-		<h3 class="title newsletter-thankyou">Thank You for Subscribing</h3>
-		<h3 class="title newsletter-error">Sorry, please try again</h3>
-	</article>
-	<section class="home__featured-retreat">
-		<div class="wrapper">
-			<header class="hide-block">
-				<h3 class="title">Featured Retreats</h3>
-			</header>
-			<div class="home__featured-retreat__container">
-					<div class="funky-bg"></div>
-
-				<?php
-				foreach ($home_retreats as $home_retreat)
-				{
-				     foreach($home_retreat_api[$home_retreat->nid->value()] as $retreat) { ?>
-
-				<div class="retreat-listing__block-small">
-					<a href="<?php echo url('node/'.$home_retreat->nid->value()); ?>" class="retreat-listing__block__image" style="background:url('<?php echo nret_parse_image_url($home_retreat->field_hero_image->value()); ?>') center center no-repeat;background-size:cover;"></a>
-					<div class="retreat-listing__block__copy">
-						<hgroup>
-							<h4><a href="<?php echo url('node/'.$home_retreat->nid->value()); ?>" title=""><?php echo $retreat->CategoryName; ?> - <?php echo $home_retreat->field_destination->title->value(); ?></a></h4>
-							<h5 class="subheader">Sleeps <?php echo $retreat->Sleeps; ?> <span class="long-dash"></span>Starting from <?php echo nret_get_currency($retreat_destination_regionId[$home_retreat->nid->value()]); echo $retreat->FromPrice; ?>  / night</h5>
-						</hgroup>
-						<p class="retreat-listing__block__copy-description"><?php echo $retreat->Teaser; ?></p>
-						<div class="btn-wrapper qv__mobile">
-							<a href="<?php echo url('node/'.$home_retreat->nid->value()); ?>" class="btn btn__transparent">Book Now</a>
-							<a href="#0" class="btn btn__transparent nolink quickview" data-quickview-id="<?php echo $home_retreat->nid->value(); ?>">Quick View</a>
-						</div>
-					</div>
-				</div>
-				<?php } } ?>
-			</div>
-		</div>
-	</section>
-	<article class="home__list-home funky-bg flex v-center h-center">
-		<hgroup>
-			<h3 class="title">List Your Home</h3>
-		</hgroup>
-		<p><?php echo variable_get('nret_listyourhome_copy'); ?></p>
-		<a href="/list-your-home" class="btn btn__transparent">Learn More</a>
-	</article>
-	<article class="home__news">
-		<div class="wrapper">
-			<header class="animated hide-block">
-				<h3 class="title">News & Features</h3>
-			</header>
-			<?php
-				foreach($home_articles as $article) {
-					if($article->field_is_this_a_featured_journal->value() == 1) { 	?>
-
-					<div class="image-overlay-block">
-						<div class="overlay__copy hide-block">
-							<hgroup class="animated">
-								<h5 class="title"><?php echo str_replace('_',' ', $article->field_journal_type->value() ); ?></h5>
-								<h3 class="title"><?php echo $article->title->value(); ?></h3>
-							</hgroup>
-							<p class="excerpt"><?php echo $article->field_journal_hero_paragraph->value(); ?></p>
-							<a href="<?php echo url('node/'.$article->nid->value()); ?>" class="strike">Read Article <span class="side-arrow"></span></a>
-						</div>
-						<div class="image-on-image right">
-							<div class="inner">
-								<time class="hide-block" datetime="2015-10-20" pubdate><?php echo date("M d", $article->field_journal_date->value()); ?></time>
-								<div class="image__large">
-									<a href="<?php echo url('node/'.$article->nid->value()); ?>">
-										<img class="hide-block" src="<?php echo nret_parse_image_url($article->field_hero_image->value()); ?>" alt="">
-									</a>
-								</div>
-								<div class="image__small hide-block">
-									<img src="<?php echo nret_parse_image_url($article->field_featured_image->value()); ?>" alt="">
-								</div>
-							</div>
-						</div>
-					</div>
-				<?php break;} } ?>
-			<section class="news-row">
-				<div class="inner">
-					<?php
-						$article_count = 1;
-						foreach($home_articles as $article) {
-							if ($article_count > 2) {
-								break;
-							}
-						if($article->field_is_this_a_featured_journal->value() != 1) { ?>
-
-						<div class="news-block">
-							<div class="news-block__image">
-								<time class="" datetime="2015-10-20" pubdate><?php echo date("M d", $article->field_journal_date->value()); ?></time>
-								<div class="image__large-wrapper">
-									<a href="<?php echo url('node/'.$article->nid->value()); ?>">
-										<img class="hide-block" src="<?php echo nret_parse_image_url($article->field_hero_image->value()); ?>" alt="">
-									</a>
-								</div>
-							</div>
-							<div class="news-block__copy hide-block">
-								<hgroup>
-									<h5 class="title"><?php echo str_replace('_',' ', $article->field_journal_type->value() ); ?></h5>
-									<h3 class="title"><?php echo $article->title->value(); ?></h3>
-								</hgroup>
-								<a href="<?php echo url('node/'.$article->nid->value()); ?>" class="strike">Read Article <span class="side-arrow"></span></a>
-							</div>
-						</div>
-					<?php $article_count++;} }?>
-			</section>
-			<a href="/journal" class="btn btn__transparent">View All</a>
-		</div>
-	</article>
-
-
+    <article class="home__list-home funky-bg flex v-center h-center">
+        <div class="container">
+            <div class="text-center">
+                <h4>STAY UP TO DATE</h4>
+                <p>Sign up and receive news and updates.</p>
+            </div>
+            <form class="newsletter-email" action="" method="POST" accept-charset="utf-8">
+                <div class="name-wrapper">
+                    <input type="text" name="FirstName" value="" placeholder="First Name" required>
+                    <input type="text" name="LastName" value="" placeholder="Last Name" required>
+                </div>
+                <input type="email" name="Email" value="" placeholder="Your Email Address" required>
+                <input type="hidden" name="MailingListCode" value="<?php echo nret_get_mailinglist_code(); ?>">
+                <input class="btn btn__transparent newsletter-submit" value="Submit" type="submit">
+            </form>
+            <h3 class="title newsletter-thankyou">Thank You for Subscribing</h3>
+            <h3 class="title newsletter-error">Sorry, please try again</h3>
+        </div>
+    </article>
 </section>
-<h1>Homepage</h1>
+
 <?php
     foreach ($home_retreats as $home_retreat)
     {

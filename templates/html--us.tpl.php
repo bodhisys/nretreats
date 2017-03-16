@@ -12,10 +12,12 @@ $nret_globalmessage_url = variable_get('nret_globalmessage_url', '');
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title><?php print $head_title; ?></title>
     <?php include 'components/optimizely.php'; ?>
-<!--    --><?php //include 'components/typekit.php'; ?>
+    <!--    --><?php //include 'components/typekit.php'; ?>
     <!--  style to load BEFORE hero element. necessary to hide hero element which is inline to the element -->
     <link rel="stylesheet" type="text/css" href="/themes/nretreats/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/themes/nretreats/scripts/flexslider/flexslider.css">
     <link rel="stylesheet" type="text/css" href="/themes/nretreats/css/redesign.css">
+
     <?php print $styles; ?>
     <?php print $scripts; ?>
     <?php include 'components/bazaarvoice.php'; ?>
@@ -56,6 +58,7 @@ if ($nret_globalmessage_status) :
 <script src="/themes/nretreats/scripts/components.js" type="text/javascript"></script>
 <script src="/themes/nretreats/scripts/page.js" type="text/javascript"></script>
 <script src="/themes/nretreats/scripts/main.js" type="text/javascript"></script>
+<script src="/themes/nretreats/scripts/flexslider/jquery.flexslider.js" type="text/javascript"></script>
 <!--<script language="javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true&v=3&key=AIzaSyAy8lCX6E19KLkr8ow3lZ4NPDr7jxX8Vg8&callback=nret.maps.runMapInOrder"></script>-->
 </body>
 </html>

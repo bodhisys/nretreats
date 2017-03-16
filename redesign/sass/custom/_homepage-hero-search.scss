@@ -1,0 +1,108 @@
+.search-section-header {
+  color: #fff!important;
+  font-size: 2.5rem!important;
+}
+
+.home__retreat-search {
+  & > .wrapper {
+    top: -350px!important;
+    background: transparent;
+    width: 600px;
+    & > .home__retreat-search-container {
+      height: auto;
+      .btn {
+        max-width: 100%;
+      }
+    }
+  }
+  .choices-search {
+    .home__search__dropdown-title{
+      text-align: right;
+      &> h3 {
+        display: block;
+        margin: 0;
+        float: left;
+        border-right: 1px solid #aaa;
+        &.first-dropdown{
+          width: 360px;
+          text-align: left;
+        }
+        &.check-in, &.check-out, &.home__search__bedrooms-dropdown {
+          width: 50px!important;
+          text-align: center;
+        }
+        &.search-btn-wrapper {
+          width: 120px;
+          text-align: center;
+          border-right: none;
+          a {
+            margin: 0!important;
+          }
+        }
+      }
+    }
+    .inner {
+      padding: 10px 0;
+      background: #fff;
+    }
+  }
+  .choices .inner h3 .icon {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  .home__search__dropdown {
+    top: 101px;
+  }
+  .global-nav__destinations .global-nav__destinations__destination-list-wrapper {
+    padding: 0;
+    height: 300px;
+  }
+}
+
+section.home-page {
+  .home__featured-destinations {
+    padding: 0;
+  }
+  .home__featured-destinations .wrapper > header,
+  .home__news .wrapper > header,
+  .home__featured-retreat .wrapper > header {
+    margin-bottom: 10px;
+  }
+  .home__search__dropdown {
+    right: auto;
+    left: 0;
+    margin: 0;
+    width: 370px;
+  }
+  .global-nav__destination-list {
+    header {
+      margin: 0;
+      padding: 5px 8px;
+      padding-left: 14px;
+    }
+    width: 100%;
+    ul {
+      li {
+        padding: 5px 8px;
+        border-bottom: 1px solid #aaa;
+        margin: 0;
+        display: block;
+      }
+    }
+    label {
+      text-transform: uppercase;
+      &.custom-check-label{
+        background: none!important;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 1280px) {
+  .home__retreat-search > .wrapper {
+    width: 800px;
+  }
+}
+

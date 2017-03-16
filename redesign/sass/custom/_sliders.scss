@@ -1,0 +1,40 @@
+.slides {
+  li {
+    position: relative;
+    .inner {
+      width: 100%;
+      padding: 0 20px;
+      position: relative;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+
+
+
+section.home-page .home__offers {
+  padding: 0;
+}
+
+
+@media screen and (min-width: 1281px){
+  .destination-carousel{
+    .flexslider .flex-direction-nav .flex-next {
+      right: 32%!important; /* adjust offset to match the hover style */
+      opacity: .8; /* adjust opacity to match the hover style */
+    }
+
+    .flexslider .flex-direction-nav .flex-prev {
+      left: 32%!important; /* adjust offset to match the hover style */
+      opacity: .8; /* adjust opacity to match the hover style */
+    }
+
+    .flex-direction-nav .flex-disabled {
+      opacity: 1!important;
+      z-index: 1000;
+    }
+  }
+}

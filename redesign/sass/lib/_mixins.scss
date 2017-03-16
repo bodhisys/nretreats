@@ -13,17 +13,17 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-@mixin placeholder($property, $value) {
-  &::-webkit-input-placeholder {
+@mixin nr-placeholder($property, $value, $space: &) {
+  #{$space}::-webkit-input-placeholder {
     #{$property}: $value;
   }
-  &:-moz-placeholder {
+  #{$space}:-moz-placeholder {
     #{$property}: $value;
   }
-  &::-moz-placeholder {
+  #{$space}::-moz-placeholder {
     #{$property}: $value;
   }
-  &:-ms-input-placeholder {
+  #{$space}:-ms-input-placeholder {
     #{$property}: $value;
   }
 }
