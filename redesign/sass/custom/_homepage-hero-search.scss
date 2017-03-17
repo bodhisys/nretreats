@@ -7,6 +7,11 @@ header {
   text-align: center;
 }
 
+.arrow-up-destination-list{
+  &:before { border-width:6px; }
+  &:after { border-width:5px; }
+}
+
 .home__retreat-search {
   display: block!important;
   & > .wrapper {
@@ -58,13 +63,31 @@ header {
   }
   .home__search__dropdown {
     top: 101px;
+    left: 0;
+    margin: 0;
   }
-  .global-nav__destinations .global-nav__destinations__destination-list-wrapper {
-    padding: 0;
-    height: 300px;
+  .global-nav__destinations {
+    width: 370px;
+    top: 97px;
+    .global-nav__destinations__destination-list-wrapper {
+      padding: 0;
+      height: 300px;
+    }
+  }
+  .home__search__check-in-wrapper ,
+  .home__search__check-out-wrapper {
+    .arrow-up-destination-list{
+      left: 17.3%;
+    }
+  }
+  .home__search__dropdown.list {
+    top: 40px;
+    left: -20px ;
+    .arrow-up-destination-list:after, .arrow-up-destination-list:before {
+      left: 60% ;
+    }
   }
 }
-
 
 @media (max-width: 1280px) {
   .home__retreat-search > .wrapper {
@@ -73,10 +96,34 @@ header {
 }
 
 
-
-.home__retreat-search .home__search__dropdown {
-  top: 96px;
-  width: 371px;
-  left: 0;
-  margin: 0;
+// Custom Styles Not Included in Design
+@mixin custom-styles(){
+  .home__retreat-search {
+    .home__search__dropdown.list {
+      width: 600px;
+      left: -420px;
+      border: 0;
+      li {
+        float: left;
+        width: 120px;
+        height: 120px;
+        a {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+        }
+        .arrow-up-destination-list {
+          left: 94px;
+          &:before, &:after {
+            left: 360px;
+          }
+        }
+      }
+    }
+  }
+  .home__retreat-search .global-nav__destinations {
+    width: 600px;
+  }
 }
+
+@include custom-styles;

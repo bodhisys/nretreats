@@ -1,0 +1,45 @@
+.home__search__dropdown, .global-nav {
+  .global-nav__destinations__destination-list-wrapper {
+    display: block;
+    overflow-y: scroll;
+    width: 100%;
+    padding: 0;
+
+    & > .wrapper {
+      display: block!important;
+    }
+  }
+
+  .global-nav__destination-list {
+    width: 100%;
+    & > header {
+      margin-bottom: 0px;
+      padding: 8px;
+      border-bottom: 1px solid #aaa;
+      h6.title {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .sort-list {
+    li {
+      margin: 0!important;
+      border-bottom: 1px solid $gray-medium!important;
+      padding: 8px;
+      &:hover {
+        background: #8c8c8c;
+        a, label {
+          color: #fff;
+          &:hover { color: #fff; }
+        }
+      }
+    }
+  }
+  //label.custom-check-label {
+  //  background: none;
+  //  text-transform: uppercase;
+  //  font-size: 14px;
+  //}
+}
+

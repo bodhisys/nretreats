@@ -20945,8 +20945,7 @@ body.desktop .real-estate-property-summary__content a.strike:hover {
     display: none; } }
 
 #retreat-search .retreat-search__result-wrapper .container {
-  position: relative;
-  margin: 0 10%; }
+  position: relative; }
 
 #retreat-search .retreat-search__result-wrapper .container header,
 #retreat-search .retreat-search__result-wrapper .container hgroup {
@@ -20971,10 +20970,6 @@ body.desktop .real-estate-property-summary__content a.strike:hover {
   left: 0;
   width: 150px;
   border-top: 1px solid #313641; }
-
-@media (max-width: 769px) {
-  #retreat-search .retreat-search__result-wrapper .container {
-    margin: 0 35px; } }
 
 #retreat-search .retreat-search__result-wrapper .container > hgroup {
   margin-left: 6.141%; }

@@ -577,7 +577,7 @@ var nret = nret || {};
             nret.home.openSearchByDateDropdown();
             nret.home.initLocationTabs();
             nret.home.readCookies();
-            nret.home.scrollToBookingWidget();
+            //nret.home.scrollToBookingWidget();
 
             new NaturalRetreatsFilter();
 

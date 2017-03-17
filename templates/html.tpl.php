@@ -55,10 +55,12 @@ if ($nret_globalmessage_status) :
 <script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
 <!--<script src="/themes/nretreats/scripts/app.js" type="text/javascript"></script>-->
 <script src="/themes/nretreats/scripts/lib.js" type="text/javascript"></script>
+<script src="/themes/nretreats/scripts/flexslider/jquery.flexslider.js" type="text/javascript"></script>
 <script src="/themes/nretreats/scripts/components.js" type="text/javascript"></script>
 <script src="/themes/nretreats/scripts/page.js" type="text/javascript"></script>
+<script src="/themes/nretreats/scripts/realestate.js" type="text/javascript"></script>
 <script src="/themes/nretreats/scripts/main.js" type="text/javascript"></script>
-<script src="/themes/nretreats/scripts/flexslider/jquery.flexslider.js" type="text/javascript"></script>
+
 <!--<script language="javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true&v=3&key=AIzaSyAy8lCX6E19KLkr8ow3lZ4NPDr7jxX8Vg8&callback=nret.maps.runMapInOrder"></script>-->
 </body>
 </html>

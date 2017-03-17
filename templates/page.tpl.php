@@ -258,7 +258,7 @@ $destinations_subnav_list = nret_get_destinations();
             //                }
             //                ?>
             <!--            </a>-->
-            <a class="logo text-center" href="http://nr.com">
+            <a class="logo text-center" href="/">
                         <span class="logo-text">
 						<!--NATURAL RETREATS-->
                             <?php

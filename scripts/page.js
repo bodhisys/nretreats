@@ -1,333 +1,91 @@
 /**
  * Created by Subash Maharjan on 3/9/2017.
  */
-/*File 1: Helpers*/
+/*File 19*/
 var nret = nret || {};
-(function($) {
-    nret.helpers = {
-        isIe : function() {
-            $(window).load(function() {
-                if(navigator.userAgent.match(/Trident.*rv:11\./)) nret.helpers.els.body.addClass('ie11');
-            });
-        },
-        awfulFixToMobileSearchBarNotFocusing : function() {
-            $('#globalSearchMbl').find('input').on('touchstart', function() {
-                $(this).css('width', '84%');
-            });
-        },
-        countrySelectEvent : function() {
-            $('#initCountrySelect').on('click', function(){
-                $('.global-nav__banner__country-dropdown').toggleClass('open');
-            });
-        },
-        disableScrolling : function() {
-            // http://stackoverflow.com/a/16324762
-            $.fn.scrollLock=function(){return $(this).on("DOMMouseScroll mousewheel",function(h){var g=$(this),f=this.scrollTop,d=this.scrollHeight,b=g.height(),i=h.originalEvent.wheelDelta,a=i>0,c=function(){h.stopPropagation();h.preventDefault();h.returnValue=false;return false};if(!a&&-i>d-b-f){g.scrollTop(d);return c()}else{if(a&&i>f){g.scrollTop(0);return c()}}})};$.fn.scrollRelease=function(){return $(this).off("DOMMouseScroll mousewheel")};
-        },
+(function ($) {
 
-        closeElementOnDocumentClick : function() {
-            // if click is NOT on any trigger element or any element with modal class
-            $(document).on('click', function(event) {
-                if (!$(event.target).closest('.doNotClose, .ui-icon, .ui-corner-all').length) {
-                    $('.open').removeClass('show show-now');
-                    if ($('.filter__options-wrapper__filter-option').length) {
-                        $('.filter__options-wrapper__filter-option').removeClass('open');
-                    }
+    nret.realEstatePage = {
+
+        stickySubNav_RealEstate: function() {
+            var realEstateSubNav = $('.real-estate-community-nav').length > 0;
+            var stickyElement = null;
+            var stickyOffset = null;
+            var handlerfunction = null;
+
+            var stickyRealEstateSubNavHandler =  function(direction) {
+                $('.real-estate-header').toggleClass('stuck');
+                if (direction == 'up') {
+                    $('.real-estate-community-nav').removeAttr('style');
+                } else if (direction == 'down') {
+                    $('.real-estate-community-nav').velocity({
+                        top:45
+                    },350);
+                    $('.real-estate-community-nav').velocity({
+                        opacity:1
+                    },250);
                 }
-            });
-        },
+            };
 
-        whatTypeOfDevice : function() {
-            if(WURFL.form_factor == "Tablet"){
-                nret.helpers.els.body.addClass('device-tablet');
-                nret.helpers.els.body.addClass('mobile');
-            } else if (WURFL.form_factor == "Smartphone") {
-                nret.helpers.els.body.addClass('device-phone');
-                nret.helpers.els.body.addClass('mobile');
-            } else {
-                nret.helpers.els.body.addClass('device-desktop');
-                nret.helpers.els.body.addClass('desktop');
+            if(realEstateSubNav) {
+                stickyElement = $('.real-estate-community-nav')[0];
+                stickyOffset = 30;
+                handlerfunction = function(direction){stickyRealEstateSubNavHandler(direction)};
             }
+
+            var sticky = new Waypoint.Sticky({
+                element: stickyElement,
+                handler: function(direction) {
+                    handlerfunction(direction);
+                },
+                offset:stickyOffset
+            });
         },
 
-        triggerClickOnFooterNewsletterLink : function () {
-            if ( nret.helpers.els.body.hasClass('mobile') ) {
-                var el = $('.footer__item.newsletter').find('.footer__item-title');
-                el.on('click', function() {
-                    $(this).next().trigger('click');
-                });
-            }
+        realEstatePageListeners: function(){
+            $('.real-estate-mobile-navigation-open').on('click', function () {
+                $(this).toggleClass('open');
+            });
+
+            $('.has-subnavigation > button').on('click', function () {
+                $(this).closest('.has-subnavigation').siblings().removeClass('open');
+                $(this).closest('.has-subnavigation').toggleClass('open');
+            });
+
+            $('.real-estate-submenu-item > button').on('click', function () {
+                $(this).closest('.real-estate-submenu-item').siblings().removeClass('open active');
+                $(this).closest('.real-estate-submenu-item').toggleClass('open').addClass('active');
+            });
+
+            $('.real-estate-footer-menu-item h4 button').on('click', function () {
+                $(this).closest('.real-estate-footer-menu-item').siblings().removeClass('open');
+                $(this).closest('.real-estate-footer-menu-item').toggleClass('open');
+            });
+
+            $('.launch-contact-modal').on('click', function () {
+                $('.real-estate-contact-form-modal').fadeIn();
+            });
+
+            $('.close-contact-modal').on('click', function () {
+                $('.real-estate-contact-form-modal').fadeOut();
+            });
         },
 
-        validateEmailEvent : function() {
-            $('.form-submit').on('submit', function(){
-                var validateTheEmail = $(this).find('.email-validation');
-                var emailValue = validateTheEmail.val();
-                if ( nret.helpers.validateEmail(emailValue) == false ) {
-                    return false;
-                } else {
-                    return true;
-                }
-            });
-        },
-        validateEmail : function(email) {
-            var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-            return re.test(email);
-        },
-        noLink : function() {
-            $('.nolink').on('click', function(e){
-                e.preventDefault();
-            });
-        },
-        lazyLoad : function() { // Refine this function
-            $('.lazy').lazyload({
-                threshold : 500
-            });
-        },
-        openMoreOnActivitiesMapListEvent : function() {
-            $('.image-on-image__intro-copy__list-item').find('h4').on('click', function() {
-                var el = $(this).parent();
-
-                if ( el.hasClass('open') ) {
-                    $('.image-on-image__intro-copy__list-item').removeClass('open');
-                } else {
-                    $('.image-on-image__intro-copy__list-item').not(el).removeClass('open');
-                    el.addClass('open');
-                }
-                nret.helpers.closeMoreOnActivitiesMapList(el);
-                nret.helpers.openMoreOnActivitiesMapList(el);
-            });
-        },
-        openMoreOnActivitiesMapList : function(el) {
-            if ( el.hasClass('open') ) {
-                el.find('.long-dash').velocity({
-                    width:30,
-                    marginRight:10
-                }, {duration:200});
-                el.find('.image-on-image__list-copy').velocity({
-                    maxHeight:600,
-                    opacity:1
-                }, {duration:800});
-            }
-        },
-        closeMoreOnActivitiesMapList: function(el) {
-            $('.image-on-image__intro-copy__list-item').find('.long-dash').velocity({
-                width:0,
-                marginRight:0
-            });
-            $('.image-on-image__intro-copy__list-item').find('.image-on-image__list-copy').velocity({
-                maxHeight:0,
-                opacity:0
-            });
-        },
-        revealHidden: function() {
-            var allMods = $(".hide-block");
-            allMods.each(function(i, el) {
-                var el = $(el);
-                if (el.visible(true)) {
-                    el.addClass("reveal-block");
-                }
-            });
-        },
-        revealHiddenOnScroll : function () {
-            nret.helpers.els.win.scroll(function(event) {
-                nret.helpers.revealHidden();
-            });
-        },
-        phoneHelperOpen : function() {
-            $('.explorer__help-modal-inner').velocity(
-                {opacity:1}, {display:'flex'}
-            );
-        },
-        phoneHelperClose : function() {
-            $('.explorer__help-modal-inner').velocity(
-                {opacity:0}, {display:'none'}
-            );
-
-            $('.explorer__help-modal').velocity({
-                backgroundColorAlpha: 0,
-            });
-        },
-        phoneHelperCloseAfterTime : function() {
-            window.setTimeout(closePhone, 10000);
-
-            function closePhone() {
-                if ( $('.explorer__phone').find('.inner').hasClass('fresh') ) {
-                    nret.helpers.phoneHelperClose();
-                    $('.explorer__phone').find('.inner').removeClass('open');
+        init: function(){
+            nret.realEstatePage.realEstatePageListeners();
+            if ($('.real-estate-community-nav').length > 0) {
+                if ( $('body').hasClass('node-type-retreat') || $('body').hasClass('desktop') || window.innerWidth >= 900 ) {
+                    nret.realEstatePage.stickySubNav_RealEstate();
                 }
             }
-        },
-        phoneHelperEvent : function() {
-            // open to start
-            $('.explorer__phone').find('.inner').on('click', function(){
-                $(this).removeClass('fresh');
-                if ( $(this).hasClass('open') ) {
-                    nret.helpers.phoneHelperClose();
-                    $(this).removeClass('open');
-                } else {
-                    $(this).addClass('open');
-                    nret.helpers.phoneHelperOpen();
-                }
-            });
-        },
-        animateIdlePhone : function() {
-            window.setTimeout(runEveryMinute, 10000);
-            function runEveryMinute() {
-                setInterval(wigglePhone, 50000);
-            }
-            function wigglePhone() {
-                if ( !$('.explorer__phone').find('.inner').hasClass('open') ) {
-                    $(".explorer__phone").addClass("tada").delay(1200).queue(function(next){
-                        $(this).removeClass("tada");
-                        next();
-                    });
-                }
-            }
-        },
-        sortDestinationNamesAlphabeticallyByState : function() {
-            $groups = $('.sort-list');
-            var sortByState = function(a,b){
-                a = $(a).find(".strike").text().split(',');
-                b = $(b).find(".strike").text().split(',');
-
-                a = a[a.length -1];
-                b = b[b.length -1];
-
-                return a == b ? 0
-                    : a < b ? -1
-                        :         +1
-            }
-
-            var sortByName = function(a,b){
-                a = $(a).find(".strike").text();
-                b = $(b).find(".strike").text();
-                return a == b ? 0
-                    : a < b ? -1
-                        :         +1
-            }
-
-            var sortLocation = function(a,b){
-                return sortByState(a,b) || sortByName(a,b);
-            }
-
-            $groups.each(function(){
-                var $groupEl = $(this).find('li');
-                var alphabeticallyOrderedElements = $groupEl.sort(sortLocation);
-
-                $(this).html(alphabeticallyOrderedElements);
-
-            });
-        },
-        // Wrap trigger element with dropdown element.
-        // This will look for the next element & pass the ID to showdropdown function.
-        // .not('.region') and .not('#acquisitionFormRegion') were added by Andres Bonilla to make normal selects on acquisition page work
-        dropdownEvents : function() {
-            $('.select-dropdown').not('.region').on('click', function(){
-                var $this = $(this);
-                var id = $(this).next().attr('id');
-
-                nret.helpers.showDropdown(id);
-                nret.helpers.changeDropdownTabValue($this);
-            });
-
-            $('.select-wrapper select, .state-select-wrapper select, .contact__topic-wrapper select').not('#acquisitionFormRegion').unbind('change').on('change', function(){
-                var $this = $(this).prev();
-                var val = $(this).val();
-
-                $this.html(val + '<span class="icon icon_carrot-down"></span>');
-            });
-        },
-        changeDropdownTabValue : function(el) {
-            $this = el;
-            $this.next().unbind('change').on('change', function(){
-                val = $this.next().val();
-                $this.html(val + '<span class="icon icon_carrot-down"></span>');
-                // $this.next().removeClass('show');
-            });
-        },
-        showDropdown : function(id) {
-            var dropdown = document.getElementById(id);
-            var event;
-            // $(dropdown).addClass('show');
-            event = document.createEvent('MouseEvents');
-            event.initMouseEvent('mousedown', true, true, window);
-            dropdown.dispatchEvent(event);
-        },
-        openMobileAmenitiesList : function ($this) {
-            var list = $this.next();
-            if (list.hasClass('grow')) {
-                list.removeClass('grow');
-            } else {
-                list.addClass('grow');
-            }
-        },
-        openMobileAmenitiesListEvent : function() {
-            $('.amenities-block').find('header').on('click', function() {
-                $this = $(this);
-                nret.helpers.openMobileAmenitiesList($this);
-                $this.find('.icon').toggleClass('open');
-            });
-        },
-        adjustMarginTopForElementBelowHomeHero : function () {
-            if ( $(window).innerHeight() > 0) {
-                if ( nret.helpers.els.body.hasClass('desktop') && $('.hero-el').length > 0 ) {
-                    var h = $('.hero-el').innerHeight() - 40;
-                    $('.hero-el__below').css('marginTop', h);
-                }
-            }
-            // if (nret.helpers.els.body.hasClass('mobile') && nret.helpers.els.body.hasClass('home-page') ) {
-            // 	var h = $('.hero-el').innerHeight() - 40;
-            // 	$('.hero-el__below').css('marginTop', h);
-            // }
-        },
-        adjustMarginTopOnResize : function () {
-            $(window).on('resize',function() {
-                nret.helpers.adjustMarginTopForElementBelowHomeHero();
-            });
-        },
-        openCalOnLabelClick : function() {
-            $('.cal').find('.input-label').on('click', function() {
-                $('.cal').find('.input-container').removeClass('show');
-                $(this).siblings('.input-container').toggleClass('show');
-                $('.growMeMore, .growMe').removeClass('show');
-            });
-        },
-        init: function() {
-            nret.helpers.els = {
-                body : $('body'),
-                win : $(window)
-            }
-            nret.helpers.noLink();
-            nret.helpers.isIe();
-            nret.helpers.openCalOnLabelClick();
-            nret.helpers.whatTypeOfDevice();
-            nret.helpers.lazyLoad();
-            nret.helpers.sortDestinationNamesAlphabeticallyByState();
-            nret.helpers.openMoreOnActivitiesMapListEvent();
-            nret.helpers.revealHidden();
-            nret.helpers.revealHiddenOnScroll();
-            nret.helpers.dropdownEvents();
-            nret.helpers.disableScrolling();
-            nret.helpers.closeElementOnDocumentClick();
-            nret.helpers.phoneHelperEvent();
-            nret.helpers.phoneHelperCloseAfterTime();
-            nret.helpers.animateIdlePhone();
-            nret.helpers.validateEmailEvent();
-            nret.helpers.openMobileAmenitiesListEvent();
-            nret.helpers.countrySelectEvent();
-            nret.helpers.awfulFixToMobileSearchBarNotFocusing();
-            nret.helpers.triggerClickOnFooterNewsletterLink();
-            nret.helpers.adjustMarginTopForElementBelowHomeHero();
-            nret.helpers.adjustMarginTopOnResize();
         }
     };
 
-
     jQuery(document).ready(function() {
-        nret.helpers.init();
-    });
-})(jQuery);
+        nret.realEstatePage.init()
+    })
+
+}(jQuery));
 /**
  * Created by Subash Maharjan on 3/9/2017.
  */
@@ -1834,7 +1592,7 @@ var nret = nret || {};
             nret.home.openSearchByDateDropdown();
             nret.home.initLocationTabs();
             nret.home.readCookies();
-            nret.home.scrollToBookingWidget();
+            //nret.home.scrollToBookingWidget();
 
             new NaturalRetreatsFilter();
 
@@ -2149,584 +1907,6 @@ var nret = nret || {};
 /**
  * Created by Subash Maharjan on 3/9/2017.
  */
-/*File 33*/
-var nret = nret || {};
-(function ($) {
-    nret.realEstateCaseStudy = {
-        init: function () {
-
-        }
-    };
-}(jQuery));
-/**
- * Created by Subash Maharjan on 3/9/2017.
- */
-/*File 34*/
-var nret = nret || {};
-(function ($) {
-    function padNumber(num, size) {
-        var s = num + '';
-        while (s.length < size) s = '0' + s;
-        return s;
-    }
-
-    nret.realEstateCommunity = {
-        addListeners: function () {
-            $('.real-estate-community-listings .sort-by-container > select').on('change', nret.realEstateCommunity.communitySort);
-        },
-        setActiveCommunityMapLocation: function (index) {
-            $('.community-map-locations-item').removeClass('active');
-            $('.community-map-locations-item').eq(index).addClass('active');
-            for (var i = 0; i < nret.realEstateCommunity.communityMapMarkers.length; i++) {
-                var iconImageUrl = i === index
-                    ? 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + padNumber(i + 1, 2) + '|2A2C33|FFFFFF'
-                    : 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + padNumber(i + 1, 2) + '|FFFFFF|000000';
-                nret.realEstateCommunity.communityMapMarkers[i].setIcon(iconImageUrl);
-                nret.realEstateCommunity.communityMapMarkers[i].setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
-            }
-        },
-        communityMap: function () {
-            var $communityMap = $('#community-map');
-            if (!$communityMap.length) return;
-            var $communityMapLocations = $('.community-map-locations-item');
-            var map = new google.maps.Map($communityMap[0], {
-                center: {
-                    lat:  parseFloat($communityMapLocations.eq(0).data('latitude')),
-                    lng:  parseFloat($communityMapLocations.eq(0).data('longitude'))
-                },
-                fullscreenControl: false,
-                mapTypeControl: false,
-                mapTypeId: 'hybrid',
-                rotateControl: false,
-                scaleControl: true,
-                streetViewControl: false,
-                scrollwheel: false,
-                zoom: 8,
-                zoomControl: true
-            });
-            $('.community-map-locations-item button').click(function () {
-                var associatedMarkerIndex = $(this).closest('.community-map-locations-item').index();
-                var associatedMarker = nret.realEstateCommunity.communityMapMarkers[associatedMarkerIndex];
-                // map.setZoom(8);
-                map.setCenter(associatedMarker.getPosition());
-                associatedMarker.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
-                nret.realEstateCommunity.setActiveCommunityMapLocation(associatedMarkerIndex);
-            });
-            for (var i = 0; i < $communityMapLocations.length; i++) {
-                (function (i) {
-                    var iconImageUrl = i === 0
-                        ? 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + padNumber(i + 1, 2) + '|2A2C33|FFFFFF'
-                        : 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + padNumber(i + 1, 2) + '|FFFFFF|000000';
-                    var newMarker = new google.maps.Marker({
-                        icon: iconImageUrl,
-                        position: {
-                            lat: parseFloat($communityMapLocations.eq(i).data('latitude')),
-                            lng: parseFloat($communityMapLocations.eq(i).data('longitude'))
-                        },
-                        map: map
-                    });
-                    newMarker.addListener('click', function () {
-                        map.setZoom(8);
-                        map.setCenter(newMarker.getPosition());
-                        newMarker.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
-                        nret.realEstateCommunity.setActiveCommunityMapLocation(i);
-                    });
-                    nret.realEstateCommunity.communityMapMarkers.push(newMarker);
-                })(i);
-            }
-            var bounds = new google.maps.LatLngBounds();
-            for (var i = 0; i < nret.realEstateCommunity.communityMapMarkers.length; i++) {
-                bounds.extend(nret.realEstateCommunity.communityMapMarkers[i].getPosition());
-            }
-            map.fitBounds(bounds);
-            nret.realEstateCommunity.setActiveCommunityMapLocation(0);
-        },
-        communityMapMarkers: [],
-        communitySort: function (e) {
-            var $wrapper = $(".real-estate-community-listings__teasers");
-            var $selected = $('.real-estate-community-listings .sort-by-container > select');
-            var $listings = $('article.real-estate-property-teaser');
-            [].sort.call($listings, function (a, b) {
-                var bedroomA = parseInt(+$(a).attr('data-bedrooms').replace(/\D/g, ''));
-                var bedroomB = parseInt(+$(b).attr('data-bedrooms').replace(/\D/g, ''));
-                var priceA = parseInt(+$(a).attr('data-price').replace(/\D/g, ''));
-                var priceB = parseInt(+$(b).attr('data-price').replace(/\D/g, ''));
-                switch ($selected.val()) {
-                    //sort by ascending # of bedrooms
-                    case '1':
-                        return bedroomA - bedroomB;
-                        break;
-                    //sort by descending # of bedrooms
-                    case '2':
-                        return bedroomB - bedroomA;
-                        break;
-                    //sort by ascending price
-                    case '3':
-                        return priceA - priceB;
-                        break;
-                    //sort by descending price
-                    case '4':
-                        return priceB - priceA;
-                        break;
-                    default:
-                }
-            });
-            $listings.each(function () {
-                $wrapper.append(this);
-            });
-        },
-        init: function () {
-            nret.realEstateCommunity.addListeners();
-            nret.realEstateCommunity.communitySort();
-            nret.realEstateCommunity.communityMap();
-        }
-    };
-}(jQuery));
-/**
- * Created by Subash Maharjan on 3/9/2017.
- */
-/*File 35*/
-var nret = nret || {};
-(function ($) {
-    nret.realEstateContact = {
-        init: function () {
-
-        }
-    };
-}(jQuery));
-/**
- * Created by Subash Maharjan on 3/9/2017.
- */
-/*File 20*/
-var nret = nret || {};
-(function ($) {
-    var Carousel = function (element) {
-        var self = this;
-        var $carouselItems = $('.real-estate-carousel__item', element);
-        var $paginationButtons = $('.real-estate-carousel__pagination button', element);
-        var xDown = null;
-        var yDown = null;
-
-        if ($carouselItems.length <= 1) return;
-
-        self.activeIndex = $('.real-estate-carousel__item.active', element).index();
-        self.itemLength = $carouselItems.length;
-
-        self.next = next;
-        self.previous = previous;
-        self.paginate = paginate;
-
-        init();
-
-
-        function handleTouchStart(evt) {
-            xDown = evt.touches[0].clientX;
-            yDown = evt.touches[0].clientY;
-        };
-
-        function handleTouchMove(evt) {
-            if ( ! xDown || ! yDown ) {
-                return;
-            }
-
-            var xUp = evt.touches[0].clientX;
-            var yUp = evt.touches[0].clientY;
-
-            var xDiff = xDown - xUp;
-            var yDiff = yDown - yUp;
-
-            if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
-                if ( xDiff > 0 ) {
-                    /* left swipe */
-                    self.previous();
-                } else {
-                    /* right swipe */
-                    self.next();
-                }
-            } else {
-                if ( yDiff > 0 ) {
-                    /* up swipe */
-                } else {
-                    /* down swipe */
-                }
-            }
-            /* reset values */
-            xDown = null;
-            yDown = null;
-        };
-
-        function init() {
-            $('.real-estate-carousel__next', element).on('click', function () {
-                self.next();
-            });
-
-            $('.real-estate-carousel__previous', element).on('click', function () {
-                self.previous();
-            });
-
-            element.addEventListener('touchstart', handleTouchStart, false);
-            element.addEventListener('touchmove', handleTouchMove, false);
-
-            $paginationButtons.on('click', function () {
-                var newIndex = $(this).index();
-                self.paginate(newIndex);
-            });
-        }
-
-        function _wrapIndex(index) {
-            var wrappedIndex;
-            if (index < 0) {
-                wrappedIndex = self.itemLength - 1;
-            } else if (index >= self.itemLength) {
-                wrappedIndex = 0;
-            } else {
-                wrappedIndex = index;
-            }
-            return wrappedIndex;
-        }
-
-        function next() {
-            var newIndex = self.activeIndex + 1;
-            paginate(newIndex);
-        }
-
-        function previous() {
-            var newIndex = self.activeIndex - 1;
-            paginate(newIndex);
-        }
-
-        function paginate(index) {
-            $carouselItems.removeClass('active');
-            $paginationButtons.removeClass('active');
-            self.activeIndex = _wrapIndex(index);
-            $carouselItems.eq(self.activeIndex).addClass('active');
-            $paginationButtons.eq(self.activeIndex).addClass('active');
-        }
-    };
-
-    $('.real-estate-carousel').each(function (index, element) {
-        new Carousel(element);
-    });
-}(jQuery));
-
-(function ($) {
-    $contactForm = $('#real-estate-contact-form');
-    if (!$contactForm) return;
-
-    $('input[type=radio][name=real-estate-topic]', $contactForm).on('change', function () {
-        var topic = this.value === 'marketing' ? 'developing' : this.value;
-        $('.real-estate-contact-form__follow-up', $contactForm).hide();
-        $('.real-estate-contact-form__follow-up--' + topic, $contactForm).show();
-    });
-
-    $contactForm.submit(function(event) {
-        event.preventDefault();
-        var timer;
-        var data = $(this).serializeArray();
-        var originalSubmitValue = $('#real-estate-contact-form button[type=submit]').text();
-        $('#real-estate-contact-form button[type=submit]').text('Sending...');
-        $.ajax({
-            type: 'POST',
-            url: '/api/v1/realstatecontact',
-            data: data,
-            success: function(response) {
-                if (response.error) {
-                    $('#real-estate-contact-form button[type=submit]').text('Error, Try Again');
-                } else {
-                    $('#real-estate-contact-form button[type=submit]').text('Sent');
-                }
-                window.clearTimeout(timer);
-                timer = setTimeout(function() {
-                    $('#real-estate-contact-form button[type=submit]').text(originalSubmitValue);
-                }, 5000);
-            }
-        });
-    });
-}(jQuery));
-/**
- * Created by Subash Maharjan on 3/9/2017.
- */
-/*File 36*/
-var nret = nret || {};
-(function ($) {
-    nret.realEstateHomepage = {
-        addListeners: function () {
-            $('.real-estate-homepage-nav__menu-item > button').on('click', function () {
-                $(this).closest('.real-estate-homepage-nav__menu-item').siblings().removeClass('active open');
-                $(this).closest('.real-estate-homepage-nav__menu-item').toggleClass('open').addClass('active');
-            });
-        },
-        init: function () {
-            nret.realEstateHomepage.addListeners();
-        }
-    };
-}(jQuery));
-/**
- * Created by Subash Maharjan on 3/9/2017.
- */
-/*File 19*/
-var nret = nret || {};
-(function ($) {
-
-    nret.realEstatePage = {
-
-        stickySubNav_RealEstate: function() {
-            var realEstateSubNav = $('.real-estate-community-nav').length > 0;
-            var stickyElement = null;
-            var stickyOffset = null;
-            var handlerfunction = null;
-
-            var stickyRealEstateSubNavHandler =  function(direction) {
-                $('.real-estate-header').toggleClass('stuck');
-                if (direction == 'up') {
-                    $('.real-estate-community-nav').removeAttr('style');
-                } else if (direction == 'down') {
-                    $('.real-estate-community-nav').velocity({
-                        top:45
-                    },350);
-                    $('.real-estate-community-nav').velocity({
-                        opacity:1
-                    },250);
-                }
-            };
-
-            if(realEstateSubNav) {
-                stickyElement = $('.real-estate-community-nav')[0];
-                stickyOffset = 30;
-                handlerfunction = function(direction){stickyRealEstateSubNavHandler(direction)};
-            }
-
-            var sticky = new Waypoint.Sticky({
-                element: stickyElement,
-                handler: function(direction) {
-                    handlerfunction(direction);
-                },
-                offset:stickyOffset
-            });
-        },
-
-        realEstatePageListeners: function(){
-            $('.real-estate-mobile-navigation-open').on('click', function () {
-                $(this).toggleClass('open');
-            });
-
-            $('.has-subnavigation > button').on('click', function () {
-                $(this).closest('.has-subnavigation').siblings().removeClass('open');
-                $(this).closest('.has-subnavigation').toggleClass('open');
-            });
-
-            $('.real-estate-submenu-item > button').on('click', function () {
-                $(this).closest('.real-estate-submenu-item').siblings().removeClass('open active');
-                $(this).closest('.real-estate-submenu-item').toggleClass('open').addClass('active');
-            });
-
-            $('.real-estate-footer-menu-item h4 button').on('click', function () {
-                $(this).closest('.real-estate-footer-menu-item').siblings().removeClass('open');
-                $(this).closest('.real-estate-footer-menu-item').toggleClass('open');
-            });
-
-            $('.launch-contact-modal').on('click', function () {
-                $('.real-estate-contact-form-modal').fadeIn();
-            });
-
-            $('.close-contact-modal').on('click', function () {
-                $('.real-estate-contact-form-modal').fadeOut();
-            });
-        },
-
-        init: function(){
-            nret.realEstatePage.realEstatePageListeners();
-            if ($('.real-estate-community-nav').length > 0) {
-                if ( $('body').hasClass('node-type-retreat') || $('body').hasClass('desktop') || window.innerWidth >= 900 ) {
-                    nret.realEstatePage.stickySubNav_RealEstate();
-                }
-            }
-        }
-    };
-
-    jQuery(document).ready(function() {
-        nret.realEstatePage.init()
-    })
-
-}(jQuery));
-/**
- * Created by Subash Maharjan on 3/9/2017.
- */
-/*File 37*/
-var nret = nret || {};
-(function ($) {
-    nret.realEstateOurDifferences = {
-        markers: [],
-        setLocationsMapLocation: function (index) {
-            var $realEstateOurDifferencesMapLocations = $('.our-differences-map-locations-item');
-            $realEstateOurDifferencesMapLocations.removeClass('active');
-            $realEstateOurDifferencesMapLocations.eq(index).addClass('active');
-            for (var i = 0; i < nret.realEstateOurDifferences.markers.length; i++) {
-                if (i === index) {
-                    nret.realEstateOurDifferences.markers[i].setIcon({
-                        anchor: new google.maps.Point(31, 31),
-                        origin: new google.maps.Point(0, 0),
-                        scaledSize: new google.maps.Size(34, 49),
-                        size: new google.maps.Size(34, 49),
-                        url: 'https://s3.amazonaws.com/natural-retreats/real-estate/google-maps-marker-active.png'
-                    });
-                } else {
-                    nret.realEstateOurDifferences.markers[i].setIcon({
-                        anchor: new google.maps.Point(14, 14),
-                        origin: new google.maps.Point(0, 0),
-                        scaledSize: new google.maps.Size(18, 26),
-                        size: new google.maps.Size(18, 26),
-                        url: 'https://s3.amazonaws.com/natural-retreats/real-estate/google-maps-marker.png'
-                    });
-                }
-            }
-        },
-        ourLocationsMap: function () {
-            var $realEstateOurDifferencesMap = $('#our-differences-map');
-            if (!$realEstateOurDifferencesMap.length) return;
-            var $realEstateOurDifferencesMapLocations = $('.our-differences-map-locations-item');
-            var map = new google.maps.Map($realEstateOurDifferencesMap[0], {
-                center: {
-                    lat:  parseFloat($realEstateOurDifferencesMapLocations.eq(0).data('latitude')),
-                    lng:  parseFloat($realEstateOurDifferencesMapLocations.eq(0).data('longitude'))
-                },
-                fullscreenControl: false,
-                mapTypeControl: false,
-                rotateControl: false,
-                scaleControl: true,
-                scrollwheel: false,
-                streetViewControl: false,
-                styles: [{"featureType": "administrative","elementType": "all","stylers": [{"saturation": "-100"}]},{"featureType": "administrative.province","elementType": "all","stylers": [{"visibility": "off"}]},{"featureType": "landscape","elementType": "all","stylers": [{"saturation": -100},{"lightness": 65},{"visibility": "on"}]},{"featureType": "poi","elementType": "all","stylers": [{"saturation": -100},{"lightness": "50"},{"visibility": "simplified"}]},{"featureType": "road","elementType": "all","stylers": [{"saturation": "-100"},{"visibility": "off"}]},{"featureType": "road.highway","elementType": "all","stylers": [{"visibility": "off"}]},{"featureType": "road.arterial","elementType": "all","stylers": [{"lightness": "30"}]},{"featureType": "road.local","elementType": "all","stylers": [{"lightness": "40"}]},{"featureType": "transit","elementType": "all","stylers": [{"saturation": -100},{"visibility": "off"}]},{"featureType": "water","elementType": "all","stylers": [{"lightness": "100"}]},{"featureType": "water","elementType": "geometry","stylers": [{"hue": "#ffff00"},{"lightness": -25},{"saturation": -97}]},{"featureType": "water","elementType": "labels","stylers": [{"lightness": -25},{"saturation": -100}]}],
-                zoom: 3,
-                zoomControl: true
-            });
-            for (var i = 0; i < $realEstateOurDifferencesMapLocations.length; i++) {
-                (function (i) {
-                    var newMarker = new google.maps.Marker({
-                        icon: i === 0
-                            ? {
-                                anchor: new google.maps.Point(31, 31),
-                                origin: new google.maps.Point(0, 0),
-                                scaledSize: new google.maps.Size(34, 49),
-                                size: new google.maps.Size(34, 49),
-                                url: 'https://s3.amazonaws.com/natural-retreats/real-estate/google-maps-marker-active.png'
-                            }
-                            : {
-                                anchor: new google.maps.Point(14, 14),
-                                origin: new google.maps.Point(0, 0),
-                                scaledSize: new google.maps.Size(18, 26),
-                                size: new google.maps.Size(18, 26),
-                                url: 'https://s3.amazonaws.com/natural-retreats/real-estate/google-maps-marker.png'
-                            },
-                        position: {
-                            lat: parseFloat($realEstateOurDifferencesMapLocations.eq(i).data('latitude')),
-                            lng: parseFloat($realEstateOurDifferencesMapLocations.eq(i).data('longitude'))
-                        },
-                        map: map
-                    });
-                    newMarker.addListener('click', function () {
-                        map.setZoom(3);
-                        map.setCenter(newMarker.getPosition());
-                        nret.realEstateOurDifferences.setLocationsMapLocation(i);
-                    });
-                    nret.realEstateOurDifferences.markers.push(newMarker);
-                })(i);
-            }
-        },
-        init: function () {
-            nret.realEstateOurDifferences.ourLocationsMap();
-        }
-    };
-}(jQuery));
-/**
- * Created by Subash Maharjan on 3/9/2017.
- */
-/*File 38*/
-var nret = nret || {};
-(function ($) {
-    nret.realEstateProperty = {
-        propertyFeaturesMobileDrawers: function () {
-            $('.real-estate-property-features .feature button').on('click', function () {
-                $(this).closest('.feature').siblings().removeClass('open');
-                $(this).closest('.feature').toggleClass('open');
-            });
-        },
-        propertyMap: function () {
-            var $propertyMap = $('#property-map');
-            if (!$propertyMap.length) return;
-            var map = new google.maps.Map($propertyMap[0], {
-                center: {
-                    lat:  parseFloat($propertyMap.data('lat')),
-                    lng:  parseFloat($propertyMap.data('lng'))
-                },
-                fullscreenControl: false,
-                mapTypeControl: false,
-                rotateControl: false,
-                scaleControl: true,
-                scrollwheel: false,
-                streetViewControl: false,
-                styles: [{"featureType":"administrative","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"saturation":-100},{"lightness":"50"},{"visibility":"simplified"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"lightness":"30"}]},{"featureType":"road.local","elementType":"all","stylers":[{"lightness":"40"}]},{"featureType":"transit","elementType":"all","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]},{"featureType":"water","elementType":"labels","stylers":[{"lightness":-25},{"saturation":-100}]}],				zoom: 3,
-                zoom: 8,
-                zoomControl: true
-            });
-            var newMarker = new google.maps.Marker({
-                icon: {
-                    anchor: new google.maps.Point(14, 14),
-                    origin: new google.maps.Point(0, 0),
-                    scaledSize: new google.maps.Size(18, 26),
-                    size: new google.maps.Size(18, 26),
-                    url: 'https://s3.amazonaws.com/natural-retreats/real-estate/google-maps-marker.png'
-                },
-                position: {
-                    lat: parseFloat($propertyMap.data('lat')),
-                    lng: parseFloat($propertyMap.data('lng'))
-                },
-                map: map
-            });
-        },
-        init: function () {
-            nret.realEstateProperty.propertyFeaturesMobileDrawers();
-            nret.realEstateProperty.propertyMap();
-        }
-    };
-}(jQuery));
-/**
- * Created by Subash Maharjan on 3/9/2017.
- */
-/*File 39*/
-var nret = nret || {};
-(function ($) {
-    nret.realEstateServices = {
-        init: function () {
-
-        }
-    };
-}(jQuery));
-/**
- * Created by Subash Maharjan on 3/9/2017.
- */
-/*File 41*/
-var nret = nret || {};
-(function($) {
-    nret.retreatDetail = {
-        scrollToReview: function() {
-            if (window.location.hash == "#reviews") {
-                // Scroll to Target
-                $('.product__reviews').velocity("scroll", {
-                    duration: 600,
-                    offset: -180,
-                    easing: "ease-in-out"
-                });
-            }
-        },
-        init: function() {
-            nret.retreatDetail.scrollToReview();
-        }
-    };
-}(jQuery));
-/**
- * Created by Subash Maharjan on 3/9/2017.
- */
 /*File 40*/
 var nret = nret || {};
 (function($) {
@@ -2772,6 +1952,28 @@ var nret = nret || {};
             nret.page_retreatSearch.openDestinationList();
             nret.page_retreatSearch.initResults();
             nret.page_retreatSearch.viewMore();
+        }
+    };
+}(jQuery));
+/**
+ * Created by Subash Maharjan on 3/9/2017.
+ */
+/*File 41*/
+var nret = nret || {};
+(function($) {
+    nret.retreatDetail = {
+        scrollToReview: function() {
+            if (window.location.hash == "#reviews") {
+                // Scroll to Target
+                $('.product__reviews').velocity("scroll", {
+                    duration: 600,
+                    offset: -180,
+                    easing: "ease-in-out"
+                });
+            }
+        },
+        init: function() {
+            nret.retreatDetail.scrollToReview();
         }
     };
 }(jQuery));

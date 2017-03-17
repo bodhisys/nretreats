@@ -247,30 +247,20 @@ $destinations_subnav_list = nret_get_destinations();
                 <span></span>
                 <span></span>
             </a>
-<!--            <a href="/" class="logo">-->
-<!--                --><?php
-//                if (theme_get_setting('toggle_logo')) {
-//                    $image = array(
-//                        'path' => theme_get_setting('logo'),
-//                        'alt' => 'Natural Retreats logo'
-//                    );
-//                    print theme('image', $image);
-//                }
-//                ?>
-<!--            </a>-->
-            <a class="logo text-center" href="http://nr.com">
-                        <span class="logo-text">
-						<!--NATURAL RETREATS-->
-                            <?php
-                            if (theme_get_setting('toggle_logo')) {
-                                $image = array(
-                                    'path' => theme_get_setting('logo'),
-                                    'alt' => 'Natural Retreats logo'
-                                );
-                                print theme('image', $image);
-                            }
-                            ?>
-						</span> <br/>
+
+            <a class="logo text-center" href="/">
+                <span class="logo-text">
+                <!--NATURAL RETREATS-->
+                    <?php
+                    if (theme_get_setting('toggle_logo')) {
+                        $image = array(
+                            'path' => theme_get_setting('logo'),
+                            'alt' => 'Natural Retreats logo'
+                        );
+                        print theme('image', $image);
+                    }
+                    ?>
+                </span> <br/>
                 <span class="logo-text-small visible-lg">Go Somewhere to Remember</span>
             </a>
             <a href="" class="mbl-btn-search icon icon_search">
@@ -398,22 +388,9 @@ $destinations_subnav_list = nret_get_destinations();
                         </div>
                     </div>
                     <div class="explorer__help-modal-inner">
-                        <div class="explore-team-block__avatar">
-                            <div class="inner" style="background: url('<?php echo $contact_image_url; ?>') center center no-repeat; background-size: cover;"></div>
-                        </div>
                         <div class="explorer__help-modal-inner__copy">
                             <div class="css_triangle-up"></div>
-<!--                            <p>-->
-<!--                                Contact Xplore Expert <span class="long-dash"></span>-->
-<!--                                <span class="italic">--><?php //echo $contact_name; ?><!--</span>-->
-<!--                            </p>-->
-<!--                            <p class="avatar-block__copy__contact">-->
-<!--                                <a href="tel:--><?php //echo str_replace(".", "", $contact_phone); ?><!--">--><?php //echo $contact_phone; ?><!--</a> or <span id="comm100-button---><?php //echo $livechat_planecode; ?><!--" class="avatar-block__copy__contact__chat" ></span>-->
-<!--                            </p>-->
-                            <p>
-                                <strong>CONTACT OUR TRAVEL EXPERTS</strong>
-
-                            </p>
+                            <h5>CONTACT OUR TRAVEL EXPERTS</h5>
                             <form action="/contact-2/#wpcf7-f3284-p3285-o1" method="post" class="wpcf7-form" novalidate="novalidate">
                                 <div style="display: none;">
                                     <input type="hidden" name="_wpcf7" value="3284">
@@ -424,7 +401,10 @@ $destinations_subnav_list = nret_get_destinations();
                                 </div>
                                 <div class="form-row">
                                     <div class="control">
-                                        <label for="first-name">First name *</label><span class="wpcf7-form-control-wrap first-name"><input type="text" name="first-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false"></span>
+                                        <label for="first-name">First name *</label>
+                                        <span class="wpcf7-form-control-wrap first-name">
+                                            <input type="text" name="first-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
+                                        </span>
                                     </div>
                                     <div class="control">
                                         <label for="last-name">Last name *</label><span class="wpcf7-form-control-wrap last-name"><input type="text" name="last-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false"></span>
@@ -455,14 +435,14 @@ $destinations_subnav_list = nret_get_destinations();
                                 </div>
                                 <div class="wpcf7-response-output wpcf7-display-none"></div>
                             </form>
-                            <div>
-                                <div class="col col-left">
+                            <div class="row">
+                                <div class="col-sm-6">
                                     <span class="header">CALL TO BOOK</span>
                                     <span>US EAST: <strong>877 805 7794</strong></span>
                                     <span>US WEST: <strong>888 451 0156</strong></span>
                                     <span>EU/UK: <strong>020 3807 4668</strong></span>
                                 </div>
-                                <div class="col col-right">
+                                <div class="col-sm-6">
                                     <span class="header">CONTACT HOURS</span>
                                     <span><em>Monday - Friday: 8am - 6pm</em></span>
                                     <span><em>Saturday - Sunday: 9am - 5pm</em></span>
