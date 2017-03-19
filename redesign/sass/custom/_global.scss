@@ -12,3 +12,23 @@ section.promotion .select__wrapper .select-text,
 section.promotion .select__wrapper.travel-with, .btn {
   @include font-montserrat;
 }
+.newstyle {
+  color: red;
+}
+.page-body,
+.footer,
+.global-nav,
+.real-estate-footer{
+  max-width: none!important;
+  min-width: auto!important;
+}
+
+#retreat-search {
+
+}
+
+@media screen and (max-width: 1280px){
+  .page-body {
+    margin-top: 55px;
+  }
+}

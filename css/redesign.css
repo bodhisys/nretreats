@@ -867,138 +867,877 @@ section.promotion .select__wrapper .select-text,
 section.promotion .select__wrapper.travel-with, .btn {
   font-family: 'Montserrat', sans-serif; }
 
-/*Mobile Only*/
-@media screen and (max-width: 769px) {
-  nav.global-nav > .inner .navbar-left, nav.global-nav > .inner .navbar-right {
-    display: block; }
-    nav.global-nav > .inner .navbar-left #openSearch, nav.global-nav > .inner .navbar-left li:after, nav.global-nav > .inner .navbar-right #openSearch, nav.global-nav > .inner .navbar-right li:after {
-      display: none; }
-    nav.global-nav > .inner .navbar-left li, nav.global-nav > .inner .navbar-right li {
-      padding: 0 0 10px 0; } }
+.newstyle {
+  color: red; }
 
-/*Potrait Tablet Only*/
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  nav.global-nav > .inner .navbar-left li a, nav.global-nav > .inner .navbar-right li a {
-    font-size: 26px;
-    font-size: 1.625rem; } }
+.page-body,
+.footer,
+.global-nav,
+.real-estate-footer {
+  max-width: none !important;
+  min-width: auto !important; }
 
-@media screen and (min-width: 1281px) {
-  .logo-text img {
-    width: auto; }
-  nav.global-nav > .inner .icon_search {
-    float: left;
-    width: 3%; }
-  nav.global-nav > .inner .navbar-left {
-    float: left;
-    width: 32%; }
-  nav.global-nav > .inner .navbar-brand {
-    width: 26%;
-    padding: 0 2%; }
-  nav.global-nav > .inner .navbar-right {
-    float: right;
-    width: 35%; }
-  nav.global-nav > .inner .icon_search {
-    font-size: 16px;
-    margin-top: 2px;
-    margin-left: 0;
-    margin-right: 10px; }
-  nav.global-nav > .inner .navbar-left li, nav.global-nav > .inner .navbar-right li {
-    font-size: 15px;
-    font-size: .9375rem;
+@media screen and (max-width: 1280px) {
+  .page-body {
+    margin-top: 55px; } }
+
+.global-nav {
+  position: relative;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  max-width: 1440px;
+  height: 100px;
+  margin: 0 auto;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  border-bottom: 1px solid #e3e3e3;
+  background-color: #fff; }
+  .global-nav > .inner {
     position: relative;
-    margin-right: 20px;
-    -webkit-transition: color .2s ease;
-    transition: color .2s ease;
-    color: #313641;
-    display: inline-block;
-    float: left; }
-    nav.global-nav > .inner .navbar-left li:after, nav.global-nav > .inner .navbar-right li:after {
+    z-index: 401;
+    height: 100%;
+    padding: 0 2.77778%; }
+    .global-nav > .inner .global-nav__retreat_search {
       position: absolute;
-      bottom: -2px;
-      display: block;
-      width: 0;
-      height: 2px;
-      content: '';
-      -webkit-transition: width .4s ease-out 0s;
-      transition: width .4s ease-out 0s;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 18.5%;
+      display: none;
+      display: none;
+      height: 100%;
+      padding-right: 20px;
+      padding-left: 0;
+      opacity: 0;
+      opacity: 0;
+      border-left: 1px solid #e3e3e3;
+      background: white;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -ms-grid-row-align: center;
+      align-items: center;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; }
+      .global-nav > .inner .global-nav__retreat_search .global-nav__book-now-close {
+        margin-top: 6px;
+        margin-right: 20px; }
+      .global-nav > .inner .global-nav__retreat_search .home__retreat-search {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        min-width: 100%; }
+        .global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper {
+          position: static;
+          width: 100%; }
+          .global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .global-nav__destinations__destination-list-wrapper {
+            width: 100%; }
+            .global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .global-nav__destinations__destination-list-wrapper .arrow-up-destination-list {
+              top: 257px; }
+            .global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .global-nav__destinations__destination-list-wrapper > .wrapper {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              height: 100%; }
+              .global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .global-nav__destinations__destination-list-wrapper > .wrapper .sort-list {
+                flex-direction: column;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column; }
+                .global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .global-nav__destinations__destination-list-wrapper > .wrapper .sort-list label {
+                  white-space: nowrap; }
+          .global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .global-nav__destination-list {
+            display: block;
+            width: 33%;
+            padding-top: 18px;
+            -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+            order: 2; }
+          .global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__retreat-search-container {
+            height: auto; }
+          .global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown {
+            top: 99px; }
+            .global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown.list {
+              top: 55px; }
+              .global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown.list .arrow-up-destination-list {
+                top: -50px; }
+            .global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown.home__search__check-in-wrapper, .global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown.home__search__check-out-wrapper {
+              border: 0;
+              background-color: transparent; }
+              .global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown.home__search__check-in-wrapper .arrow-up-destination-list, .global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown.home__search__check-out-wrapper .arrow-up-destination-list {
+                z-index: 1;
+                top: -172px;
+                left: 22%; }
+              .global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown.home__search__check-in-wrapper .home__search__calendar, .global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown.home__search__check-out-wrapper .home__search__calendar {
+                border: 1px solid #efefef; }
+            .global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown .home__search__check-out-wrapper .arrow-up-destination-list {
+              left: 33%; }
+            .global-nav > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown .arrow-up-destination-list {
+              top: -249px; }
+    .global-nav > .inner .book-now-btn {
+      width: auto;
+      padding: 0 16px; }
+    .global-nav > .inner .global-nav__search-wrapper {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 16.5%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      display: none;
+      height: 100%;
+      padding-left: 48px;
+      opacity: 0;
+      border-left: 1px solid #e3e3e3;
+      background: white;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .global-nav > .inner .global-nav__search-wrapper form {
+        width: 100%; }
+        .global-nav > .inner .global-nav__search-wrapper form input {
+          font-size: 18px;
+          font-size: 1.125rem;
+          position: relative;
+          top: 5px;
+          width: 85%;
+          letter-spacing: -.025rem;
+          color: #313641; }
+      .global-nav > .inner .global-nav__search-wrapper .btn__square {
+        margin-right: 20px;
+        margin-left: auto; }
+    .global-nav > .inner #main-menu li {
+      font-size: 15px;
+      font-size: .9375rem;
+      position: relative;
+      margin-right: 20px;
+      -webkit-transition: color .2s ease;
+      transition: color .2s ease;
+      color: #313641; }
+      .global-nav > .inner #main-menu li:after {
+        position: absolute;
+        bottom: -2px;
+        display: block;
+        width: 0;
+        height: 2px;
+        content: '';
+        -webkit-transition: width .4s ease-out 0s;
+        transition: width .4s ease-out 0s;
+        background-color: #313641; }
+      .global-nav > .inner #main-menu li:hover, .global-nav > .inner #main-menu li.active {
+        width: 100%; }
+    .global-nav > .inner .initMobileSearchDates {
+      display: none;
+      width: 87.25%;
+      margin: 40px auto 0; }
+    .global-nav > .inner .mobile-destination_subnav {
+      display: none;
+      padding: 0 20px; }
+      .global-nav > .inner .mobile-destination_subnav.show {
+        display: block; }
+      .global-nav > .inner .mobile-destination_subnav .destination_subnav_block {
+        padding: 25px 0;
+        border-bottom: 1px solid #313641; }
+      .global-nav > .inner .mobile-destination_subnav .mobile-destination_subnav_list {
+        overflow: hidden;
+        max-height: 0;
+        -webkit-transition: max-height .5s ease;
+        transition: max-height .5s ease; }
+        .global-nav > .inner .mobile-destination_subnav .mobile-destination_subnav_list .show {
+          max-height: 5000px; }
+    .global-nav > .inner .global-nav__tel,
+    .global-nav > .inner .nav__tel {
+      font-family: 'proxima-nova', sans-serif;
+      font-size: 10px;
+      font-size: .625rem;
+      font-weight: 600;
+      margin-right: 20px; }
+    .global-nav > .inner .icon_search {
+      font-size: 11px;
+      margin-right: 7px;
+      margin-left: 15px;
+      cursor: pointer;
+      color: inherit; }
+    .global-nav > .inner .global-nav__right {
+      margin-left: auto; }
+    .global-nav > .inner .global-nav__banner {
+      position: absolute;
+      top: -45px;
+      right: 0;
+      left: 0;
+      display: none;
+      width: 100%;
+      height: 45px;
+      background-color: #5e6777; }
+      .global-nav > .inner .global-nav__banner .inner,
+      .global-nav > .inner .global-nav__banner .global-nav__banner__country-select {
+        height: 100%; }
+      .global-nav > .inner .global-nav__banner .inner {
+        position: relative; }
+      .global-nav > .inner .global-nav__banner .icon_close {
+        font-size: 12px;
+        font-size: .75rem;
+        position: absolute;
+        position: absolute;
+        top: 15px;
+        right: 40px;
+        cursor: pointer;
+        color: #fff; }
+      .global-nav > .inner .global-nav__banner .global-nav__banner__country-select {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
+      .global-nav > .inner .global-nav__banner #initCountrySelect {
+        position: relative;
+        cursor: pointer; }
+      .global-nav > .inner .global-nav__banner .global-nav__banner__country-dropdown {
+        position: absolute;
+        top: 29px;
+        left: 0;
+        overflow: hidden;
+        width: auto;
+        max-height: 0;
+        padding: 0 15px;
+        -webkit-transition: max-height .35s ease-in-out;
+        transition: max-height .35s ease-in-out;
+        text-align: center;
+        text-transform: capitalize;
+        background-color: #5e6777; }
+        .global-nav > .inner .global-nav__banner .global-nav__banner__country-dropdown.open {
+          max-height: 500px; }
+        .global-nav > .inner .global-nav__banner .global-nav__banner__country-dropdown li {
+          padding-top: 15px; }
+          .global-nav > .inner .global-nav__banner .global-nav__banner__country-dropdown li:last-child {
+            padding-bottom: 15px; }
+          .global-nav > .inner .global-nav__banner .global-nav__banner__country-dropdown li .strike {
+            color: #fff; }
+      .global-nav > .inner .global-nav__banner h5 {
+        text-align: center;
+        color: #fdfdfd; }
+        .global-nav > .inner .global-nav__banner h5 .country-select__dropdown-value {
+          font-size: 15px;
+          font-size: .9375rem;
+          font-style: italic;
+          cursor: pointer;
+          text-decoration: underline;
+          letter-spacing: 0rem;
+          text-transform: capitalize; }
+        .global-nav > .inner .global-nav__banner h5 .icon_carrot-down {
+          font-size: 6px;
+          font-size: .375rem;
+          vertical-align: middle; }
+    .global-nav > .inner .mbl-btn-search {
+      display: none; }
+    .global-nav > .inner .mbl-search-background {
+      display: none;
+      overflow: hidden; }
+      .global-nav > .inner .mbl-search-background form {
+        width: 100%;
+        height: 100%; }
+        .global-nav > .inner .mbl-search-background form input {
+          font-size: 16px;
+          font-size: 1rem;
+          width: 85%;
+          height: 100%;
+          padding-left: 15px;
+          letter-spacing: -.025rem;
+          color: #313641;
+          color: #fff;
+          background-color: transparent; }
+    .global-nav > .inner .mbl-btn-nav {
+      display: none; }
+    .global-nav > .inner a {
+      font-weight: normal;
+      font-style: normal; }
+      .global-nav > .inner a.active {
+        color: inherit; }
+    .global-nav > .inner.stuck {
+      position: fixed;
+      z-index: 100;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 45px;
       background-color: #313641; }
-    nav.global-nav > .inner .navbar-left li:hover:after, nav.global-nav > .inner .navbar-left li .active:after, nav.global-nav > .inner .navbar-right li:hover:after, nav.global-nav > .inner .navbar-right li .active:after {
-      width: 100%; }
-  nav.global-nav > .inner .navbar-brand {
+      .global-nav > .inner.stuck > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown {
+        top: 45px; }
+        .global-nav > .inner.stuck > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown.list {
+          top: 35px; }
+        .global-nav > .inner.stuck > .inner .global-nav__retreat_search .home__retreat-search > .wrapper .home__search__dropdown .global-nav__destinations__destination-list-wrapper .arrow-up-destination-list {
+          top: -257px; }
+      .global-nav > .inner.stuck > .inner #main-menu li {
+        color: #fff; }
+        .global-nav > .inner.stuck > .inner #main-menu li a.active {
+          border-bottom: 1px solid #fff; }
+      .global-nav > .inner.stuck > .inner .global-nav__tel, .global-nav > .inner.stuck > .inner .nav__tel, .global-nav > .inner.stuck > .inner .icon_search {
+        color: #fff; }
+      .global-nav > .inner.stuck > .inner .global-nav__destinations {
+        top: 45px; }
+      .global-nav > .inner.stuck > .inner .book-now-btn {
+        height: auto; }
+      .global-nav > .inner.stuck .logo {
+        display: none; }
+        .global-nav > .inner.stuck .logo.logo-stuck {
+          display: block;
+          height: 100%;
+          background: url("../images/logo_white.svg") center center no-repeat;
+          background-size: contain; }
+      .global-nav > .inner.stuck .global-nav__retreat_search .global-nav__book-now-close {
+        width: 35px;
+        height: 35px;
+        margin-top: 4px;
+        padding-left: 3px; }
+      .global-nav > .inner.stuck .home__retreat-search {
+        height: 44px; }
+      .global-nav > .inner.stuck .home__retreat-search-container header {
+        margin-top: 0; }
+        .global-nav > .inner.stuck .home__retreat-search-container header .underline {
+          display: none; }
+      .global-nav > .inner.stuck .home__retreat-search-container .home__search__dropdown-title > h3 {
+        margin-top: 0; }
+      .global-nav > .inner.stuck .home__retreat-search-container .initHomeRetreatSearch {
+        height: 35px;
+        margin-top: 4px; }
+  .global-nav .logo-text {
+    display: block;
+    vertical-align: middle; }
+    .global-nav .logo-text img {
+      width: auto !important; }
+  .global-nav .mbl-search-menu-title {
     position: absolute;
-    margin: 0 auto;
-    text-align: center; }
-  nav.global-nav > .inner .mbl-btn-nav {
+    overflow: hidden;
+    width: 0;
+    height: 0; }
+  .global-nav .mbl-search-menu {
     position: absolute;
     top: 0;
     left: 0;
-    display: block;
-    width: 50px;
-    height: auto;
-    padding: 17.5px 0; }
-    nav.global-nav > .inner .mbl-btn-nav span {
-      position: relative;
-      z-index: 2;
+    overflow: scroll;
+    width: 0;
+    height: 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    background-color: rgba(49, 47, 60, 0.65);
+    background-color: white; }
+    .global-nav .mbl-search-menu .options {
       display: block;
-      width: 15px;
-      height: 1px;
-      margin: 3px auto;
-      background: #312f3c; }
-  nav.global-nav > .inner .global-nav__search-wrapper {
-    left: 0; }
-  nav.global-nav > .inner a {
+      overflow: hidden;
+      width: 100%;
+      height: 0;
+      margin: 84px auto 0 auto;
+      border: none; }
+      .global-nav .mbl-search-menu .options a {
+        position: relative;
+        display: block;
+        float: left;
+        width: 50%;
+        height: 10.16667vw;
+        -webkit-transition: background-color .4s linear 0s;
+        transition: background-color .4s linear 0s;
+        white-space: nowrap;
+        text-decoration: none;
+        color: #353535;
+        background-color: #e0e0e2; }
+        .global-nav .mbl-search-menu .options a:nth-child(1) {
+          border-right: 1px solid rgba(0, 0, 0, 0.2); }
+        .global-nav .mbl-search-menu .options a.active {
+          background-color: #fff; }
+        .global-nav .mbl-search-menu .options a span {
+          font-family: 'proxima-nova', sans-serif;
+          font-size: 2.66667vw;
+          font-style: normal;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          display: inline-block;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          letter-spacing: .2em;
+          -webkit-font-smoothing: antialiased; }
+    .global-nav .mbl-search-menu section {
+      position: absolute;
+      left: 50%;
+      width: 82.83333vw;
+      height: calc(100vh - 120px);
+      margin: 6.66667vw auto 0 auto;
+      -webkit-transition: opacity .42s, -webkit-transform 2s ease-in-out 0s;
+      transition: opacity .42s, -webkit-transform 2s ease-in-out 0s;
+      transition: opacity .42s, transform 2s ease-in-out 0s;
+      transition: opacity .42s, transform 2s ease-in-out 0s, -webkit-transform 2s ease-in-out 0s;
+      -webkit-transform: translate(-50%, 0) scale(0.7, 0.7);
+      transform: translate(-50%, 0) scale(0.7, 0.7);
+      pointer-events: none;
+      opacity: 0; }
+      .global-nav .mbl-search-menu section.active {
+        -webkit-transition: opacity .4s ease-out 0s;
+        transition: opacity .4s ease-out 0s;
+        -webkit-transform: translate(-50%, 0) scale(1, 1);
+        transform: translate(-50%, 0) scale(1, 1);
+        pointer-events: auto;
+        opacity: 1; }
+      .global-nav .mbl-search-menu section .select-box {
+        font-family: adobe-garamond-pro,sans-serif;
+        font-size: 4.66667vw;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        min-height: 11.83333vw;
+        max-height: 11.83333vw;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        -webkit-font-smoothing: antialiased; }
+        .global-nav .mbl-search-menu section .select-box.cal.active {
+          max-height: none; }
+        .global-nav .mbl-search-menu section .select-box .intro {
+          position: absolute;
+          top: 5vw;
+          left: 0;
+          -webkit-transform: none;
+          transform: none; }
+        .global-nav .mbl-search-menu section .select-box .icon {
+          font-size: 7px;
+          position: absolute;
+          position: absolute;
+          top: 7.6vw;
+          right: 0;
+          display: inline-block; }
+        .global-nav .mbl-search-menu section .select-box select {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 11.09375vw;
+          opacity: 0;
+          outline: none;
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none; }
+      .global-nav .mbl-search-menu section .start-exploring {
+        font-family: 'proxima-nova', sans-serif;
+        font-size: 2.66667vw;
+        font-style: normal;
+        position: relative;
+        left: 50%;
+        display: block;
+        width: 83.33333vw;
+        padding: 4.33333vw 0;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+        text-align: center;
+        letter-spacing: .2em;
+        color: #fff;
+        background-color: #312f3c; }
+
+.mbl-search-menu .calendar {
+  width: auto;
+  margin: 0 auto;
+  padding: 15vw 0 0 0;
+  border-collapse: separate; }
+
+.mbl-search-menu .ui-datepicker {
+  font-family: 'proxima-nova', sans-serif;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  margin: 0 auto;
+  padding: 0;
+  color: #313641;
+  border: 0;
+  border-radius: 0;
+  background-color: #f6f6f6;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column; }
+  .mbl-search-menu .ui-datepicker .ui-datepicker-header {
+    font-size: 10px;
+    font-size: .625rem;
+    font-weight: 500;
+    width: 100%;
+    letter-spacing: .2rem;
     text-transform: uppercase;
-    font-size: 12px; }
-  nav.global-nav.stuck .inner .navbar-left li, nav.global-nav.stuck .inner .navbar-right li {
-    color: #fff; }
-    nav.global-nav.stuck .inner .navbar-left li a.active, nav.global-nav.stuck .inner .navbar-right li a.active {
-      border-bottom: 1px solid #fff; }
-  nav.global-nav.sticky-top-nav {
-    background-color: #333333 !important;
-    border-color: #333333;
-    -webkit-transition: background 0.5s linear;
-    -moz-transition: background 0.5s linear;
-    -ms-transition: background 0.5s linear;
-    -o-transition: background 0.5s linear;
-    transition: background 0.5s linear;
-    max-width: 100%;
-    margin: 0 auto; }
-    nav.global-nav.sticky-top-nav .main-menu__link-list li, nav.global-nav.sticky-top-nav .logo-text-small, nav.global-nav.sticky-top-nav .sign-in-link, nav.global-nav.sticky-top-nav .inner .icon_search {
-      color: #fff !important; }
-    nav.global-nav.sticky-top-nav .explorer__help-modal .explorer__phone .inner {
-      background: #fff !important;
-      color: #000 !important; }
-  section.booking-widget.stuck nav.booking-widget__global-nav-stuck .inner .navbar-left li, section.booking-widget.stuck nav.booking-widget__global-nav-stuck .inner .navbar-right li {
-    color: #fff; }
-  .global-nav__destinations {
-    margin-left: 8%;
-    overflow: visible;
-    height: 315px;
-    width: 400px;
-    top: 75px; }
-    .global-nav__destinations.show {
-      padding: 8px 8px 8px 0; }
-      .global-nav__destinations.show .global-nav__destinations__destination-list-wrapper {
-        height: 300px; } }
+    color: #3d4451;
+    border: 0;
+    border-radius: 0;
+    background: transparent; }
+  .mbl-search-menu .ui-datepicker .ui-datepicker-calendar thead {
+    border-bottom: 1px solid #acafb4; }
+    .mbl-search-menu .ui-datepicker .ui-datepicker-calendar thead tr th span {
+      font-family: 'proxima-nova', sans-serif;
+      font-size: 10px;
+      font-size: .625rem;
+      font-weight: 100;
+      text-transform: uppercase;
+      opacity: 1;
+      color: #acafb4; }
+  .mbl-search-menu .ui-datepicker .ui-datepicker-calendar tbody {
+    border: 0; }
+    .mbl-search-menu .ui-datepicker .ui-datepicker-calendar tbody tr .ui-state-disabled {
+      color: #3d4451; }
+      .mbl-search-menu .ui-datepicker .ui-datepicker-calendar tbody tr .ui-state-disabled span {
+        text-decoration: line-through; }
+    .mbl-search-menu .ui-datepicker .ui-datepicker-calendar tbody tr .ui-state-default {
+      font-family: 'proxima-nova', sans-serif;
+      font-style: normal;
+      width: 27px;
+      height: 26px;
+      margin: 0 auto;
+      text-align: center;
+      color: #3d4451;
+      border: 0;
+      background: transparent; }
+    .mbl-search-menu .ui-datepicker .ui-datepicker-calendar tbody tr .ui-state-active {
+      border: 1px solid #3d4451;
+      border-radius: 100px; }
+
+.global-nav__destinations {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-height: 0;
+  -webkit-transition: max-height .4s ease-in-out;
+  transition: max-height .4s ease-in-out;
+  background-color: #fff; }
+  .global-nav__destinations.show {
+    max-height: 1500px;
+    border-bottom: 1px solid #e3e3e3; }
+
+.global-nav__destinations__region {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  background-color: #e2e2e4; }
+  .global-nav__destinations__region a {
+    font-family: 'proxima-nova', sans-serif;
+    font-size: 10px;
+    font-size: .625rem;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: .2rem;
+    text-transform: uppercase; }
+  .global-nav__destinations__region ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 45px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .global-nav__destinations__region ul li {
+      margin-bottom: 26px;
+      text-align: center; }
+      .global-nav__destinations__region ul li:last-child {
+        margin-bottom: 0; }
+      .global-nav__destinations__region ul li .active {
+        color: inherit;
+        border-bottom: 1px solid #313641; }
+  .global-nav__destinations__region .global-nav__region-all {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 45px;
+    cursor: pointer;
+    -webkit-transition: background-color .5s ease;
+    transition: background-color .5s ease;
+    text-align: center;
+    background-color: #313641;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .global-nav__destinations__region .global-nav__region-all a {
+      width: 100%;
+      height: 100%;
+      padding-top: 17px;
+      -webkit-transition: color .5s ease;
+      transition: color .5s ease;
+      color: #fff;
+      color: #fff; }
+    .global-nav__destinations__region .global-nav__region-all:hover {
+      background-color: #5e6777; }
+      .global-nav__destinations__region .global-nav__region-all:hover a {
+        color: #fff; }
+
+.global-nav__destinations__destination-list-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  padding-top: 35px;
+  padding-bottom: 20px;
+  padding-left: 8.5%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .global-nav__destinations__destination-list-wrapper > .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; }
+    .global-nav__destinations__destination-list-wrapper > .wrapper .global-nav__destination-list {
+      -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+      order: 2; }
+      .global-nav__destinations__destination-list-wrapper > .wrapper .global-nav__destination-list.current {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1; }
+
+.global-nav__destination-list {
+  z-index: 350;
+  width: 33.33%; }
+  .global-nav__destination-list > header {
+    margin-bottom: 26px;
+    text-align: left !important; }
+    .global-nav__destination-list > header span.underline {
+      display: block;
+      width: 140px;
+      padding-top: 15px;
+      border-bottom: 1px solid #abaeb3; }
+  .global-nav__destination-list ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column; }
+    .global-nav__destination-list ul li {
+      margin-bottom: 10px;
+      white-space: nowrap; }
+    .global-nav__destination-list ul .destination-list-link {
+      margin-bottom: 0; }
+  .global-nav__destination-list a.strike {
+    font-size: 15px;
+    font-size: .9375rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 27px;
+    line-height: 1.6875rem;
+    letter-spacing: .01rem;
+    color: #313641; }
+    .global-nav__destination-list a.strike span.strike-through {
+      top: 12px; }
+
+section.home-page .home__hero-wrapper {
+  max-width: 100%; }
+
+.global-nav__destination-list > header {
+  text-align: left !important; }
+
+.sign-in-link {
+  position: absolute;
+  right: 4.5%;
+  top: 10px; }
+
+.explorer__help-modal .explorer__phone {
+  position: absolute;
+  right: 0;
+  top: -12px;
+  padding: 4px 0; }
+
+.explorer__help-modal .explorer__help-modal-inner {
+  color: #1d1e1f;
+  width: 500px; }
 
 /*Mobile and Tablet*/
-@media (max-width: 1280px) {
-  nav.global-nav {
+@media screen and (max-width: 1280px) {
+  .global-nav {
+    z-index: 600;
+    top: 0;
+    display: block;
     height: 55px; }
-  nav.global-nav > .inner {
-    padding: 0;
-    padding-left: 4.5%; }
-  nav.global-nav > .inner .global-nav__right {
-    margin-left: auto;
-    padding-top: 17px; }
-  nav.global-nav > .inner .navbar-brand {
-    width: 91%; }
-  nav.global-nav .logo-text-small {
+    .global-nav > .inner {
+      height: 50px;
+      padding: 0;
+      padding-left: 4.5%;
+      background: #fff; }
+      .global-nav > .inner .navbar-brand {
+        width: 91%; }
+      .global-nav > .inner .global-nav__retreat_search {
+        left: 19%;
+        width: 81%;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start; }
+      .global-nav > .inner .book-now-btn {
+        display: none; }
+      .global-nav > .inner #main-menu {
+        display: block;
+        padding: 47.5px 0 0 35px; }
+        .global-nav > .inner #main-menu li {
+          padding: 0 0 10px 0; }
+          .global-nav > .inner #main-menu li:after {
+            display: none; }
+        .global-nav > .inner #main-menu #openSearch {
+          display: none; }
+      .global-nav > .inner .initMobileSearchDates {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+      .global-nav > .inner a {
+        font-size: 25px;
+        color: #313641;
+        -webkit-font-smoothing: antialiased; }
+      .global-nav > .inner .global-nav__tel, .global-nav > .inner .nav__tel {
+        padding: 0 0 0 35px; }
+      .global-nav > .inner .global-nav__right {
+        position: absolute;
+        z-index: -1;
+        top: 50px;
+        left: 0;
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        height: calc(100vh - 50px);
+        height: -moz-calc(100vh - 50px);
+        -webkit-transform: translateY(-120%);
+        transform: translateY(-120%);
+        background: #f1f1f1;
+        margin-left: auto;
+        padding-top: 17px; }
+        .global-nav > .inner .global-nav__right #openSearch {
+          display: none; }
+        .global-nav > .inner .global-nav__right #openSearchInNav {
+          overflow: hidden;
+          width: 0;
+          height: 0;
+          padding: 0; }
+      .global-nav > .inner .global-nav__banner {
+        display: none !important; }
+      .global-nav > .inner .mbl-btn-search {
+        font-size: 12px;
+        position: absolute;
+        z-index: 1000;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 50px;
+        height: 50px;
+        padding: 17.5px 0;
+        -webkit-transition: border-left .3s;
+        transition: border-left .3s;
+        border-left: 1px solid #fff; }
+        .global-nav > .inner .mbl-btn-search span {
+          position: relative;
+          z-index: 60;
+          display: block;
+          width: 15px;
+          height: 1px;
+          margin: 3px auto;
+          opacity: 0;
+          background: #fff; }
+          .global-nav > .inner .mbl-btn-search span:nth-child(2) {
+            opacity: 0; }
+        .global-nav > .inner .mbl-btn-search:before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transition: -webkit-transform .3s;
+          transition: -webkit-transform .3s;
+          transition: transform .3s;
+          transition: transform .3s, -webkit-transform .3s;
+          -webkit-transform: translate(-50%, -50%) scale(1, 1);
+          transform: translate(-50%, -50%) scale(1, 1); }
+        .global-nav > .inner .mbl-btn-search.open {
+          border-left: 1px solid #dfdfdf; }
+          .global-nav > .inner .mbl-btn-search.open:before {
+            -webkit-transform: translate(-50%, -50%) scale(0, 0);
+            transform: translate(-50%, -50%) scale(0, 0); }
+      .global-nav > .inner .mbl-search-background {
+        position: absolute;
+        z-index: 50;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 50px;
+        height: 0;
+        background: #312f3c; }
+      .global-nav > .inner .mbl-btn-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 50px;
+        height: auto;
+        padding: 17.5px 0; }
+        .global-nav > .inner .mbl-btn-nav span {
+          position: relative;
+          z-index: 2;
+          display: block;
+          width: 15px;
+          height: 1px;
+          margin: 3px auto;
+          background: #312f3c; }
+          .global-nav > .inner .mbl-btn-nav span:nth-child(4) {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 0;
+            margin: 0;
+            background: #312f3c; }
+    .global-nav.stuck .logo {
+      display: block; }
+      .global-nav.stuck .logo.logo-stuck {
+        display: none; }
+      .global-nav.stuck .logo .inner .global-nav__tel, .global-nav.stuck .logo .inner .nav__tel, .global-nav.stuck .logo .inner .icon_search {
+        color: #313641; }
+    .global-nav .logo-text {
+      height: 50px;
+      line-height: 50px; }
+    .global-nav .logo-text-small {
+      display: none; }
+    .global-nav .mbl-search-menu-title {
+      font-family: adobe-garamond-pro,sans-serif;
+      font-size: 12px;
+      z-index: 70;
+      top: 17px;
+      width: 100%;
+      height: auto;
+      text-align: center;
+      letter-spacing: .15em;
+      color: #fff;
+      -webkit-font-smoothing: antialiased; }
+    .global-nav .mbl-search-menu {
+      width: 100vw;
+      height: 100vh; }
+    .global-nav .mbl-search-menu section .select-box {
+      z-index: 1; }
+  .global-nav__destinations {
     display: none; }
-  .explorer__phone.animate {
-    padding: 4px 0; }
-    .explorer__phone.animate .icon {
-      color: #000; }
+  .sign-in-link {
+    top: 21px !important; }
   .explorer__help-modal .explorer__phone .inner {
     background: transparent;
     color: #000;
@@ -1010,26 +1749,165 @@ section.promotion .select__wrapper.travel-with, .btn {
     text-align: center; }
     .explorer__help-modal .explorer__phone .inner:hover, .explorer__help-modal .explorer__phone .inner.open {
       background: transparent; }
+    .explorer__help-modal .explorer__phone .inner .icon {
+      display: block; }
+    .explorer__help-modal .explorer__phone .inner .text {
+      display: none; }
+  .explorer__help-modal .explorer__phone.animate {
+    padding: 4px 0; }
+    .explorer__help-modal .explorer__phone.animate .icon {
+      color: #000; }
   .explorer__help-modal .explorer__help-modal-inner {
     top: 30px !important; }
   .explorer__help-modal .explorer__help-modal-inner__copy .css_triangle-up {
     right: 0 !important; }
-  .sign-in-link {
-    top: 21px !important; } }
+  #openSearchInNav {
+    display: none; } }
 
 /*Desktop Only*/
-@media (min-width: 1281px) {
-  nav.global-nav > .inner {
+@media screen and (min-width: 1281px) {
+  .logo-text img {
+    width: auto; }
+  .global-nav .logo {
+    width: 26%;
+    padding: 0 2%;
+    position: absolute;
+    margin: 30px 31%;
+    text-align: center; }
+  .global-nav > .inner {
     padding: 0 4.5%; }
-  nav.global-nav > .inner .mbl-btn-nav {
-    display: none; }
-  nav.global-nav > .inner .global-nav__right {
-    padding-top: 40px; }
-  nav.global-nav > .inner .navbar-brand {
-    top: 31px; } }
-
-.global-nav__destination-list > header {
-  text-align: left !important; }
+    .global-nav > .inner .icon_search {
+      float: left;
+      width: 3%; }
+    .global-nav > .inner .navbar-left {
+      float: left;
+      width: 32%; }
+    .global-nav > .inner .navbar-brand {
+      width: 26%;
+      padding: 0 2%; }
+    .global-nav > .inner .navbar-right {
+      float: right;
+      width: 35%; }
+    .global-nav > .inner .icon_search {
+      font-size: 16px;
+      margin-top: 2px;
+      margin-left: 0;
+      margin-right: 10px; }
+    .global-nav > .inner .navbar-left li, .global-nav > .inner .navbar-right li {
+      font-size: 15px;
+      font-size: .9375rem;
+      position: relative;
+      margin-right: 20px;
+      -webkit-transition: color .2s ease;
+      transition: color .2s ease;
+      color: #313641;
+      display: inline-block;
+      float: left; }
+      .global-nav > .inner .navbar-left li:after, .global-nav > .inner .navbar-right li:after {
+        position: absolute;
+        bottom: -2px;
+        display: block;
+        width: 0;
+        height: 2px;
+        content: '';
+        -webkit-transition: width .4s ease-out 0s;
+        transition: width .4s ease-out 0s;
+        background-color: #313641; }
+      .global-nav > .inner .navbar-left li:hover:after, .global-nav > .inner .navbar-left li .active:after, .global-nav > .inner .navbar-right li:hover:after, .global-nav > .inner .navbar-right li .active:after {
+        width: 100%; }
+    .global-nav > .inner .navbar-brand {
+      position: absolute;
+      margin: 0 auto;
+      text-align: center;
+      top: 31px; }
+    .global-nav > .inner .mbl-btn-nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+      width: 50px;
+      height: auto;
+      padding: 17.5px 0; }
+      .global-nav > .inner .mbl-btn-nav span {
+        position: relative;
+        z-index: 2;
+        display: block;
+        width: 15px;
+        height: 1px;
+        margin: 3px auto;
+        background: #312f3c; }
+    .global-nav > .inner .global-nav__search-wrapper {
+      left: 0; }
+    .global-nav > .inner .global-nav__right {
+      padding-top: 40px; }
+    .global-nav > .inner a {
+      text-transform: uppercase;
+      font-size: 12px; }
+  .global-nav.sticky-top-nav {
+    height: 55px;
+    background-color: #333333 !important;
+    border-color: #333333;
+    -webkit-transition: background 0.5s linear;
+    -moz-transition: background 0.5s linear;
+    -ms-transition: background 0.5s linear;
+    -o-transition: background 0.5s linear;
+    transition: background 0.5s linear;
+    max-width: 100%;
+    margin: 0 auto; }
+    .global-nav.sticky-top-nav .logo {
+      margin: 16px 31%; }
+    .global-nav.sticky-top-nav .main-menu__link-list li .global-nav__right,
+    .global-nav.sticky-top-nav .logo-text-small .global-nav__right,
+    .global-nav.sticky-top-nav .inner .global-nav__right {
+      padding-top: 20px; }
+    .global-nav.sticky-top-nav .main-menu__link-list li .icon_search,
+    .global-nav.sticky-top-nav .logo-text-small .icon_search,
+    .global-nav.sticky-top-nav .inner .icon_search {
+      color: #fff !important; }
+    .global-nav.sticky-top-nav .main-menu__link-list li .navbar-left li, .global-nav.sticky-top-nav .main-menu__link-list li .navbar-right li,
+    .global-nav.sticky-top-nav .logo-text-small .navbar-left li,
+    .global-nav.sticky-top-nav .logo-text-small .navbar-right li,
+    .global-nav.sticky-top-nav .inner .navbar-left li,
+    .global-nav.sticky-top-nav .inner .navbar-right li {
+      color: #fff; }
+      .global-nav.sticky-top-nav .main-menu__link-list li .navbar-left li a.active, .global-nav.sticky-top-nav .main-menu__link-list li .navbar-right li a.active,
+      .global-nav.sticky-top-nav .logo-text-small .navbar-left li a.active,
+      .global-nav.sticky-top-nav .logo-text-small .navbar-right li a.active,
+      .global-nav.sticky-top-nav .inner .navbar-left li a.active,
+      .global-nav.sticky-top-nav .inner .navbar-right li a.active {
+        border-bottom: 1px solid #fff; }
+    .global-nav.sticky-top-nav .sign-in-link, .global-nav.sticky-top-nav .logo-text-small {
+      display: none; }
+    .global-nav.sticky-top-nav .explorer__help-modal .explorer__phone .inner {
+      background: #fff !important;
+      color: #000 !important; }
+  .global-nav__destinations {
+    margin-left: 8%;
+    overflow: visible;
+    height: 315px;
+    width: 400px;
+    top: 75px; }
+    .global-nav__destinations.show {
+      padding: 8px 8px 8px 0; }
+      .global-nav__destinations.show .global-nav__destinations__destination-list-wrapper {
+        height: 300px; }
+  .explorer__help-modal .explorer__phone {
+    width: auto;
+    height: auto; }
+    .explorer__help-modal .explorer__phone .inner {
+      display: block;
+      border-radius: 0;
+      padding: 8px 20px;
+      color: #fff; }
+      .explorer__help-modal .explorer__phone .inner .icon {
+        display: none; }
+      .explorer__help-modal .explorer__phone .inner .text {
+        text-transform: uppercase;
+        font-size: 12px; }
+      .explorer__help-modal .explorer__phone .inner.open {
+        color: #000; }
+  .booking-widget.stuck .booking-widget__global-nav-stuck .inner .navbar-left li, .booking-widget.stuck .booking-widget__global-nav-stuck .inner .navbar-right li {
+    color: #fff; } }
 
 .home__search__dropdown .global-nav__destinations__destination-list-wrapper, .global-nav .global-nav__destinations__destination-list-wrapper {
   display: block;
@@ -1423,24 +2301,6 @@ form.newsletter-email input[type='email'], form.newsletter-email input[type='tex
 .real-estate-footer__social-item {
   font-style: 1.5rem; }
 
-.explorer__help-modal .explorer__phone {
-  position: absolute;
-  right: 0;
-  top: -12px;
-  padding: 4px 0; }
-
-.page-body, footer.footer, nav.global-nav, .real-estate-footer {
-  max-width: none !important;
-  min-width: auto !important; }
-
-.sign-in-link {
-  position: absolute;
-  right: 4.5%;
-  top: 10px; }
-
-section.home-page .home__hero-wrapper {
-  max-width: 100%; }
-
 .our-services {
   padding: 120px 0; }
   .our-services .icon {
@@ -1453,46 +2313,33 @@ section.home-page .home__hero-wrapper {
     font-size: 14px;
     color: #a6a6a6; }
 
-@media (max-width: 769px) {
-  .global-nav__destinations.show {
-    display: block;
-    z-index: 3; } }
-
-@media only screen and (max-width: 1024px) and (min-width: 600px) {
-  .page-body, footer.footer, nav.global-nav {
-    min-width: auto; } }
+.home-page .global-nav {
+  top: 45px; }
+  .home-page .global-nav .global-nav__banner {
+    display: block; }
+    .home-page .global-nav .global-nav__banner .icon_carrot-down {
+      font-size: 6px;
+      font-size: .375rem; }
+  .home-page .global-nav > .inner .global-nav__retreat_search {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
 
 @media screen and (max-width: 1280px) {
-  .explorer__help-modal .explorer__phone .inner .icon {
-    display: block; }
-  .explorer__help-modal .explorer__phone .inner .text {
-    display: none; }
-  #openSearchInNav {
-    display: none; } }
+  .home-page .global-nav {
+    top: 0; } }
 
-@media screen and (min-width: 1281px) {
-  .explorer__help-modal .explorer__phone {
-    width: auto;
-    height: auto; }
-    .explorer__help-modal .explorer__phone .inner {
-      display: block;
-      border-radius: 0;
-      padding: 8px 20px;
-      color: #fff; }
-      .explorer__help-modal .explorer__phone .inner .icon {
-        display: none; }
-      .explorer__help-modal .explorer__phone .inner .text {
-        text-transform: uppercase;
-        font-size: 12px; }
-      .explorer__help-modal .explorer__phone .inner.open {
-        color: #000; }
-  nav.global-nav .logo {
-    width: 26%;
-    padding: 0 2%;
-    position: absolute;
-    margin: 30px 31%;
-    text-align: center; } }
+#retreat-search .subnav-container .filter__apply-filter .btn {
+  width: 85px;
+  height: 45px; }
 
-.explorer__help-modal .explorer__help-modal-inner {
-  color: #1d1e1f;
-  width: 500px; }
+#retreat-search .subnav-container.stuck {
+  padding: 0 4.5%;
+  margin: 0;
+  height: 55px; }
+  #retreat-search .subnav-container.stuck .checkin-sublabel, #retreat-search .subnav-container.stuck .checkout-sublabel {
+    display: none !important; }
+  #retreat-search .subnav-container.stuck .filter__apply-filter .btn {
+    width: 98px;
+    height: 40px;
+    margin: 8px 0px; }

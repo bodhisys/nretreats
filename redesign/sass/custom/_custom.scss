@@ -1,26 +1,3 @@
-
-.explorer__help-modal .explorer__phone {
-  position: absolute;
-  right: 0;
-  top: -12px;
-  padding: 4px 0;
-}
-
-.page-body, footer.footer, nav.global-nav, .real-estate-footer{
-  max-width: none!important;
-  min-width: auto!important;
-}
-
-.sign-in-link {
-  position: absolute;
-  right: 4.5%;
-  top: 10px;
-}
-
-section.home-page .home__hero-wrapper {
-  max-width: 100%;
-}
-
 .our-services{
   padding: 120px 0;
   .icon {
@@ -37,58 +14,54 @@ section.home-page .home__hero-wrapper {
   }
 }
 
-
-@media (max-width: 769px) {
-  .global-nav__destinations.show {
-    display: block;
-    z-index: 3;
-  }
-}
-@media only screen and (max-width: 1024px) and (min-width: 600px) {
-  .page-body, footer.footer, nav.global-nav {
-    min-width: auto;
-  }
-}
-@media screen and (max-width: 1280px){
-  .explorer__help-modal .explorer__phone {
-    .inner {
-      .icon { display: block; }
-      .text { display: none; }
-    }
-  }
-  #openSearchInNav { display: none; }
-}
-@media screen and (min-width: 1281px){
-  .explorer__help-modal .explorer__phone {
-    width: auto;
-    height: auto;
-    .inner {
+// Homepage
+.home-page {
+  .global-nav {
+    top: 45px;
+    .global-nav__banner {
       display: block;
-      border-radius: 0;
-      padding: 8px 20px;
-      color: #fff;
-      .icon { display: none; }
-      .text {
-        text-transform: uppercase;
-        font-size: 12px;
+      .icon_carrot-down {
+        font-size: 6px;
+        font-size: .375rem;
       }
-      &.open {
-        color: #000;
+    }
+    & > .inner {
+      .global-nav__retreat_search {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
       }
     }
   }
-  nav.global-nav .logo  {
-    width: 26%;
-    padding: 0 2%;
-    position: absolute;
-    margin: 30px 31%;
-    text-align: center;
+}
+@media screen and (max-width: 1280px) {
+  .home-page {
+    .global-nav {
+      top: 0;
+    }
   }
 }
 
-.explorer__help-modal {
-  .explorer__help-modal-inner {
-    color: #1d1e1f;
-    width: 500px;
+// Search Results
+#retreat-search {
+  .subnav-container {
+    .filter__apply-filter .btn {
+      width: 85px;
+      height: 45px;
+    }
+    &.stuck {
+      padding: 0 4.5%;
+      margin: 0;
+      height: 55px;
+      .checkin-sublabel, .checkout-sublabel {
+        display: none!important;
+      }
+      .filter__apply-filter .btn {
+        width: 98px;
+        height: 40px;
+        margin: 8px 0px;
+      }
+    }
   }
+
 }

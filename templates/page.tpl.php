@@ -271,7 +271,7 @@ $destinations_subnav_list = nret_get_destinations();
                             }
                             ?>
 						</span>
-                <span class="logo-text-small visible-lg">Go Somewhere to Remember</span>
+                <span class="logo-text-small">Go Somewhere to Remember</span>
             </a>
             <a href="" class="mbl-btn-search icon icon_search">
                 <span></span>
