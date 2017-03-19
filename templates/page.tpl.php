@@ -270,7 +270,7 @@ $destinations_subnav_list = nret_get_destinations();
                                 print theme('image', $image);
                             }
                             ?>
-						</span> <br/>
+						</span>
                 <span class="logo-text-small visible-lg">Go Somewhere to Remember</span>
             </a>
             <a href="" class="mbl-btn-search icon icon_search">

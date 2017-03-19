@@ -12,6 +12,25 @@ header {
   &:after { border-width:5px; }
 }
 
+section.home-page {
+  .home__retreat-search {
+    & > .wrapper {
+      header { margin-bottom: 0; }
+    }
+  }
+  .home__retreat-search .global-nav__destinations.show {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .global-nav__destination-list {
+    width: 100%!important;
+  }
+  .home__search__dropdown {
+    width: 600px;
+  }
+}
+
 .home__retreat-search {
   display: block!important;
   & > .wrapper {
@@ -89,9 +108,19 @@ header {
   }
 }
 
+@media (max-width: 769px) {
+  section.home-page {
+    .home__retreat-search > .wrapper, .home__search__dropdown {
+      width: 100%;
+    }
+  }
+}
+
 @media (max-width: 1280px) {
-  .home__retreat-search > .wrapper {
-    width: 800px;
+  section.home-page {
+    .home__retreat-search > .wrapper, .home__search__dropdown {
+      width: 800px;
+    }
   }
 }
 
