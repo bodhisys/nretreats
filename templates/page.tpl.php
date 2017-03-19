@@ -273,11 +273,11 @@ $destinations_subnav_list = nret_get_destinations();
 						</span>
                 <span class="logo-text-small">Go Somewhere to Remember</span>
             </a>
-            <a href="" class="mbl-btn-search icon icon_search">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
+<!--            <a href="" class="mbl-btn-search icon icon_search">-->
+<!--                <span></span>-->
+<!--                <span></span>-->
+<!--                <span></span>-->
+<!--            </a>-->
             <div class="mbl-search-background">
                 <form id="globalSearchMbl" action="/search" method="get" accept-charset="utf-8">
                     <input id="globalSearchInput" type="search" name="search" value="" placeholder="Search">

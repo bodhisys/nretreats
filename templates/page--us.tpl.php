@@ -263,11 +263,11 @@ $destinations_subnav_list = nret_get_destinations();
                 </span>
                 <span class="logo-text-small">Go Somewhere to Remember</span>
             </a>
-            <a href="" class="mbl-btn-search icon icon_search">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
+<!--            <a href="" class="mbl-btn-search icon icon_search">-->
+<!--                <span></span>-->
+<!--                <span></span>-->
+<!--                <span></span>-->
+<!--            </a>-->
             <div class="mbl-search-background">
                 <form id="globalSearchMbl" action="/search" method="get" accept-charset="utf-8">
                     <input id="globalSearchInput" type="search" name="search" value="" placeholder="Search">
@@ -378,7 +378,8 @@ $destinations_subnav_list = nret_get_destinations();
             <!--			<div class="btn__blue btn initMobileSearchDates">BOOK NOW</div>-->
 
             <!--			<div id="openBookNowSearch" class="btn btn__blue book-now-btn">Book Now</div>-->
-
+        </div>
+        <div class="contact-signin-wrapper">
             <div class="explorer__help-modal">
                 <div class="wrapper">
                     <div class="explorer__phone animate">

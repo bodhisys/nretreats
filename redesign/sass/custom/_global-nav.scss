@@ -1265,7 +1265,7 @@ section.home-page .home__hero-wrapper {
 
       // Styles
       .icon_search {
-        font-size: 16px;
+        font-size: 20px;
         margin-top: 2px;
         margin-left: 0;
         margin-right: 10px;
@@ -1405,6 +1405,14 @@ section.home-page .home__hero-wrapper {
         border-radius: 0;
         padding: 8px 20px;
         color: #fff;
+
+        // custom
+        top: -16px;
+        position: absolute;
+        right: 0;
+        width: 98px;
+        height: 32px;
+
         .icon { display: none; }
         .text {
           text-transform: uppercase;

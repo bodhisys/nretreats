@@ -1789,7 +1789,7 @@ section.home-page .home__hero-wrapper {
       float: right;
       width: 35%; }
     .global-nav > .inner .icon_search {
-      font-size: 16px;
+      font-size: 20px;
       margin-top: 2px;
       margin-left: 0;
       margin-right: 10px; }
@@ -1898,7 +1898,12 @@ section.home-page .home__hero-wrapper {
       display: block;
       border-radius: 0;
       padding: 8px 20px;
-      color: #fff; }
+      color: #fff;
+      top: -16px;
+      position: absolute;
+      right: 0;
+      width: 98px;
+      height: 32px; }
       .explorer__help-modal .explorer__phone .inner .icon {
         display: none; }
       .explorer__help-modal .explorer__phone .inner .text {
