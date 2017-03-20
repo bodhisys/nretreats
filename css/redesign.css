@@ -889,7 +889,6 @@ section.promotion .select__wrapper.travel-with, .btn {
   right: 0;
   left: 0;
   width: 100%;
-  max-width: 1440px;
   height: 100px;
   margin: 0 auto;
   -webkit-transition: all .2s ease;
@@ -1547,9 +1546,6 @@ section.promotion .select__wrapper.travel-with, .btn {
     .global-nav__destination-list a.strike span.strike-through {
       top: 12px; }
 
-section.home-page .home__hero-wrapper {
-  max-width: 100%; }
-
 .global-nav__destination-list > header {
   text-align: left !important; }
 
@@ -1568,13 +1564,31 @@ section.home-page .home__hero-wrapper {
   color: #1d1e1f;
   width: 500px; }
 
+@media (max-width: 768px) {
+  .global-nav .logo-text {
+    line-height: normal !important;
+    width: 50%;
+    margin: 2px 25%; }
+  .global-nav > .inner {
+    padding: 0 !important; }
+    .global-nav > .inner .global-nav__right {
+      width: 100%; } }
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  .global-nav > .inner .global-nav__right {
+    width: 400px; } }
+
 /*Mobile and Tablet*/
 @media screen and (max-width: 1280px) {
   .global-nav {
     z-index: 600;
     top: 0;
     display: block;
-    height: 55px; }
+    height: 50px; }
+    .global-nav .sign-in-link {
+      top: 15px !important;
+      font-size: 13px !important;
+      right: 50px; }
     .global-nav > .inner {
       height: 50px;
       padding: 0;
@@ -1616,14 +1630,17 @@ section.home-page .home__hero-wrapper {
         left: 0;
         display: block;
         overflow: hidden;
-        width: 100%;
-        height: calc(100vh - 50px);
-        height: -moz-calc(100vh - 50px);
+        height: calc(100vh - 55px);
+        height: -moz-calc(100vh - 55px);
         -webkit-transform: translateY(-120%);
         transform: translateY(-120%);
-        background: #f1f1f1;
-        margin-left: auto;
-        padding-top: 17px; }
+        background: #313641;
+        margin-left: auto; }
+        .global-nav > .inner .global-nav__right .navbar-left li, .global-nav > .inner .global-nav__right .navbar-right li {
+          padding: 15px;
+          border-bottom: 1px solid #f1f1f1; }
+        .global-nav > .inner .global-nav__right .navbar-left a, .global-nav > .inner .global-nav__right .navbar-right a {
+          color: #f1f1f1; }
         .global-nav > .inner .global-nav__right #openSearch {
           display: none; }
         .global-nav > .inner .global-nav__right #openSearchInNav {
@@ -1844,7 +1861,7 @@ section.home-page .home__hero-wrapper {
       text-transform: uppercase;
       font-size: 12px; }
   .global-nav.sticky-top-nav {
-    height: 55px;
+    height: 50px;
     background-color: #333333 !important;
     border-color: #333333;
     -webkit-transition: background 0.5s linear;
@@ -2318,21 +2335,26 @@ form.newsletter-email input[type='email'], form.newsletter-email input[type='tex
     font-size: 14px;
     color: #a6a6a6; }
 
-.home-page .global-nav {
+section.home-page .global-nav {
   top: 45px; }
-  .home-page .global-nav .global-nav__banner {
+  section.home-page .global-nav .global-nav__banner {
     display: block; }
-    .home-page .global-nav .global-nav__banner .icon_carrot-down {
+    section.home-page .global-nav .global-nav__banner .icon_carrot-down {
       font-size: 6px;
       font-size: .375rem; }
-  .home-page .global-nav > .inner .global-nav__retreat_search {
+  section.home-page .global-nav > .inner .global-nav__retreat_search {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
 
+section.home-page .home__hero-wrapper {
+  max-width: 100%; }
+
 @media screen and (max-width: 1280px) {
-  .home-page .global-nav {
-    top: 0; } }
+  section.home-page .global-nav {
+    top: 0; }
+  section.home-page .home__hero-wrapper {
+    top: 50px; } }
 
 #retreat-search .subnav-container .filter__apply-filter .btn {
   width: 85px;
@@ -2341,7 +2363,7 @@ form.newsletter-email input[type='email'], form.newsletter-email input[type='tex
 #retreat-search .subnav-container.stuck {
   padding: 0 4.5%;
   margin: 0;
-  height: 55px; }
+  height: 50px; }
   #retreat-search .subnav-container.stuck .checkin-sublabel, #retreat-search .subnav-container.stuck .checkout-sublabel {
     display: none !important; }
   #retreat-search .subnav-container.stuck .filter__apply-filter .btn {

@@ -15,7 +15,7 @@
 }
 
 // Homepage
-.home-page {
+section.home-page {
   .global-nav {
     top: 45px;
     .global-nav__banner {
@@ -33,11 +33,17 @@
       }
     }
   }
+  .home__hero-wrapper {
+    max-width: 100%;
+  }
 }
 @media screen and (max-width: 1280px) {
-  .home-page {
+  section.home-page {
     .global-nav {
       top: 0;
+    }
+    .home__hero-wrapper {
+      top: 50px;
     }
   }
 }
@@ -52,7 +58,7 @@
     &.stuck {
       padding: 0 4.5%;
       margin: 0;
-      height: 55px;
+      height: 50px;
       .checkin-sublabel, .checkout-sublabel {
         display: none!important;
       }

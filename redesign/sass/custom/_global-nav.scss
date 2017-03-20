@@ -6,7 +6,7 @@
   right: 0;
   left: 0;
   width: 100%;
-  max-width: 1440px;
+  //max-width: 1440px;
   height: 100px;
   margin: 0 auto;
   -webkit-transition: all .2s ease;
@@ -950,9 +950,7 @@
   }
 }
 
-section.home-page .home__hero-wrapper {
-  max-width: 100%;
-}
+
 .global-nav__destination-list > header {
   text-align: left!important;
 }
@@ -973,15 +971,39 @@ section.home-page .home__hero-wrapper {
     width: 500px;
   }
 }
+@media (max-width: 768px) {
+  .global-nav {
+    .logo-text {
+      line-height: normal!important;
+      width: 50%;
+      margin: 2px 25%;
+    }
 
+    & > .inner {
+      padding: 0!important;
+      .global-nav__right {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (min-width: 769px) and (max-width: 1280px) {
+  .global-nav > .inner .global-nav__right {
+    width: 400px;
+  }
+}
 /*Mobile and Tablet*/
 @media screen and (max-width: 1280px){
   .global-nav {
     z-index: 600;
     top: 0;
     display: block;
-    height: 55px;
-
+    height: 50px;
+    .sign-in-link {
+      top: 15px !important;
+      font-size: 13px!important;
+      right: 50px;
+    }
     & > .inner {
       height: 50px;
       padding: 0;
@@ -1035,14 +1057,24 @@ section.home-page .home__hero-wrapper {
         left: 0;
         display: block;
         overflow: hidden;
-        width: 100%;
-        height:      calc(100vh - 50px);
-        height: -moz-calc(100vh - 50px);
+        //width: 400px;
+        height:      calc(100vh - 55px);
+        height: -moz-calc(100vh - 55px);
         -webkit-transform: translateY(-120%);
         transform: translateY(-120%);
-        background: #f1f1f1;
+        background: #313641;
         margin-left: auto;
-        padding-top: 17px;
+        //padding-top: 17px;
+        .navbar-left, .navbar-right {
+          li {
+            padding: 15px;
+            border-bottom: 1px solid #f1f1f1;
+
+          }
+          a {
+            color: #f1f1f1;
+          }
+        }
 
         #openSearch { display: none; }
         #openSearchInNav {
@@ -1337,7 +1369,7 @@ section.home-page .home__hero-wrapper {
     }
 
     &.sticky-top-nav {
-      height: 55px;
+      height: 50px;
       background-color: $gray-dark!important;
       border-color: $gray-dark;
       -webkit-transition: background 0.5s linear;
