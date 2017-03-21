@@ -2508,6 +2508,9 @@ section.home-page .home__offers {
 @media (min-width: 769px) and (max-width: 1280px) {
   section.home-page .home__retreat-search > .wrapper, section.home-page .home__search__dropdown {
     width: 750px; }
+  section.home-page .home__retreat-search .global-nav__destinations.show {
+    margin: 0 auto !important;
+    width: 500px !important; }
   .search-section-header {
     font-size: 2rem !important; } }
 

@@ -21,6 +21,10 @@
     .home__retreat-search > .wrapper, .home__search__dropdown {
       width: 750px;
     }
+    .home__retreat-search .global-nav__destinations.show {
+      margin: 0 auto!important;
+      width: 500px!important;
+    }
   }
   .search-section-header {
     font-size: 2rem!important;
