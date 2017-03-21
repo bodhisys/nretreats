@@ -1,0 +1,41 @@
+@media (max-width: 769px) {
+  section.home-page {
+    .home__retreat-search > .wrapper, .home__search__dropdown {
+      width: 100%;
+    }
+  }
+  .search-section-header {
+    font-size: 1.5rem!important;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 769px){
+  .search-section-header {
+    color: #fff!important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  section.home-page {
+    .home__retreat-search > .wrapper, .home__search__dropdown {
+      width: 750px;
+    }
+  }
+  .search-section-header {
+    font-size: 2rem!important;
+  }
+}
+
+@media screen and (max-width: 1280px){
+  .home__retreat-search .choices-search {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 1281px){
+  .search-section-header {
+    font-size: 2.5rem!important;
+  }
+}
+

@@ -34,10 +34,6 @@ $(document).ready(function(){
            // (window.innerWidth < 900) ? 2 : 4;
     }
 
-    $(function() {
-        SyntaxHighlighter.all();
-    });
-
     $window.load(function() {
         $('.special-offer-slider').flexslider({
             animation: "slide",
@@ -56,5 +52,33 @@ $(document).ready(function(){
 
         flexslider.vars.minItems = gridSize;
         flexslider.vars.maxItems = gridSize;
+    });
+}());
+
+(function() {
+
+    // store the slider in a local variable
+    var $window = $(window);
+
+    $window.load(function() {
+        if(window.innerWidth < 1281) {
+            var gd = $('.global-nav__right').find('.global-nav__destinations');
+            $('#main-left-menu li.first').append(gd);
+        }
+    });
+
+    // check grid size on resize event
+    $window.resize(function() {
+        if(window.innerWidth <= 1280) {
+            if(!$('#main-left-menu').find('.global-nav__destinations').length) {
+                var gd = $('.global-nav__right').find('.global-nav__destinations');
+                $('#main-left-menu li.first').append(gd);
+            }
+        } else {
+            if($('#main-left-menu').find('.global-nav__destinations').length) {
+                var gd = $('.global-nav__right').find('.global-nav__destinations');
+                $('#main-left-menu').after(gd);
+            }
+        }
     });
 }());

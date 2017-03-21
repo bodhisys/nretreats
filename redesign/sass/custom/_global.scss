@@ -55,11 +55,6 @@ section.promotion .select__wrapper.travel-with, .btn {
     display: none!important;
   }
 }
-@media screen and (max-width: 1280px){
-  .page-body {
-    margin-top: 0px;
-  }
-}
 @media screen and (min-width: 769px){
   .show-on-mobile-only {
     display: none!important;
@@ -76,5 +71,10 @@ section.promotion .select__wrapper.travel-with, .btn {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
+  }
+}
+@media screen and (max-width: 1280px){
+  .page-body {
+    margin-top: 0px;
   }
 }

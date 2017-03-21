@@ -106,45 +106,115 @@ section.home-page {
   }
 }
 
-@media (max-width: 769px) {
-  section.home-page {
-    .home__retreat-search > .wrapper, .home__search__dropdown {
-        width: 100%;
+.home__list-home {
+  background: #1d1e1f;
+  padding: 80px 0;
+  .text-center {
+    h4, p {
+      color: #fff;
+      font-weight:300;
+      @include font-montserrat;
+    }
+    p {
+      padding: 20px 0 60px 0;
     }
   }
-  .search-section-header {
-    font-size: 1.5rem!important;
-    padding: 10px;
-  }
 }
 
-@media screen and (min-width: 769px){
-  .search-section-header {
-    color: #fff!important;
+.home__offers {
+  padding: 50px 0;
+  h3 {
+    text-transform: uppercase;
   }
-}
-
-@media (min-width: 769px) and (max-width: 1280px) {
-  section.home-page {
-    .home__retreat-search > .wrapper, .home__search__dropdown {
-      width: 750px;
+  .flexslider {
+    li {
+      .special-offer-tag {
+        position: absolute;
+        color: #fff;
+        padding: 8px 15px;
+        font-size: 11px;
+      }
     }
   }
-  .search-section-header {
-    font-size: 2rem!important;
+  .flex-caption {
+    h4 {
+      text-transform: uppercase;
+      font-style: 14px;
+    }
+    .text {
+      color: $gray-light;
+      font-size: 13px;
+      padding-top: 10px;
+    }
   }
 }
 
-@media screen and (max-width: 1280px){
-  .home__retreat-search .choices-search {
-    padding: 10px;
+// Homepage
+section.home-page {
+  .global-nav {
+    top: 45px;
+    .global-nav__banner {
+      display: block;
+      .icon_carrot-down {
+        font-size: 6px;
+        font-size: .375rem;
+      }
+    }
+    & > .inner {
+      .global-nav__retreat_search {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+    }
+  }
+  .home__hero-wrapper {
+    max-width: 100%;
   }
 }
 
-@media screen and (min-width: 1281px){
-  .search-section-header {
-    font-size: 2.5rem!important;
+section.home-page .home__offers {
+  padding: 0;
+}
+
+.our-services{
+  padding: 120px 0;
+  .icon {
+    font-size: 28px;
   }
+  h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 20px 0;
+  }
+  .text-summary {
+    font-size: 14px;
+    color: $gray-light;
+  }
+}
+
+// Search Results
+#retreat-search {
+  .subnav-container {
+    .filter__apply-filter .btn {
+      width: 85px;
+      height: 45px;
+    }
+    &.stuck {
+      padding: 0 4.5%;
+      margin: 0;
+      height: 50px;
+      .checkin-sublabel, .checkout-sublabel {
+        display: none!important;
+      }
+      .filter__apply-filter .btn {
+        width: 98px;
+        height: 40px;
+        margin: 8px 0px;
+      }
+    }
+  }
+
 }
 
 // Custom Styles Not Included in Design

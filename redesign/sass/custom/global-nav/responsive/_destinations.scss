@@ -1,4 +1,4 @@
-.home__search__dropdown, .global-nav {
+@mixin common-destination-dropdown(){
   .global-nav__destinations__destination-list-wrapper {
     display: block;
     overflow-y: scroll;
@@ -9,7 +9,6 @@
       display: block!important;
     }
   }
-
   .global-nav__destination-list {
     width: 100%;
     & > header {
@@ -21,7 +20,6 @@
       }
     }
   }
-
   .sort-list {
     li {
       margin: 0!important;
@@ -36,10 +34,7 @@
       }
     }
   }
-  //label.custom-check-label {
-  //  background: none;
-  //  text-transform: uppercase;
-  //  font-size: 14px;
-  //}
 }
-
+.home__search__dropdown, .global-nav {
+  @include common-destination-dropdown;
+}
