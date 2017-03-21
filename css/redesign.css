@@ -853,75 +853,6 @@
   border-right-color: #D8D8D8;
   margin-top: -9px; }
 
-.hero-bottom {
-  background: #e2e2e2; }
-
-.partners-bar {
-  height: 60px;
-  margin: 0;
-  padding: 10px 0; }
-  .partners-bar li {
-    width: 16.2%;
-    padding: 0 3.6%;
-    float: left; }
-    .partners-bar li img {
-      max-width: 100%; }
-
-form.newsletter-email ::-webkit-input-placeholder {
-  color: #eeeeee; }
-
-form.newsletter-email :-moz-placeholder {
-  color: #eeeeee; }
-
-form.newsletter-email ::-moz-placeholder {
-  color: #eeeeee; }
-
-form.newsletter-email :-ms-input-placeholder {
-  color: #eeeeee; }
-
-form.newsletter-email ::-webkit-input-placeholder {
-  font-style: normal; }
-
-form.newsletter-email :-moz-placeholder {
-  font-style: normal; }
-
-form.newsletter-email ::-moz-placeholder {
-  font-style: normal; }
-
-form.newsletter-email :-ms-input-placeholder {
-  font-style: normal; }
-
-form.newsletter-email ::-webkit-input-placeholder {
-  text-transform: uppercase; }
-
-form.newsletter-email :-moz-placeholder {
-  text-transform: uppercase; }
-
-form.newsletter-email ::-moz-placeholder {
-  text-transform: uppercase; }
-
-form.newsletter-email :-ms-input-placeholder {
-  text-transform: uppercase; }
-
-form.newsletter-email ::-webkit-input-placeholder {
-  font-size: 12px; }
-
-form.newsletter-email :-moz-placeholder {
-  font-size: 12px; }
-
-form.newsletter-email ::-moz-placeholder {
-  font-size: 12px; }
-
-form.newsletter-email :-ms-input-placeholder {
-  font-size: 12px; }
-
-form.newsletter-email .btn {
-  width: 100px;
-  color: #fff; }
-
-form.newsletter-email input[type='email'], form.newsletter-email input[type='text'] {
-  background: #222; }
-
 body,
 h1,
 h2,
@@ -2076,6 +2007,75 @@ section.promotion .select__wrapper.travel-with, .btn {
       color: #fff; }
       .home__search__dropdown .sort-list li:hover a:hover, .home__search__dropdown .sort-list li:hover label:hover, .global-nav .sort-list li:hover a:hover, .global-nav .sort-list li:hover label:hover {
         color: #fff; }
+
+.hero-bottom {
+  background: #e2e2e2; }
+
+.partners-bar {
+  height: 60px;
+  margin: 0;
+  padding: 10px 0; }
+  .partners-bar li {
+    width: 16.2%;
+    padding: 0 3.6%;
+    float: left; }
+    .partners-bar li img {
+      max-width: 100%; }
+
+form.newsletter-email ::-webkit-input-placeholder {
+  color: #eeeeee; }
+
+form.newsletter-email :-moz-placeholder {
+  color: #eeeeee; }
+
+form.newsletter-email ::-moz-placeholder {
+  color: #eeeeee; }
+
+form.newsletter-email :-ms-input-placeholder {
+  color: #eeeeee; }
+
+form.newsletter-email ::-webkit-input-placeholder {
+  font-style: normal; }
+
+form.newsletter-email :-moz-placeholder {
+  font-style: normal; }
+
+form.newsletter-email ::-moz-placeholder {
+  font-style: normal; }
+
+form.newsletter-email :-ms-input-placeholder {
+  font-style: normal; }
+
+form.newsletter-email ::-webkit-input-placeholder {
+  text-transform: uppercase; }
+
+form.newsletter-email :-moz-placeholder {
+  text-transform: uppercase; }
+
+form.newsletter-email ::-moz-placeholder {
+  text-transform: uppercase; }
+
+form.newsletter-email :-ms-input-placeholder {
+  text-transform: uppercase; }
+
+form.newsletter-email ::-webkit-input-placeholder {
+  font-size: 12px; }
+
+form.newsletter-email :-moz-placeholder {
+  font-size: 12px; }
+
+form.newsletter-email ::-moz-placeholder {
+  font-size: 12px; }
+
+form.newsletter-email :-ms-input-placeholder {
+  font-size: 12px; }
+
+form.newsletter-email .btn {
+  width: 100px;
+  color: #fff; }
+
+form.newsletter-email input[type='email'], form.newsletter-email input[type='text'] {
+  background: #222; }
 
 .slides li {
   position: relative; }
