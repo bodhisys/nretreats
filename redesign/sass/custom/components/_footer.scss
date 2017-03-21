@@ -88,6 +88,9 @@
   .real-estate-footer {
     padding: 0;
   }
+  .social-icons-list {
+    background: #fff;
+  }
   .real-estate-footer__social {
     width: 320px;
     margin: 0 auto;
@@ -95,6 +98,7 @@
   .real-estate-footer__social-item {
     .icon {
       font-size: 18px;
+      color: #1d1e1f;
     }
   }
   .copyright-info {
@@ -102,8 +106,13 @@
     span {
       font-size: 13px;
       padding: 3px;
+      color: #1d1e1f;
       a {
         font-size: 13px;
+        color: #1d1e1f;
+        &:hover {
+          color: #1d1e1f;
+        }
       }
     }
   }

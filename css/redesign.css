@@ -2298,18 +2298,25 @@ form.newsletter-email input[type='email'], form.newsletter-email input[type='tex
 @media screen and (max-width: 769px) {
   .real-estate-footer {
     padding: 0; }
+  .social-icons-list {
+    background: #fff; }
   .real-estate-footer__social {
     width: 320px;
     margin: 0 auto; }
   .real-estate-footer__social-item .icon {
-    font-size: 18px; }
+    font-size: 18px;
+    color: #1d1e1f; }
   .copyright-info {
     text-align: center; }
     .copyright-info span {
       font-size: 13px;
-      padding: 3px; }
+      padding: 3px;
+      color: #1d1e1f; }
       .copyright-info span a {
-        font-size: 13px; } }
+        font-size: 13px;
+        color: #1d1e1f; }
+        .copyright-info span a:hover {
+          color: #1d1e1f; } }
 
 @media screen and (min-width: 769px) {
   .real-estate-footer {
