@@ -5,7 +5,7 @@ $contact_phone = variable_get('nret_contact_' . $userglobalposition . '_phone');
 <footer class="real-estate-footer">
     <div class="footer-bottom">
         <div class="container">
-            <div class="row">
+            <div class="row hide-on-mobile">
                 <div class="col-sm-6">
                     <div>
                         <span class="icon icon_search"></span>
@@ -53,6 +53,11 @@ $contact_phone = variable_get('nret_contact_' . $userglobalposition . '_phone');
                             <h3 class="title newsletter-thankyou">Thank You for Subscribing</h3>
                         </div>
                     </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="social-icons-list">
                     <ul class="real-estate-footer__social">
                         <li class="real-estate-footer__social-item">
                             <a href="https://www.facebook.com/naturalretreats" target="_blank"><span class="icon icon_fb"></span></a>
@@ -67,6 +72,11 @@ $contact_phone = variable_get('nret_contact_' . $userglobalposition . '_phone');
                             <a href="https://www.instagram.com/naturalretreats/" target="_blank"><span class="icon icon_instagram"></span></a>
                         </li>
                     </ul>
+                </div>
+                <div class="copyright-info show-on-mobile-only">
+                    <span>©<script>document.write(new Date().getFullYear())</script> Natural Retreats</span>
+                    <span>|</span>
+                    <span><a href="/terms-conditions">TERMS & CONDITIONS</a></span>
                 </div>
             </div>
         </div>

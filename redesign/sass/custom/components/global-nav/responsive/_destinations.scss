@@ -2,6 +2,7 @@
   .global-nav__destinations__destination-list-wrapper {
     display: block;
     overflow-y: scroll;
+    overflow-x: hidden;
     width: 100%;
     padding: 0;
 
@@ -37,4 +38,25 @@
 }
 .home__search__dropdown, .global-nav {
   @include common-destination-dropdown;
+}
+
+@media screen and (max-width: 1280px){
+  .home__search__dropdown, .global-nav {
+    .global-nav__destinations__destination-list-wrapper {
+      height: 300px;
+    }
+  }
+
+  #main-left-menu {
+    .arrow_box {
+      background: transparent!important;
+    }
+    .global-nav__destination-list {
+      & > header {
+        h6.title {
+          color: #fff!important;
+        }
+      }
+    }
+  }
 }

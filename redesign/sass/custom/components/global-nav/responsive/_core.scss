@@ -26,6 +26,9 @@
 }
 /*Mobile and Tablet*/
 @media screen and (max-width: 1280px){
+  .global-nav__right {
+    height: 600px;
+  }
   .global-nav {
     z-index: 600;
     top: 0;

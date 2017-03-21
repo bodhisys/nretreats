@@ -1605,6 +1605,8 @@ section.promotion .select__wrapper.travel-with, .btn {
 
 /*Mobile and Tablet*/
 @media screen and (max-width: 1280px) {
+  .global-nav__right {
+    height: 600px; }
   .global-nav {
     z-index: 600;
     top: 0;
@@ -1983,6 +1985,7 @@ section.promotion .select__wrapper.travel-with, .btn {
 .home__search__dropdown .global-nav__destinations__destination-list-wrapper, .global-nav .global-nav__destinations__destination-list-wrapper {
   display: block;
   overflow-y: scroll;
+  overflow-x: hidden;
   width: 100%;
   padding: 0; }
   .home__search__dropdown .global-nav__destinations__destination-list-wrapper > .wrapper, .global-nav .global-nav__destinations__destination-list-wrapper > .wrapper {
@@ -2007,6 +2010,14 @@ section.promotion .select__wrapper.travel-with, .btn {
       color: #fff; }
       .home__search__dropdown .sort-list li:hover a:hover, .home__search__dropdown .sort-list li:hover label:hover, .global-nav .sort-list li:hover a:hover, .global-nav .sort-list li:hover label:hover {
         color: #fff; }
+
+@media screen and (max-width: 1280px) {
+  .home__search__dropdown .global-nav__destinations__destination-list-wrapper, .global-nav .global-nav__destinations__destination-list-wrapper {
+    height: 300px; }
+  #main-left-menu .arrow_box {
+    background: transparent !important; }
+  #main-left-menu .global-nav__destination-list > header h6.title {
+    color: #fff !important; } }
 
 .hero-bottom {
   background: #e2e2e2; }
@@ -2076,6 +2087,29 @@ form.newsletter-email .btn {
 
 form.newsletter-email input[type='email'], form.newsletter-email input[type='text'] {
   background: #222; }
+
+@media screen and (max-width: 769px) {
+  form.newsletter-email {
+    display: block;
+    width: 100%; }
+    form.newsletter-email .name-wrapper {
+      width: 100%;
+      display: block;
+      padding: 0;
+      margin: 0; }
+      form.newsletter-email .name-wrapper input {
+        width: 49% !important;
+        float: left;
+        margin: 0;
+        margin-bottom: 10px; }
+        form.newsletter-email .name-wrapper input:first-child {
+          margin-right: 1%; }
+        form.newsletter-email .name-wrapper input:last-child {
+          margin-left: 1%; }
+    form.newsletter-email input[type='email'], form.newsletter-email .btn {
+      display: block;
+      width: 100% !important;
+      margin-bottom: 10px; } }
 
 .slides li {
   position: relative; }
@@ -2195,11 +2229,6 @@ form.newsletter-email input[type='email'], form.newsletter-email input[type='tex
     background: #333;
     text-transform: uppercase; } }
 
-.real-estate-footer {
-  padding: 50px 0;
-  display: block;
-  background: #a6a6a6; }
-
 .footer-top {
   background: #333333;
   color: #eeeeee; }
@@ -2232,11 +2261,6 @@ form.newsletter-email input[type='email'], form.newsletter-email input[type='tex
   .thumbnail-images img {
     width: 100%; }
 
-.real-estate-footer a, .real-estate-footer .real-estate-footer-newsletter-signup-button {
-  color: #eeeeee; }
-  .real-estate-footer a:hover, .real-estate-footer .real-estate-footer-newsletter-signup-button:hover {
-    color: #fff; }
-
 #footerSearch {
   background: transparent;
   padding: 5px 10px;
@@ -2251,6 +2275,14 @@ form.newsletter-email input[type='email'], form.newsletter-email input[type='tex
   #footerSearch:-ms-input-placeholder {
     color: #eeeeee; }
 
+.real-estate-footer {
+  display: block;
+  background: #a6a6a6; }
+  .real-estate-footer a, .real-estate-footer .real-estate-footer-newsletter-signup-button {
+    color: #eeeeee; }
+    .real-estate-footer a:hover, .real-estate-footer .real-estate-footer-newsletter-signup-button:hover {
+      color: #fff; }
+
 .real-estate-footer__copyright {
   text-align: left; }
 
@@ -2258,11 +2290,30 @@ form.newsletter-email input[type='email'], form.newsletter-email input[type='tex
   padding: 10px;
   margin-left: 10px; }
 
-.real-estate-footer__social-item .icon {
-  font-size: 24px; }
-
 .real-estate-footer__social-item {
   font-style: 1.5rem; }
+  .real-estate-footer__social-item .icon {
+    font-size: 24px; }
+
+@media screen and (max-width: 769px) {
+  .real-estate-footer {
+    padding: 0; }
+  .real-estate-footer__social {
+    width: 320px;
+    margin: 0 auto; }
+  .real-estate-footer__social-item .icon {
+    font-size: 18px; }
+  .copyright-info {
+    text-align: center; }
+    .copyright-info span {
+      font-size: 13px;
+      padding: 3px; }
+      .copyright-info span a {
+        font-size: 13px; } }
+
+@media screen and (min-width: 769px) {
+  .real-estate-footer {
+    padding: 50px 0; } }
 
 .search-section-header {
   font-family: 'EB Garamond', serif; }

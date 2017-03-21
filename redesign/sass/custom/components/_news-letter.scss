@@ -13,3 +13,33 @@ form.newsletter-email {
 form.newsletter-email input[type='email'], form.newsletter-email input[type='text'] {
   background: #222;
 }
+
+@media screen and (max-width: 769px){
+  form.newsletter-email {
+    display: block;
+    width: 100%;
+    .name-wrapper {
+      width: 100%;
+      display: block;
+      padding: 0;
+      margin: 0;
+      input {
+        width: 49% !important;
+        float: left;
+        margin: 0;
+        margin-bottom:10px;
+        &:first-child {
+          margin-right: 1%;
+        }
+        &:last-child {
+          margin-left: 1%;
+        }
+      }
+    }
+    input[type='email'], .btn {
+      display: block;
+      width: 100%!important;
+      margin-bottom:10px;
+    }
+  }
+}
