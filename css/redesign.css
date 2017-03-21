@@ -877,9 +877,47 @@ section.promotion .select__wrapper.travel-with, .btn {
   max-width: none !important;
   min-width: auto !important; }
 
+.destination-display-block {
+  padding: 30px;
+  background: #313641;
+  margin-bottom: 2px; }
+  .destination-display-block h4, .destination-display-block p {
+    color: #fff; }
+  .destination-display-block p {
+    font-size: 13px;
+    font-family: 'EB Garamond', serif; }
+
+.view-all-destination-link {
+  text-align: center;
+  display: block;
+  padding: 10px;
+  font-size: 15px; }
+  .view-all-destination-link a {
+    font-style: normal !important;
+    font-weight: normal;
+    margin-left: 8px; }
+
+@media screen and (max-width: 769px) {
+  .hide-on-mobile {
+    display: none !important; } }
+
 @media screen and (max-width: 1280px) {
   .page-body {
     margin-top: 55px; } }
+
+@media screen and (min-width: 769px) {
+  .show-on-mobile-only {
+    display: none !important; }
+  section.home-page .home__hero-wrapper {
+    position: fixed;
+    z-index: -1;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto; } }
 
 .global-nav {
   position: relative;
@@ -1559,6 +1597,8 @@ section.promotion .select__wrapper.travel-with, .btn {
   right: 0;
   top: -12px;
   padding: 4px 0; }
+  .explorer__help-modal .explorer__phone .icon {
+    display: none; }
 
 .explorer__help-modal .explorer__help-modal-inner {
   color: #1d1e1f;
@@ -1771,7 +1811,8 @@ section.promotion .select__wrapper.travel-with, .btn {
     .explorer__help-modal .explorer__phone .inner .text {
       display: none; }
   .explorer__help-modal .explorer__phone.animate {
-    padding: 4px 0; }
+    padding: 4px 0;
+    top: -50px; }
     .explorer__help-modal .explorer__phone.animate .icon {
       color: #000; }
   .explorer__help-modal .explorer__help-modal-inner {
@@ -1780,6 +1821,14 @@ section.promotion .select__wrapper.travel-with, .btn {
     right: 0 !important; }
   #openSearchInNav {
     display: none; } }
+
+@media screen and (max-width: 1280px) {
+  section.home-page .global-nav {
+    top: 0; }
+  section.home-page .home__hero-wrapper {
+    top: 50px; }
+  .home__retreat-search .choices-search .check-in, .home__retreat-search .choices-search .check-out, .home__retreat-search .choices-search .home__search__bedrooms-dropdown {
+    display: none !important; } }
 
 /*Desktop Only*/
 @media screen and (min-width: 1281px) {
@@ -1960,8 +2009,6 @@ section.promotion .select__wrapper.travel-with, .btn {
         color: #fff; }
 
 .search-section-header {
-  color: #fff !important;
-  font-size: 2.5rem !important;
   font-family: 'EB Garamond', serif; }
 
 header {
@@ -2043,11 +2090,23 @@ section.home-page .home__search__dropdown {
 
 @media (max-width: 769px) {
   section.home-page .home__retreat-search > .wrapper, section.home-page .home__search__dropdown {
-    width: 100%; } }
+    width: 100%; }
+  .search-section-header {
+    font-size: 1.5rem !important;
+    padding: 10px; } }
 
-@media (max-width: 1280px) {
+@media screen and (min-width: 769px) {
+  .search-section-header {
+    color: #fff !important;
+    font-size: 2.5rem !important; } }
+
+@media (min-width: 769px) and (max-width: 1280px) {
   section.home-page .home__retreat-search > .wrapper, section.home-page .home__search__dropdown {
-    width: 800px; } }
+    width: 750px; } }
+
+@media screen and (max-width: 1280px) {
+  .home__retreat-search .choices-search {
+    padding: 10px; } }
 
 .home__retreat-search .home__search__dropdown.list {
   width: 600px;
@@ -2323,6 +2382,9 @@ form.newsletter-email input[type='email'], form.newsletter-email input[type='tex
 .real-estate-footer__social-item {
   font-style: 1.5rem; }
 
+.flexslider {
+  overflow: hidden; }
+
 .our-services {
   padding: 120px 0; }
   .our-services .icon {
@@ -2349,12 +2411,6 @@ section.home-page .global-nav {
 
 section.home-page .home__hero-wrapper {
   max-width: 100%; }
-
-@media screen and (max-width: 1280px) {
-  section.home-page .global-nav {
-    top: 0; }
-  section.home-page .home__hero-wrapper {
-    top: 50px; } }
 
 #retreat-search .subnav-container .filter__apply-filter .btn {
   width: 85px;

@@ -1,3 +1,6 @@
+.flexslider {
+  overflow: hidden;
+}
 .our-services{
   padding: 120px 0;
   .icon {
@@ -37,16 +40,8 @@ section.home-page {
     max-width: 100%;
   }
 }
-@media screen and (max-width: 1280px) {
-  section.home-page {
-    .global-nav {
-      top: 0;
-    }
-    .home__hero-wrapper {
-      top: 50px;
-    }
-  }
-}
+
+
 
 // Search Results
 #retreat-search {

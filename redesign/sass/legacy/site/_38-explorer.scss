@@ -24,13 +24,13 @@ body.mobile .explorer__help-modal
   text-align: right;
 }
 
-@media (max-width: 769px)
-{
-  .explorer__help-modal
-  {
-    display: none;
-  }
-}
+//@media (max-width: 769px)
+//{
+//  .explorer__help-modal
+//  {
+//    display: none;
+//  }
+//}
 
 .explorer__help-modal > .wrapper
 {

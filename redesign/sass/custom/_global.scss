@@ -23,12 +23,58 @@ section.promotion .select__wrapper.travel-with, .btn {
   min-width: auto!important;
 }
 
-#retreat-search {
 
+.destination-display-block {
+  padding: 30px;
+  background: #313641;
+
+  margin-bottom: 2px;
+  h4, p {
+    color: #fff;
+  }
+  p{
+    font-size: 13px;
+    @include font-eb-garamond;
+  }
 }
 
+.view-all-destination-link {
+  text-align: center;
+  display: block;
+  padding: 10px;
+  font-size: 15px;
+  a {
+    font-style: normal!important;
+    font-weight:normal;
+    margin-left: 8px;
+  }
+}
+
+@media screen and (max-width: 769px){
+  .hide-on-mobile {
+    display: none!important;
+  }
+}
 @media screen and (max-width: 1280px){
   .page-body {
     margin-top: 55px;
+  }
+}
+@media screen and (min-width: 769px){
+  .show-on-mobile-only {
+    display: none!important;
+  }
+  section.home-page .home__hero-wrapper
+  {
+    position: fixed;
+    z-index: -1;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }

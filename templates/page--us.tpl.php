@@ -384,7 +384,7 @@ $destinations_subnav_list = nret_get_destinations();
                 <div class="wrapper">
                     <div class="explorer__phone animate">
                         <div class="inner fresh">
-                            <span class="icon icon_phone"></span>
+                            <span class="icon fa fa-phone"></span>
                             <div class="text">Contact</div>
                         </div>
                     </div>
