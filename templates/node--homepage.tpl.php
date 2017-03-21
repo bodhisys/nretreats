@@ -369,7 +369,7 @@ $destinations_subnav_list = nret_get_destinations();
         </div>
     </div>
     <section class="home__offers">
-        <header class="hide-block">
+        <header class="hide-block hide-on-mobile">
             <h3 class="title">Special Offers</h3>
         </header>
 
@@ -384,15 +384,25 @@ $destinations_subnav_list = nret_get_destinations();
                                     <a href="<?php echo url('node/'.$offer->nid->value()); ?>" class="offers-block">
                                         <img src="<?php echo nret_parse_image_url( $offer->field_hero_image->value() ); ?>" alt="">
                                     </a>
-                                    <p class="special-offer-tag">Offer</p>
+                                    <p class="special-offer-tag"><span class="show-on-mobile-only">Special</span> Offer</p>
                                 </div>
 
-                                <div class="flex-caption">
-                                    <h4><?php echo $offer->title->value(); ?></h4>
-                                    <p class="text">
-                                        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
-                                    </p>
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6">
+                                        <div class="flex-caption">
+                                            <h4><?php echo $offer->title->value(); ?></h4>
+                                            <p class="text">
+                                                Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6">
+                                        <a href="<?php echo url('node/'.$offer->nid->value()); ?>" class="btn btn__transparent">
+                                            View Offer
+                                        </a>
+                                    </div>
                                 </div>
+
                             </li>
 
                         <?php } ?>

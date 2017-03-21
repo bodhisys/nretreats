@@ -3245,7 +3245,7 @@ var nret = nret || {};
                     $('.subnav-container').removeAttr('style');
                 } else if (direction == 'down') {
                     $('.subnav-container').velocity({
-                        top:55
+                        top:50
                     },350);
                     $('.subnav-container').velocity({
                         opacity:1

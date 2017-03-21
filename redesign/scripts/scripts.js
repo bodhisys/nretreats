@@ -19,17 +19,6 @@ $(document).ready(function(){
             touch: true,
             controlNav: false
         });
-        // $('.special-offer-slider').flexslider({
-        //     animation: "slide",
-        //     animationLoop: false,
-        //     itemWidth: 360,
-        //     itemMargin: 5,
-        //     minItems: 1,
-        //     maxItems: 2,
-        //     slideshow: false,
-        //     touch: true,
-        //     controlNav: false
-        // });
     });
 });
 
@@ -53,6 +42,7 @@ $(document).ready(function(){
         $('.special-offer-slider').flexslider({
             animation: "slide",
             animationLoop: false,
+            controlNav: true,
             itemWidth: 210,
             itemMargin: 5,
             minItems: getGridSize(), // use function to pull in initial value

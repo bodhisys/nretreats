@@ -903,7 +903,7 @@ section.promotion .select__wrapper.travel-with, .btn {
 
 @media screen and (max-width: 1280px) {
   .page-body {
-    margin-top: 55px; } }
+    margin-top: 0px; } }
 
 @media screen and (min-width: 769px) {
   .show-on-mobile-only {
@@ -1441,7 +1441,6 @@ section.promotion .select__wrapper.travel-with, .btn {
 
 .global-nav__destinations {
   position: absolute;
-  top: 100px;
   right: 0;
   left: 0;
   display: -webkit-box;
@@ -1612,11 +1611,16 @@ section.promotion .select__wrapper.travel-with, .btn {
   .global-nav > .inner {
     padding: 0 !important; }
     .global-nav > .inner .global-nav__right {
-      width: 100%; } }
+      width: 100%; }
+  .global-nav__destinations {
+    top: 50px; } }
 
 @media (min-width: 769px) and (max-width: 1280px) {
   .global-nav > .inner .global-nav__right {
-    width: 400px; } }
+    width: 400px; }
+  .home__retreat-search .choices-search .inner {
+    width: 500px;
+    margin: 0 auto; } }
 
 /*Mobile and Tablet*/
 @media screen and (max-width: 1280px) {
@@ -1820,9 +1824,7 @@ section.promotion .select__wrapper.travel-with, .btn {
   .explorer__help-modal .explorer__help-modal-inner__copy .css_triangle-up {
     right: 0 !important; }
   #openSearchInNav {
-    display: none; } }
-
-@media screen and (max-width: 1280px) {
+    display: none; }
   section.home-page .global-nav {
     top: 0; }
   section.home-page .home__hero-wrapper {
@@ -1949,6 +1951,7 @@ section.promotion .select__wrapper.travel-with, .btn {
       color: #000 !important; }
   .global-nav__destinations {
     margin-left: 8%;
+    top: 100px;
     overflow: visible;
     height: 315px;
     width: 400px;
@@ -2097,16 +2100,21 @@ section.home-page .home__search__dropdown {
 
 @media screen and (min-width: 769px) {
   .search-section-header {
-    color: #fff !important;
-    font-size: 2.5rem !important; } }
+    color: #fff !important; } }
 
 @media (min-width: 769px) and (max-width: 1280px) {
   section.home-page .home__retreat-search > .wrapper, section.home-page .home__search__dropdown {
-    width: 750px; } }
+    width: 750px; }
+  .search-section-header {
+    font-size: 2rem !important; } }
 
 @media screen and (max-width: 1280px) {
   .home__retreat-search .choices-search {
     padding: 10px; } }
+
+@media screen and (min-width: 1281px) {
+  .search-section-header {
+    font-size: 2.5rem !important; } }
 
 .home__retreat-search .home__search__dropdown.list {
   width: 600px;
@@ -2204,8 +2212,7 @@ section.home-page .home__offers {
     background: transparent;
     border: none; }
     .guest-reviews-carousel .flexslider .flex-caption, .home__offers .flexslider .flex-caption {
-      font-size: 14px;
-      margin-top: 20px; }
+      font-size: 14px; }
     .guest-reviews-carousel .flexslider .btn-default, .home__offers .flexslider .btn-default {
       width: 170px;
       font-size: 12px;
@@ -2227,18 +2234,11 @@ section.home-page .home__offers {
 .home__offers {
   padding: 50px 0; }
   .home__offers h3 {
-    text-transform: uppercase;
-    padding-bottom: 50px; }
-  .home__offers .flexslider li .image-wrap, .home__offers .flexslider li .flex-caption {
-    padding: 10px 20px; }
+    text-transform: uppercase; }
   .home__offers .flexslider li .special-offer-tag {
     position: absolute;
-    top: 50px;
-    right: 19px;
-    background: #333;
     color: #fff;
     padding: 8px 15px;
-    text-transform: uppercase;
     font-size: 11px; }
   .home__offers .flex-caption h4 {
     text-transform: uppercase;
@@ -2247,6 +2247,43 @@ section.home-page .home__offers {
     color: #a6a6a6;
     font-size: 13px;
     padding-top: 10px; }
+
+@media screen and (max-width: 769px) {
+  section.home-page .home__hero {
+    height: 300px; }
+  .guest-reviews-carousel .flexslider, .home__offers .flexslider {
+    position: relative; }
+    .guest-reviews-carousel .flexslider li .image-wrap, .home__offers .flexslider li .image-wrap {
+      padding: 5px 0px; }
+    .guest-reviews-carousel .flexslider li .flex-caption, .home__offers .flexslider li .flex-caption {
+      height: 110px;
+      margin: 5px 0;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .guest-reviews-carousel .flexslider li .special-offer-tag, .home__offers .flexslider li .special-offer-tag {
+      bottom: 165px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      text-transfrom: capitalize;
+      font-size: 16px; }
+  .flex-control-nav {
+    bottom: 140px !important; } }
+
+@media screen and (min-width: 769px) {
+  section.home-page .home__offers header {
+    margin-bottom: 72px; }
+  .home__offers h3 {
+    padding-bottom: 50px; }
+  .guest-reviews-carousel .flexslider .flex-caption, .home__offers .flexslider .flex-caption {
+    margin-top: 20px; }
+  .guest-reviews-carousel .flexslider li .image-wrap, .guest-reviews-carousel .flexslider li .flex-caption, .home__offers .flexslider li .image-wrap, .home__offers .flexslider li .flex-caption {
+    padding: 10px 20px; }
+  .guest-reviews-carousel .flexslider li .special-offer-tag, .home__offers .flexslider li .special-offer-tag {
+    top: 50px;
+    right: 19px;
+    background: #333;
+    text-transform: uppercase; } }
 
 .home__list-home {
   background: #1d1e1f;

@@ -13,10 +13,19 @@
       }
     }
   }
+  .global-nav__destinations {
+    top: 50px;
+  }
+
 }
+
 @media (min-width: 769px) and (max-width: 1280px) {
   .global-nav > .inner .global-nav__right {
     width: 400px;
+  }
+  .home__retreat-search .choices-search .inner {
+    width: 500px;
+    margin: 0 auto;
   }
 }
 /*Mobile and Tablet*/
@@ -301,9 +310,7 @@
     }
   }
   #openSearchInNav { display: none; }
-}
 
-@media screen and (max-width: 1280px) {
   section.home-page {
     .global-nav {
       top: 0;
@@ -460,6 +467,7 @@
   }
   .global-nav__destinations {
     margin-left: 8%;
+    top: 100px;
     &.show {
       padding: 8px 8px 8px 0;
       .global-nav__destinations__destination-list-wrapper {

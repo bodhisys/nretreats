@@ -2,25 +2,16 @@
   padding: 50px 0;
   h3 {
     text-transform: uppercase;
-    padding-bottom: 50px;
   }
   .flexslider {
     li {
-      .image-wrap, .flex-caption {
-        padding: 10px 20px;
-      }
       .special-offer-tag {
         position: absolute;
-        top: 50px;
-        right: 19px;
-        background: #333;
         color: #fff;
         padding: 8px 15px;
-        text-transform: uppercase;
         font-size: 11px;
       }
     }
-    
   }
   .flex-caption {
     h4 {
@@ -31,6 +22,66 @@
       color: $gray-light;
       font-size: 13px;
       padding-top: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 769px){
+  section.home-page .home__hero {
+    height: 300px;
+  }
+  .guest-reviews-carousel, .home__offers  {
+    .flexslider {
+      position: relative;
+      li {
+        .image-wrap {
+          padding: 5px 0px;
+        }
+        .flex-caption {
+          height: 110px;
+          margin: 5px 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .special-offer-tag {
+          bottom: 165px;
+          width: 100%;
+          margin: 0 auto;
+          text-align: center;
+          text-transfrom: capitalize;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .flex-control-nav {
+    bottom: 140px!important;
+  }
+}
+
+@media screen and (min-width: 769px){
+  section.home-page .home__offers header {
+    margin-bottom: 72px;
+  }
+  .home__offers h3 {
+    padding-bottom: 50px;
+  }
+  .guest-reviews-carousel, .home__offers  {
+    .flexslider {
+      .flex-caption {
+        margin-top: 20px;
+      }
+      li {
+        .image-wrap, .flex-caption {
+          padding: 10px 20px;
+        }
+        .special-offer-tag {
+          top: 50px;
+          right: 19px;
+          background: #333;
+          text-transform: uppercase;
+        }
+      }
     }
   }
 }
